@@ -1,2 +1,4 @@
 __pycache__
 git-ignore
+.ipynb_checkpoints
+*.ipynb
