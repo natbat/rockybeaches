@@ -26,7 +26,10 @@ SECRET_KEY = '@a@0_64&#8(t5*)!g7_%k=0+ixv3^@=cykg_8=(w83*wk#h)po'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'tidepools-near-me-staging.herokuapp.com'
+    'tidepools-near-me-staging.herokuapp.com',
+    # For dev:
+    '127.0.0.1',
+    'localhost',
 ]
 
 
@@ -82,6 +85,10 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config()
+if db_from_env:
+    DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators

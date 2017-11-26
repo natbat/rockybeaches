@@ -1,3 +1,4 @@
 Django==2.0rc1
 psycopg2==2.7.3.2
 gunicorn==19.7.1
+dj-database-url==0.4.2
