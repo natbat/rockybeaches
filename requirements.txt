@@ -1,0 +1,2 @@
+Django==2.0rc1
+psycopg2==2.7.3.2
