@@ -25,7 +25,9 @@ SECRET_KEY = '@a@0_64&#8(t5*)!g7_%k=0+ixv3^@=cykg_8=(w83*wk#h)po'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'tidepools-near-me-staging.herokuapp.com'
+]
 
 
 # Application definition
