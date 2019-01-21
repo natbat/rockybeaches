@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>San Francisco tree search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{% static "app.css" %}">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+
+</head>
+<body>
+
+<header class="section">
+  <div class="inner">
+    <p class="title">Tidepools Near Me</p>
+    <nav></nav>
+  </div>
+</header>
+
+<section class="page-title">
+
+  <div class="title-wrapper">
+    <div class="inner">
+      <h1 class="text">{{ place }}</h1>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="inner">
+    <h2>What you might see</h2>
+    <div id="species"></div>
+
+    <h2>How to find the tidepooling spot</h2>
+    <div id="map"></div>
+
+    <script type="text/javascript">
+    var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            detectRetina: true,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+        }),
+        latlng = L.latLng({{ place.latitude }}, {{ place.longitude }});
+
+    var map = L.map('map', {
+        center: latlng,
+        zoom: 14,
+        layers: [tiles]
+    });
+    L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km }} * 1000).addTo(map);
+    map.on('moveend', function() {
+      console.log(map.getCenter());
+    });
+    // Fetch things you might see
+    var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km }}&per_page=9";
+    fetch(url).then(
+      response => response.json()
+    ).then(data => {
+      var divs = data.results.map(item => {
+        var div = document.createElement('div');
+        div.innerHTML = `
+          <h3>${item.taxon.preferred_common_name}</h3>
+          <img width="80px" src="${item.taxon.default_photo.medium_url}">
+          <p>Seen ${item.count} time${item.count === 1 ? '' : 's'}</p>
+        `;
+        return div;
+      });
+      var wrapper = document.getElementById('species');
+      divs.map(div => wrapper.appendChild(div));
+      console.log(divs);
+    });
+
+    </script>
+  </div>
+</section>
+
+<footer class="section">
+  <nav class="inner">
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+</html>

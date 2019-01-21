@@ -1,1 +1,245 @@
-body { font-family: helvetica, sans-serif; }
+/* @import url('https://fonts.googleapis.com/css?family=Amaranth:700|Nunito:400,400i,700&subset=latin-ext'); */
+
+/* Reset and Page Setup */
+
+/* Reset from http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset */
+
+body {
+	color: Black;
+	margin: 0;
+	padding: 0;
+	font-family: 'Nunito', Avenir, sans-serif;
+  font-weight: 400;
+	font-size: 16px;
+	line-height: 1.25;
+}
+
+
+
+/* Helper styles */
+.intro {
+  font-size: 1rem;
+}
+p {
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+}
+.meta {
+  color: rgba(28,82,113,0.6);
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Amaranth', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0
+}
+h1,
+.header1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1rem;
+}
+h2,
+.header2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1rem;
+}
+h3,
+.header3 {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.25rem 0;
+}
+h4,
+.header4 {
+  margin: 1rem 0 0.25rem 0;
+  font-weight: 400;
+  text-decoration: underline;
+}
+h5,
+.header5 {
+  margin: 1rem 0 0.25rem 0;
+  font-family: 'Nunito', Avenir, sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+}
+h6,
+.header6 {
+  margin: 1rem 0 0.25rem 0;
+  font-family: 'Nunito', Avenir, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+div,
+section,
+article,
+header,
+nav,
+footer,
+.wrapper {
+	display: block;
+	box-sizing: border-box;
+}
+
+
+a:link,
+a:visited {
+	color: #3494CC;
+	text-decoration: underline;
+}
+a:hover,
+a:focus,
+a:active  {
+	color: #3494CC;
+	text-decoration: underline;
+}
+
+a img {
+  display: block;
+  max-width: 100%;
+	border: 0;
+	vertical-align: bottom;
+}
+
+/* Page Furniture */
+
+.section,
+section {
+  position: relative;
+  z-index: 1
+}
+.inner {
+  width: 70%;
+  margin: 0 auto;
+}
+header.section {
+  background-color: #680345;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+header .inner {
+  padding: 0.5em 0;
+}
+header .title {
+  color: white;
+}
+footer{
+  height: 50em
+}
+
+.page-title {
+  background-image: url('img/content/pillar-point.jpg');
+  background-attachment: fixed;
+  background-position: 70% 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4em 0 0 0;
+}
+.home .page-title {
+  background-image: url('img/ripples-in-a-tidepool.jpg');
+  /* http://www.publicdomainpictures.net/view-image.php?image=116723&picture=ripples-in-a-tidepool */
+  padding-bottom: 2em;
+}
+.page-title .text {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  color: white;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.home .page-title .text {
+  font-size: 4em;
+}
+.title-wrapper {
+  margin-top: 30vw;
+  background-color: black;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.7em 0 0.5em 0;
+}
+
+
+/* General */
+
+a:link,
+a:visited {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+/* Components */
+
+#map {
+    width: 100%;
+    height: 30vw;
+    border: 1px solid #ccc;
+}
