@@ -1,4 +1,6 @@
 __pycache__
+.DS_Store
 git-ignore
 .ipynb_checkpoints
 *.ipynb
+db.sqlite3
