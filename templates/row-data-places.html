@@ -1,12 +1,18 @@
-{% extends "base.html" %}
-{% load wagtailcore_tags wagtailimages_tags %}
+<!DOCTYPE html>
+{% set place = rows[0] %}
+<html>
+<head>
+<title>Tidepools Near Me: {{ place.address }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% block extra_head %}
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="">
-  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
-  {% endblock %}
+<link rel="stylesheet" href="/static/tidepools.css">
 
-  {% block content %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+
+</head>
+<body>
+
 <header class="section">
   <div class="inner">
     <p class="title">Tidepools Near Me</p>
@@ -15,9 +21,10 @@
 </header>
 
 <section class="page-title">
+
   <div class="title-wrapper">
     <div class="inner">
-      <h1 class="text">{{ page.title }}</h1>
+      <h1 class="text">{{ place.address }}</h1>
     </div>
   </div>
 </section>
@@ -28,6 +35,9 @@
     <div id="species"></div>
 
     <h2>How to find the tidepooling spot</h2>
+
+    {{ place.directions|safe }}
+    
     <div id="map"></div>
 
     <script type="text/javascript">
@@ -69,4 +79,15 @@
     </script>
   </div>
 </section>
-{% endblock %}
+
+<footer class="section">
+  <nav class="inner">
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+</html>
