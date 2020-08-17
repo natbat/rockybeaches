@@ -4,3 +4,6 @@ git-ignore
 .ipynb_checkpoints
 *.ipynb
 db.sqlite3
+.venv
+Pipfile
+Pipfile.lock
