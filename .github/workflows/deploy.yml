@@ -36,4 +36,5 @@ jobs:
           --project tidepools-near-me \
           --install datasette-template-sql \
           --install datasette-graphql \
+          --static static:static \
           --template-dir templates
