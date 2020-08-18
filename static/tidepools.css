@@ -174,35 +174,55 @@ section {
   width: 70%;
   margin: 0 auto;
 }
+
 header.section {
-  background-color: #680345;
+  background-color: white;
   position: fixed;
   width: 100%;
   z-index: 20;
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 header .inner {
-  padding: 0.5em 0;
+  padding: 0;
 }
 header .title {
-  color: white;
+  color: #176AB8;
+	margin: 0.3em 0 0.3em 0;
+	display: inline-block;
+	width: 147px;
+	height: 50px;
+	text-indent: -999em;
+	background-image: url('rocky-beaches-logo.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-footer{
+
+
+footer {
   height: 50em
 }
 
+.title-wrapper {
+  margin-top: 20vw;
+  background-color: black;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.7em 0 0.5em 0;
+}
 .page-title {
   background-image: url('img/content/pillar-point.jpg');
   background-attachment: fixed;
   background-position: 70% 70%;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 4em 0 0 0;
+	background-color: #176AB8;
+  padding: 1em 0 0 0;
 }
-.home .page-title {
-  background-image: url('img/ripples-in-a-tidepool.jpg');
+/* .home .page-title {
+  background-image: url('img/ripples-in-a-tidepool.jpg'); */
   /* http://www.publicdomainpictures.net/view-image.php?image=116723&picture=ripples-in-a-tidepool */
-  padding-bottom: 2em;
-}
+  /* padding-bottom: 2em;
+} */
 .page-title .text {
   font-size: 2em;
   margin: 0;
@@ -212,15 +232,10 @@ footer{
   color: rgba(255,255,255,0.9);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
-.home .page-title .text {
+/* .home .page-title .text {
   font-size: 4em;
-}
-.title-wrapper {
-  margin-top: 30vw;
-  background-color: black;
-  background-color: rgba(0,0,0,0.6);
-  padding: 0.7em 0 0.5em 0;
-}
+} */
+
 
 
 /* General */
