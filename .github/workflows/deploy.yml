@@ -37,4 +37,5 @@ jobs:
           --install datasette-template-sql \
           --install datasette-graphql \
           --static static:static \
-          --template-dir templates
+          --template-dir templates \
+          --plugins-dir plugins
