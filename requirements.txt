@@ -3,3 +3,5 @@ datasette
 datasette-publish-vercel>=0.8
 yaml-to-sqlite
 httpx
+pytz
+astral
