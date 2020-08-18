@@ -4,3 +4,9 @@
   name: "Pillar Point Harbor CA"
   latitude: 37.4954239229958
   longitude: -122.4986519292
+-
+  id: 2
+  station_id: 9414750
+  name: "Alameda, CA"
+  latitude: 37.7717
+  longitude: -122.3075
