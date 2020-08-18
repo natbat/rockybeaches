@@ -14,149 +14,132 @@
 <body>
 
 <header class="section">
-  <div class="inner">
+  <div class="stretch">
     <h1 class="title">Rocky Beaches</h1>
-    <nav></nav>
-  </div> <!-- end .inner -->
+  </div>
 </header> <!-- end header -->
 
 <section class="page-title">
-  <div class="title-wrapper">
-    <div class="inner">
-      <h1 class="text">{{ place.address }}</h1>
-    </div>
-  </div> <!-- end .inner -->
+  <div class="title-wrapper stretch">
+    <h1 class="text"><span>{{ place.address }}</span></h1>
+  </div>
 </section> <!-- end .page-title -->
 
 <section class="content">
-  <div class="inner">
+  <div class="primary">
+    {{ place.tagline|safe }}
+    {{ place.body|safe }}
 
-    <div class="primary">
-      {{ place.tagline|safe }}
-      {{ place.body|safe }}
+    <h2>What you could see</h2>
+    <div id="species">TODO: INAT TAXA GO HERE</div>
+  </div> <!-- end .primary -->
 
-      <h2>What you could see</h2>
-      <div id="species">TODO: INAT TAXA GO HERE</div>
-    </div> <!-- end .primary -->
-
-    <div class="secondary">
-      tidepool tips
-    </div>
-
-  </div> <!-- end .inner -->
+  <div class="secondary">
+    tidepool tips
+  </div>
 </section> <!-- end .page-title -->
 
 <section class="content">
-  <div class="inner">
-    <div class="primary">
-      <h2>How to get there</h2>
+  <h2 class="stretch"><span>How to get there</span></h2>
+  <div class="primary">
+    {{ place.directions|safe }}
 
-      {{ place.directions|safe }}
+    <h3>Parking</h3>
+    {{ place.parking|safe }}
+  </div>
 
-      <h3>Parking</h3>
-      {{ place.parking|safe }}
-    </div>
+  <div class="secondary">
+    info
+    {{ place.address|safe }}
+    {{ place.phone|safe }}
+    {{ place.open_to_public|safe }}
+    {{ place.bathrooms|safe }}
+    {{ place.visitor_center|safe }}
+    {{ place.docents|safe }}
+    {{ place.dogs|safe }}
+    {{ place.entry_cost|safe }}
+  </div> <!-- end .secondary -->
 
-    <div class="secondary">
-      info
-      {{ place.address|safe }}
-      {{ place.phone|safe }}
-      {{ place.open_to_public|safe }}
-      {{ place.bathrooms|safe }}
-      {{ place.visitor_center|safe }}
-      {{ place.docents|safe }}
-      {{ place.dogs|safe }}
-      {{ place.entry_cost|safe }}
-    </div> <!-- end .secondary -->
+  <div class="primary">
+    <div id="map"></div>
 
-    <div class="primary">
-      <div id="map"></div>
+    <script type="text/javascript">
+    var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            detectRetina: true,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+        }),
+        latlng = L.latLng({{ place.latitude }}, {{ place.longitude }});
 
-      <script type="text/javascript">
-      var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              maxZoom: 19,
-              detectRetina: true,
-              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
-          }),
-          latlng = L.latLng({{ place.latitude }}, {{ place.longitude }});
-
-      var map = L.map('map', {
-          center: latlng,
-          zoom: 14,
-          layers: [tiles]
+    var map = L.map('map', {
+        center: latlng,
+        zoom: 14,
+        layers: [tiles]
+    });
+    L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km }} * 1000).addTo(map);
+    map.on('moveend', function() {
+      console.log(map.getCenter());
+    });
+    // Fetch things you might see
+    var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km }}&per_page=9";
+    fetch(url).then(
+      response => response.json()
+    ).then(data => {
+      var divs = data.results.map(item => {
+        var div = document.createElement('div');
+        div.innerHTML = `
+          <h3>${item.taxon.preferred_common_name}</h3>
+          <img width="80px" src="${item.taxon.default_photo.medium_url}">
+          <p>Seen ${item.count} time${item.count === 1 ? '' : 's'}</p>
+        `;
+        return div;
       });
-      L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km }} * 1000).addTo(map);
-      map.on('moveend', function() {
-        console.log(map.getCenter());
-      });
-      // Fetch things you might see
-      var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km }}&per_page=9";
-      fetch(url).then(
-        response => response.json()
-      ).then(data => {
-        var divs = data.results.map(item => {
-          var div = document.createElement('div');
-          div.innerHTML = `
-            <h3>${item.taxon.preferred_common_name}</h3>
-            <img width="80px" src="${item.taxon.default_photo.medium_url}">
-            <p>Seen ${item.count} time${item.count === 1 ? '' : 's'}</p>
-          `;
-          return div;
-        });
-        var wrapper = document.getElementById('species');
-        divs.map(div => wrapper.appendChild(div));
-        console.log(divs);
-      });
+      var wrapper = document.getElementById('species');
+      divs.map(div => wrapper.appendChild(div));
+      console.log(divs);
+    });
 
-      </script>
+    </script>
 
-    </div> <!-- end .primary -->
+  </div> <!-- end .primary -->
+</section>
+
+<section class="content">
+  <h2 class="stretch"><span>When to visit</span></h2>
+  <div class="full">
+    <div class="tides">TODO: tides info here</div>
+
+    <h3>Species you'll see then </h3>
+    <p>TODO: TAXA</p>
+
+    <h3>Recent observations at {{ place.address }}</h3>
+    <p>TODO: recent observations</p>
   </div>
 </section>
 
 <section class="content">
-  <div class="inner">
-    <div class="full">
-      <h2>When to visit</h2>
+  <h2 class="stretch"><span>Other considerations</span></h2>
 
-      <div class="tides">TODO: tides info here</div>
+  <div class="full">
+    <h3>Accessibility and Safety</h3>
+    {{ place.accessibility_and_safety|safe }}
 
-      <h3>Species you'll see then </h3>
-      <p>TODO: TAXA</p>
+    <p>TODO repeat general tips and link to read more</p>
 
-      <h3>Recent observations at {{ place.address }}</h3>
-      <p>TODO: recent observations</p>
-    </div>
+    <h3>Pet Policy</h3>
+    {{ place.pet_policy|safe }}
+
+    <h3>Food options</h3>
+    {{ place.food_options|safe }}
+
   </div>
-</section>
-
-<section class="content">
-  <div class="inner">
-    <div class="full">
-      <h2>Other considerations</h2>
-
-      <h3>Accessibility and Safety</h3>
-      {{ place.accessibility_and_safety|safe }}
-
-      <p>TODO repeat general tips and link to read more</p>
-
-      <h3>Pet Policy</h3>
-      {{ place.pet_policy|safe }}
-
-      <h3>Food options</h3>
-      {{ place.food_options|safe }}
-
-    </div>
-  </div> <!-- end .inner -->
 </section> <!-- end .content -->
 
 <footer class="section">
-  <nav class="inner">
-    <ul>
+    <ul class="full">
       <li><a href="#">About</a></li>
       <li><a href="">Contact</a></li>
     </ul>
-  </nav> <!-- end .inner -->
 </footer> <!-- end footer -->
 
 </body>

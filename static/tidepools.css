@@ -143,7 +143,6 @@ footer,
 	box-sizing: border-box;
 }
 
-
 a:link,
 a:visited {
 	color: #3494CC;
@@ -168,30 +167,48 @@ a img {
 .section,
 section {
   position: relative;
-  z-index: 1
-}
-.inner {
-  width: 70%;
-  margin: 0 auto;
-	padding-top:1em;
+  z-index: 1;
 	display: grid;
-	grid-template-columns: 7fr 3fr;
-	column-gap: 1em;
+	grid-template-columns: 10% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+	column-gap: 1rem;
 	justify-items: stretch;
 	align-items: stretch;
-	border: 1px solid black;
+	margin: 0 0 1rem 0;
 }
 .primary {
-	border:1px solid lime;
-	grid-column-start: 1;
+	grid-column: 2 / span 7;
+	margin: 0 0 0.5rem 0;
 }
 .secondary {
-	border: 1px solid orange;
-	grid-column-start: 2;
+	grid-column: 9 / span 3;
+	margin: 0 0 0.5rem 0;
 }
 .full {
-	border: 1px solid red;
-	column-span: 2;
+	grid-column: 2 / span 10;
+	margin: 0 0 0.5rem 0;
+}
+.stretch {
+	grid-column: 1 / span 12;
+	padding: 0.5rem 10% 0.3rem 10%;
+	margin: 0 0 0.5rem 0;
+}
+h1.stretch,
+h2.stretch,
+h3.stretch,
+h4.stretch,
+h5.stretch,
+h6.stretch {
+	background-color: #176AB8;
+	color: white;
+}
+h1.stretch span,
+h2.stretch span,
+h3.stretch span,
+h4.stretch span,
+h5.stretch span,
+h6.stretch span {
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 header.section {
@@ -201,12 +218,9 @@ header.section {
   z-index: 20;
 	box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
-header .inner {
-  padding: 0;
-}
 header .title {
   color: #176AB8;
-	margin: 0.3em 0 0.3em 0;
+	margin: 0.3rem 0 0.3rem 1rem;
 	display: inline-block;
 	width: 147px;
 	height: 50px;
@@ -223,7 +237,7 @@ footer {
 }
 
 .title-wrapper {
-  margin-top: 20vw;
+  margin: 20vw 0 0 0;
   background-color: black;
   background-color: rgba(0,0,0,0.6);
   padding: 0.7em 0 0.5em 0;
@@ -245,11 +259,15 @@ footer {
 .page-title .text {
   font-size: 2em;
   margin: 0;
-  padding: 0;
+  padding: 0 10% 0 10%;
   line-height: 1.2;
   color: white;
   color: rgba(255,255,255,0.9);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.page-title .text span {
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 /* .home .page-title .text {
   font-size: 4em;
@@ -259,17 +277,7 @@ footer {
 
 /* General */
 
-a:link,
-a:visited {
-  text-decoration: none;
-  border-bottom: 1px solid;
-}
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  border-bottom: 1px dotted;
-}
+
 /* Components */
 
 #map {
