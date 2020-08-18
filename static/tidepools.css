@@ -173,16 +173,26 @@ section {
 .inner {
   width: 70%;
   margin: 0 auto;
-	display: grid
+	padding-top:1em;
+	display: grid;
+	grid-template-columns: 7fr 3fr;
+	column-gap: 1em;
+	justify-items: stretch;
+	align-items: stretch;
+	border: 1px solid black;
 }
 .primary {
 	border:1px solid lime;
+	grid-column-start: 1;
 }
 .secondary {
 	border: 1px solid orange;
-
+	grid-column-start: 2;
 }
-
+.full {
+	border: 1px solid red;
+	column-span: 2;
+}
 
 header.section {
   background-color: white;

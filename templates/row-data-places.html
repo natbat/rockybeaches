@@ -30,22 +30,35 @@
 
 <section class="content">
   <div class="inner">
+
     <div class="primary">
       {{ place.tagline|safe }}
       {{ place.body|safe }}
 
       <h2>What you could see</h2>
       <div id="species">TODO: INAT TAXA GO HERE</div>
+    </div> <!-- end .primary -->
 
+    <div class="secondary">
+      tidepool tips
+    </div>
+
+  </div> <!-- end .inner -->
+</section> <!-- end .page-title -->
+
+<section class="content">
+  <div class="inner">
+    <div class="primary">
       <h2>How to get there</h2>
 
       {{ place.directions|safe }}
 
       <h3>Parking</h3>
       {{ place.parking|safe }}
-    </div> <!-- end .primary -->
+    </div>
 
     <div class="secondary">
+      info
       {{ place.address|safe }}
       {{ place.phone|safe }}
       {{ place.open_to_public|safe }}
@@ -98,31 +111,42 @@
       </script>
 
     </div> <!-- end .primary -->
+  </div>
+</section>
 
-    <!-- TODO:CLEAR THIS -->
-    <h2>When to visit</h2>
+<section class="content">
+  <div class="inner">
+    <div class="full">
+      <h2>When to visit</h2>
 
-    <div class="tides">TODO: tides info here</div>
+      <div class="tides">TODO: tides info here</div>
 
-    <h3>Species you'll see then </h3>
-    <p>TODO: TAXA</p>
+      <h3>Species you'll see then </h3>
+      <p>TODO: TAXA</p>
 
-    <h3>Recent observations at {{ place.address }}</h3>
-    <p>TODO: recent observations</p>
+      <h3>Recent observations at {{ place.address }}</h3>
+      <p>TODO: recent observations</p>
+    </div>
+  </div>
+</section>
 
-    <h2>Other considerations</h2>
+<section class="content">
+  <div class="inner">
+    <div class="full">
+      <h2>Other considerations</h2>
 
-    <h3>Accessibility and Safety</h3>
-    {{ place.accessibility_and_safety|safe }}
+      <h3>Accessibility and Safety</h3>
+      {{ place.accessibility_and_safety|safe }}
 
-    <p>TODO repeat general tips and link to read more</p>
+      <p>TODO repeat general tips and link to read more</p>
 
-    <h3>Pet Policy</h3>
-    {{ place.pet_policy|safe }}
+      <h3>Pet Policy</h3>
+      {{ place.pet_policy|safe }}
 
-    <h3>Food options</h3>
-    {{ place.food_options|safe }}
+      <h3>Food options</h3>
+      {{ place.food_options|safe }}
 
+    </div>
   </div> <!-- end .inner -->
 </section> <!-- end .content -->
 
