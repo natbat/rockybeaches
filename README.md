@@ -1,4 +1,4 @@
-# tidepools_near_me
+# Rocky Beaches
 
 To build the SQLite database from the YAML in `data/`:
 
