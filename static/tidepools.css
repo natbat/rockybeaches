@@ -173,7 +173,16 @@ section {
 .inner {
   width: 70%;
   margin: 0 auto;
+	display: grid
 }
+.primary {
+	border:1px solid lime;
+}
+.secondary {
+	border: 1px solid orange;
+
+}
+
 
 header.section {
   background-color: white;
