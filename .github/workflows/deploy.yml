@@ -28,6 +28,7 @@ jobs:
     - name: Run tests
       run: |
         pytest
+        datasette . --get /us/pillar-point | grep 'Rocky Beaches'
     - name: Build database
       run: scripts/build.sh
     - name: Deploy to Vercel
