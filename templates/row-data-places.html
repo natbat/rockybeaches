@@ -9,7 +9,6 @@
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
-
 </head>
 <body>
 
@@ -24,8 +23,6 @@
     <h1 class="text" id="origin"><span>{{ place.address }}</span></h1>
   </div>
 </section> <!-- end .page-title -->
-
-
 
 {% set species_counts = graphql('''
 {
@@ -104,7 +101,8 @@
 </section> <!-- end .page-title -->
 
 <section class="content">
-  <h2 class="stretch" id="how-to-get-there"><span>How to get there</span></h2>
+  <a class="anchor" name="how-to-get-there"></a>
+  <h2 class="stretch"><span>How to get there</span></h2>
   <div class="primary">
     {{ place.directions|safe }}
 
@@ -187,7 +185,8 @@
 ''')["places_row"]["observations_list"]["nodes"] %}
 
 <section class="content">
-  <h2 class="stretch" id="when-to-visit"><span>When to visit</span></h2>
+  <a class="anchor" name="when-to-visit"></a>
+  <h2 class="stretch"><span>When to visit</span></h2>
   <div class="full">
     <div class="tides">
       <p><strong>Today</strong></p>
@@ -251,7 +250,8 @@
 </section>
 
 <section class="content">
-  <h2 class="stretch" id="other-considerations"><span>Other considerations</span></h2>
+  <a class="anchor" name="other-considerations"></a>
+  <h2 class="stretch"><span>Other considerations</span></h2>
 
   <div class="full">
     <h3>Accessibility and Safety</h3>

@@ -476,3 +476,20 @@ footer {
 		flex-basis: 48%;
 	}
 }
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+.anchor {
+	display: block;
+	position: relative;
+	top: -90px;
+	visibility: hidden;
+}
