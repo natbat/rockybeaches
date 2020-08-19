@@ -34,8 +34,10 @@
       nodes {
         count
         taxon {
+          id
           preferred_common_name
           wikipedia_url
+          name
           default_photo
         }
       }
@@ -50,12 +52,14 @@
     {{ place.body|safe }}
 
     <h2>What you could see</h2>
-    <div id="species">
+    <div class="species-list">
       <ul>
         {% for species_count in species_counts %}
-          <li>{{ species_count.taxon.preferred_common_name }} (<em>{{ species_count.taxon.name }}]</em>)
-          - seen {{ species_count.count }} times
-          <img src="{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}" art="{{ species_count.taxon.preferred_common_name }}">
+          <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}">
+            <h3 class="name">{{ species_count.taxon.preferred_common_name }}</h3> <em class="latin">{{ species_count.taxon.name }}]</em>
+          <img src="{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}" alt="{{ species_count.taxon.preferred_common_name }}">
+          <p class="meta seen">seen {{ species_count.count }} times</p>
+          </a>
           </li>
         {% endfor %}
       </ul>
@@ -81,7 +85,7 @@
 
     <h3>Have fun!</h3>
     <ul class="bullets">
-      <li>Take lots of photos, <a href="https://www.inaturalist.org/">upload to iNaturalist</p> for help identifying.</li>
+      <li>Take lots of photos, <a href="https://www.inaturalist.org/">upload to iNaturalist</a> for help identifying.</li>
       <li>If you don't see anything, sit very still, wait and watch!</li>
     </ul>
     <!-- <p><a href="#">See more tips</a></p> -->

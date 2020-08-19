@@ -170,6 +170,10 @@ ul.bullets li {
 	list-style-type: circle;
 	margin-bottom: 0.4rem;
 }
+
+.meta {
+	font-size: 0.75rem
+}
 /* Page Furniture */
 
 .section,
@@ -282,7 +286,7 @@ footer {
 } */
 
 .pull-out {
-	font-size: 0.8em;
+	font-size: 0.75rem;
 	margin-top: -5.5rem;
 	background-color: rgba(255, 255, 255, 1);
 	padding: 1rem;
