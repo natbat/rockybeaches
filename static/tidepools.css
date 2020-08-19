@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Amaranth:700|Nunito:400,400i,700&subset=latin-ext'); */
+@import url('https://fonts.googleapis.com/css?family=Amaranth:700|Nunito:400,400i,700&subset=latin-ext');
 
 /* Reset and Page Setup */
 
@@ -70,6 +70,11 @@ body {
 
 
 /* Helper styles */
+
+html {
+	scroll-behavior: smooth;
+}
+
 .intro {
   font-size: 1rem;
 }
@@ -439,7 +444,7 @@ footer {
 	padding: 0 0 1rem 0;
 
 	display: grid;
-	grid-template-columns: 0.8rem 1fr 0.8rem 3fr 1rem;
+	grid-template-columns: 0.8rem 1fr 2rem 3fr 1rem;
 	column-gap: 0;
 	justify-items: stretch;
 	align-items: center;
@@ -593,11 +598,9 @@ footer {
 	.species {
 		flex-basis: 48%;
 	}
-}
-
-
-html {
-	scroll-behavior: smooth;
+	.tide-prediction {
+		grid-template-columns: 0.8rem 1fr 1rem 3fr 1rem;
+	}
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
