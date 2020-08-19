@@ -30,7 +30,7 @@
 {% set species_counts = graphql('''
 {
   places_row(slug: "pillar-point") {
-    species_counts_list(first: 10, sort_desc: count) {
+    species_counts_list(first: 9, sort_desc: count) {
       nodes {
         count
         taxon {
@@ -52,13 +52,14 @@
     {{ place.body|safe }}
 
     <h2>What you could see</h2>
-    <div class="species-list">
-      <ul>
+    <div>
+      <ul class="species-list">
         {% for species_count in species_counts %}
-          <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}">
-            <h3 class="name">{{ species_count.taxon.preferred_common_name }}</h3> <em class="latin">{{ species_count.taxon.name }}]</em>
-          <img src="{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}" alt="{{ species_count.taxon.preferred_common_name }}">
-          <p class="meta seen">seen {{ species_count.count }} times</p>
+          <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="taxa-link-wrap">
+            <h3 class="name"><span class="image" style="background-image: url('{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
+            <p class="latin">{{ species_count.taxon.name }}</p>
+
+          <p class="meta seen">seen here {{ species_count.count }} times</p>
           </a>
           </li>
         {% endfor %}

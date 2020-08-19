@@ -77,7 +77,7 @@ p {
   padding: 0;
 }
 .meta {
-  color: rgba(28,82,113,0.6);
+  color: rgba(0,0,0,0.3);
   font-size: 0.875rem;
 }
 
@@ -280,6 +280,7 @@ footer {
 .page-title .text span {
 	padding-left: 1rem;
 	padding-right: 1rem;
+	display: block;
 }
 /* .home .page-title .text {
   font-size: 4em;
@@ -301,7 +302,72 @@ footer {
 	font-size: 1rem;
 }
 
-
+.species-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between; /* this spacebetween wont work in some MSEdge browsers*/
+	align-items: stretch;
+	align-content: stretch;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+.species {
+	flex-basis: 32%;
+	margin-bottom: 2rem;
+	display: block;
+}
+.species .taxa-link-wrap,
+.species .taxa-link-wrap:link,
+.species .taxa-link-wrap:visited,
+.species .taxa-link-wrap:hover,
+.species .taxa-link-wrap:focus,
+.species .taxa-link-wrap:active {
+	color: black;
+	text-decoration: none;
+	border: none;
+}
+.species .image {
+	display: block;
+	height: 16vw;
+	width: 16vw;
+	max-width: 100%;
+	margin: 0 auto 1rem auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	border-radius: 50%;
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+.species .name {
+	margin: 0 0 0.1rem 0;
+	display: block;
+	font-family: 'Nunito', Avenir, sans-serif;
+  font-weight: 400;
+	font-size: 1.125rem;
+}
+.species .latin {
+	margin: 0;
+	display: block;
+	font-size: 0.75rem;
+	font-style: italic;
+	margin-bottom: 0.3rem
+}
+.species .seen {
+	margin: 0;
+	display: block;
+}
+.species .taxa-link-wrap:hover .image,
+.species .taxa-link-wrap:focus .image,
+.species .taxa-link-wrap:active .image {
+	opacity: 0.6;
+}
+.species .taxa-link-wrap:hover .name,
+.species .taxa-link-wrap:focus .name,
+.species .taxa-link-wrap:active .name {
+	text-decoration: underline;
+}
 
 
 /* General */
@@ -319,6 +385,9 @@ footer {
 
 /* Overrides */
 @media (max-width: 55rem) {
+	.title-wrapper {
+		margin-top: 30vw;
+	}
 	.section,
 	section {
 		grid-template-columns: 5% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5%;
@@ -328,9 +397,16 @@ footer {
 		padding-left: 5%;
 		padding-right: 5%
 	}
+	.species .image {
+		height: 19vw;
+		width: 19vw;
+	}
 }
 
 @media (max-width: 40rem) {
+	.title-wrapper {
+	  margin-top: 40vw;
+	}
 	.primary,
 	.secondary,
 	.full {
@@ -350,5 +426,12 @@ footer {
 	.pull-out h3 {
 		margin-top: 0;
 		font-size: 1.25rem;
+	}
+	.species .image {
+		height: 36vw;
+		width: 36vw;
+	}
+	.species {
+		flex-basis: 48%;
 	}
 }
