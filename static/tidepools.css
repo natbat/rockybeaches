@@ -57,7 +57,8 @@ table {
 /* end reset */
 
 body {
-	color: Black;
+	color: black;
+	background-color: #176AB8;
 	margin: 0;
 	padding: 0;
 	font-family: 'Nunito', Avenir, sans-serif;
@@ -180,6 +181,9 @@ ul.bullets li {
 }
 /* Page Furniture */
 
+.page {
+	background-color: white;
+}
 .section,
 section {
   position: relative;
@@ -233,6 +237,7 @@ header.section {
   width: 100%;
   z-index: 20;
 	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	border-top: 2px solid #176AB8;
 }
 header .title {
   color: #176AB8;
@@ -249,7 +254,8 @@ header .title {
 
 
 footer {
-  height: 50em
+  min-height: 30vw;
+	background-color: #176AB8;
 }
 
 .title-wrapper {
