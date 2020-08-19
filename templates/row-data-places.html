@@ -21,7 +21,7 @@
 
 <section class="page-title">
   <div class="title-wrapper stretch">
-    <h1 class="text"><span>{{ place.address }}</span></h1>
+    <h1 class="text" id="origin"><span>{{ place.address }}</span></h1>
   </div>
 </section> <!-- end .page-title -->
 
@@ -48,7 +48,17 @@
 
 <section class="content">
   <div class="primary">
-    {{ place.tagline|safe }}
+
+        <p class="intro">{{ place.tagline|safe }}</p>
+
+    <ul class="subnav">
+      <!-- <li><a href="#origin">Why here?</a></li> -->
+      <li><a href="#how-to-get-there" class="selected">How to get there</a></li>
+      <li><a href="#when-to-visit">When to visit</a></li>
+      <li><a href="#other-considerations">Other considerations</a></li>
+    </ul>
+
+
     {{ place.body|safe }}
 
     <h2>What you could see</h2>
@@ -94,7 +104,7 @@
 </section> <!-- end .page-title -->
 
 <section class="content">
-  <h2 class="stretch"><span>How to get there</span></h2>
+  <h2 class="stretch" id="how-to-get-there"><span>How to get there</span></h2>
   <div class="primary">
     {{ place.directions|safe }}
 
@@ -177,7 +187,7 @@
 ''')["places_row"]["observations_list"]["nodes"] %}
 
 <section class="content">
-  <h2 class="stretch"><span>When to visit</span></h2>
+  <h2 class="stretch" id="when-to-visit"><span>When to visit</span></h2>
   <div class="full">
     <div class="tides">TODO: tides info here</div>
 
@@ -189,7 +199,7 @@
 </section>
 
 <section class="content">
-  <h2 class="stretch"><span>Other considerations</span></h2>
+  <h2 class="stretch" id="other-considerations"><span>Other considerations</span></h2>
 
   <div class="full">
     <h3>Accessibility and Safety</h3>

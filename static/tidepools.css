@@ -78,7 +78,11 @@ p {
 }
 .meta {
   color: rgba(0,0,0,0.3);
-  font-size: 0.875rem;
+  font-size: 0.75rem
+}
+.intro {
+	font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 h1,
@@ -151,7 +155,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active  {
-	color: #3494CC;
+	color: #176AB8;
 	text-decoration: underline;
 }
 
@@ -171,8 +175,8 @@ ul.bullets li {
 	margin-bottom: 0.4rem;
 }
 
-.meta {
-	font-size: 0.75rem
+.content p {
+	margin-bottom: 1rem;
 }
 /* Page Furniture */
 
@@ -302,6 +306,47 @@ footer {
 	font-size: 1rem;
 }
 
+
+/* General */
+
+
+/* Components */
+
+.subnav {
+	border-bottom: 1px solid #3494CC;
+	margin: 0 0 1rem 0 ;
+}
+
+.subnav li {
+	display: inline-block;
+	margin: 0.3rem 1rem 0 0 ;
+}
+.subnav a:link,
+.subnav a:visited,
+.subnav a:hover,
+.subnav a:focus,
+.subnav a:active {
+	display: block;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	padding: 0.2rem;
+	margin-bottom: -1px;
+}
+.subnav a:hover,
+.subnav a:focus,
+.subnav a:active {
+	color: #176AB8;
+	border-color: #176AB8;
+}
+.subnav a.selected:link,
+.subnav a.selected:visited,
+.subnav a.selected:hover,
+.subnav a.selected:focus,
+.subnav a.selected:active {
+	color: #176AB8;
+	border-color: #176AB8;
+}
+
 .species-list {
 	display: flex;
 	flex-direction: row;
@@ -368,12 +413,6 @@ footer {
 .species .taxa-link-wrap:active .name {
 	text-decoration: underline;
 }
-
-
-/* General */
-
-
-/* Components */
 
 #map {
     width: 100%;
