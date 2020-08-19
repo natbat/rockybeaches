@@ -102,7 +102,7 @@ def extra_template_vars(datasette):
             "minimas": minimas,
             "maximas": maximas,
             "heights": heights[1:-1],
-            "lowest_tide": list(sorted(heights, key=lambda t: t["feet"]))[0],
+            "lowest_tide": list(sorted(heights[1:-1], key=lambda t: t["feet"]))[0],
         }
         info.update(
             {
@@ -147,7 +147,11 @@ def get_minimas_maximas(tide_times):
         except IndexError:
             continue
         try:
-            next_ = tide_times[i + 1]
+            current = tide_times[i]
+            offset_to_change = 1
+            while current["feet"] == tide_times[i + offset_to_change]["feet"]:
+                offset_to_change += 1
+            next_ = tide_times[i + offset_to_change]
         except IndexError:
             continue
         if previous["feet"] < row["feet"] > next_["feet"]:

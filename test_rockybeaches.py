@@ -1,6 +1,6 @@
 from datasette.app import Datasette
 from yaml_to_sqlite.cli import cli as yaml_to_sqlite_cli
-from plugins.template_vars import extra_template_vars
+from plugins.template_vars import extra_template_vars, get_minimas_maximas
 import pytest
 import pathlib
 import sqlite_utils
@@ -35,8 +35,11 @@ async def test_tide_data_for_place(db_path):
             {"time": "05:42", "time_pct": 23.75, "feet": -0.77},
             {"time": "17:30", "time_pct": 72.92, "feet": 1.979},
         ],
-        "maximas": [{"time": "12:12", "time_pct": 50.83, "feet": 4.97}],
-        "lowest_tide": {"feet": -0.77, "time": "05:42", "time_pct": 23.75},
+        "maximas": [
+            {"time": "12:12", "time_pct": 50.83, "feet": 4.97},
+            {"time": "23:24", "time_pct": 97.5, "feet": 6.397},
+        ],
+        "lowest_tide": {"time": "05:42", "time_pct": 23.75, "feet": -0.77},
         "dawn": "06:02:08",
         "sunrise": "06:30:10",
         "noon": "13:13:37",
@@ -56,6 +59,26 @@ async def test_tide_data_for_place(db_path):
         "time": "22:48",
         "time_pct": 95.0,
     }
+
+
+@pytest.mark.parametrize(
+    "input,expected_minimas,expected_maximas",
+    [
+        # Just one minima
+        ([0.5, 0.4, 0.5], [0.4], []),
+        # Two minimas, one maxima
+        ([0.5, 0.4, 0.5, 0.3, 0.5], [0.4, 0.3], [0.5]),
+        # Confusing case: duplicate values at minima
+        ([0.5, 0.4, 0.4, 0.5, 0.3, 0.5], [0.4, 0.3], [0.5]),
+    ],
+)
+def test_get_minimas_maximas(input, expected_minimas, expected_maximas):
+    input_reformatted = [{"feet": f} for f in input]
+    expected_minimas_reformatted = [{"feet": f} for f in expected_minimas]
+    expected_maximas_reformatted = [{"feet": f} for f in expected_maximas]
+    minimas, maximas = get_minimas_maximas(input_reformatted)
+    assert minimas == expected_minimas_reformatted
+    assert maximas == expected_maximas_reformatted
 
 
 TIDE_DATA = [
