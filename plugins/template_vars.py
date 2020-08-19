@@ -65,7 +65,17 @@ def extra_template_vars(datasette):
             },
         )
         tide_times = list(dict(r) for r in results)
-        minimas, maximas = get_minimas_maximas(tide_times)
+        heights = [
+            {
+                "time": tide_time["datetime"].split()[-1],
+                "time_pct": round(
+                    100 * time_to_float(tide_time["datetime"].split()[-1]), 2
+                ),
+                "feet": tide_time["mllw_feet"],
+            }
+            for tide_time in tide_times
+        ]
+        minimas, maximas = get_minimas_maximas(heights)
         place = (
             await db.execute(
                 "select * from places where station_id = (select id from stations where station_id = :station_id)",
@@ -84,10 +94,23 @@ def extra_template_vars(datasette):
         info = {
             "minimas": minimas,
             "maximas": maximas,
+            "heights": heights[1:-1],
         }
         info.update(
             {
                 key: value.astimezone(tz).time().isoformat(timespec="seconds")
+                for key, value in astral_info.items()
+            }
+        )
+        info.update(
+            {
+                "{}_pct".format(key): round(
+                    100
+                    * time_to_float(
+                        value.astimezone(tz).time().isoformat(timespec="seconds")
+                    ),
+                    2,
+                )
                 for key, value in astral_info.items()
             }
         )
@@ -111,8 +134,18 @@ def get_minimas_maximas(tide_times):
             next_ = tide_times[i + 1]
         except IndexError:
             continue
-        if previous["mllw_feet"] < row["mllw_feet"] > next_["mllw_feet"]:
+        if previous["feet"] < row["feet"] > next_["feet"]:
             maximas.append(row)
-        if previous["mllw_feet"] > row["mllw_feet"] < next_["mllw_feet"]:
+        if previous["feet"] > row["feet"] < next_["feet"]:
             minimas.append(row)
     return minimas, maximas
+
+
+def time_to_float(s):
+    if s.count(":") == 2:
+        hh, mm, ss = map(float, s.split(":"))
+    else:
+        hh, mm = map(float, s.split(":"))
+        ss = 0.0
+    # 1 hour = 1/24th, 1 minute = 60th/hour, 1 second = 60th/minute
+    return hh / 24 + ((mm / 60) * (1 / 24)) + ((ss / 60) * (1 / 24 / 60))

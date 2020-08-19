@@ -29,19 +29,31 @@ async def test_tide_data_for_station(db_path):
     datasette = Datasette([db_path])
     tide_data_for_station = extra_template_vars(datasette)["tide_data_for_station"]
     tide_data = await tide_data_for_station(9414131)
-    assert tide_data == {
+    heights = tide_data.pop("heights")
+    expected = {
         "minimas": [
-            {"station_id": 9414131, "datetime": "2020-08-19 05:42", "mllw_feet": -0.77},
-            {"station_id": 9414131, "datetime": "2020-08-19 17:30", "mllw_feet": 1.979},
+            {"time": "05:42", "time_pct": 23.75, "feet": -0.77},
+            {"time": "17:30", "time_pct": 72.92, "feet": 1.979},
         ],
-        "maximas": [
-            {"station_id": 9414131, "datetime": "2020-08-19 12:12", "mllw_feet": 4.97}
-        ],
+        "maximas": [{"time": "12:12", "time_pct": 50.83, "feet": 4.97}],
         "dawn": "06:02:08",
         "sunrise": "06:30:10",
         "noon": "13:13:37",
         "sunset": "19:56:05",
         "dusk": "20:24:02",
+        "dawn_pct": 25.15,
+        "sunrise_pct": 27.09,
+        "noon_pct": 55.11,
+        "sunset_pct": 83.06,
+        "dusk_pct": 85.0,
+    }
+    assert tide_data == expected
+    assert len(heights) == 240
+    # This one has a nice round-ish number for time_pct
+    assert heights[-12] == {
+        "feet": 6.253,
+        "time": "22:48",
+        "time_pct": 95.0,
     }
 
 
