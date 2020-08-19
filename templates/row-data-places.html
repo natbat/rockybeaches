@@ -25,6 +25,25 @@
   </div>
 </section> <!-- end .page-title -->
 
+
+
+{% set species_counts = graphql('''
+{
+  places_row(slug: "pillar-point") {
+    species_counts_list(first: 10, sort_desc: count) {
+      nodes {
+        count
+        taxon {
+          preferred_common_name
+          wikipedia_url
+          default_photo
+        }
+      }
+    }
+  }
+}
+''')["places_row"]["species_counts_list"]["nodes"] %}
+
 <section class="content">
   <div class="primary">
     {{ place.tagline|safe }}
@@ -33,7 +52,13 @@
     <h2>What you could see</h2>
     <div id="species">
       <ul>
-        <li></li>
+        {% for species_count in species_counts %}
+          <li>{{ species_count.taxon.preferred_common_name }} (<em>{{ species_count.taxon.name }}]</em>)
+          - seen {{ species_count.count }} times
+          <img src="{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}" art="{{ species_count.taxon.preferred_common_name }}">
+          </li>
+        {% endfor %}
+      </ul>
     </div>
 
   </div> <!-- end .primary -->
