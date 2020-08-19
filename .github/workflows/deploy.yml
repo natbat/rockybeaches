@@ -39,6 +39,7 @@ jobs:
           --project tidepools-near-me \
           --install datasette-template-sql \
           --install "datasette-graphql>=0.12.3" \
+          --install astral \
           --static static:static \
           --template-dir templates \
           --plugins-dir plugins
