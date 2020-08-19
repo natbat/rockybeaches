@@ -25,10 +25,10 @@ def db_path(tmpdir):
 
 
 @pytest.mark.asyncio
-async def test_tide_data_for_station(db_path):
+async def test_tide_data_for_place(db_path):
     datasette = Datasette([db_path])
-    tide_data_for_station = extra_template_vars(datasette)["tide_data_for_station"]
-    tide_data = await tide_data_for_station(9414131)
+    tide_data_for_place = extra_template_vars(datasette)["tide_data_for_place"]
+    tide_data = await tide_data_for_place("pillar-point")
     heights = tide_data.pop("heights")
     expected = {
         "minimas": [

@@ -189,7 +189,30 @@
 <section class="content">
   <h2 class="stretch" id="when-to-visit"><span>When to visit</span></h2>
   <div class="full">
-    <div class="tides">TODO: tides info here</div>
+    <div class="tides">
+      {% set tide_data = tide_data_for_place(place.slug) %}
+      <div style="
+        width: 100%;
+        height: 60px;
+        background-color: #000000;
+        background: linear-gradient(90deg,
+          #000000 0%,
+          #ffff00 {{ tide_data.dawn_pct }}%,
+          #ff9300 {{ tide_data.sunrise_pct }}%,
+          #fffec5 {{ tide_data.noon_pct }}%,
+          #ffff00 {{ tide_data.sunset_pct }}%,
+          #ffc464 {{ tide_data.dusk_pct }}%,
+          #000000 100%
+        );
+        position: relative;
+      ">
+        {% for minima in tide_data.minimas %}
+          <span style="padding-left: 3px; border-left: 2px solid black; display: block; height: 100%; line-height: 60px; position: absolute; bottom: 0; left: {{ minima.time_pct }}%">
+            {{ minima.time }} {{ minima.feet }}ft
+          </span>
+        {% endfor %}
+      </div>
+    </div>
 
     <h3>Recent observations at {{ place.address }}</h3>
     {% for observation in observations %}

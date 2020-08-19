@@ -55,8 +55,21 @@ order by
 
 @hookimpl
 def extra_template_vars(datasette):
-    async def tide_data_for_station(station_id, day=None):
+    async def tide_data_for_place(place_slug, day=None):
         db = datasette.get_database()
+        place = (
+            await db.execute(
+                "select * from places where slug = :place_slug",
+                {"place_slug": place_slug},
+            )
+        ).first()
+        station = (
+            await db.execute(
+                "select * from stations where id = :station_db_id",
+                {"station_db_id": place["station_id"]},
+            )
+        ).first()
+        station_id = station["station_id"]
         results = await db.execute(
             SQL,
             {
@@ -76,12 +89,6 @@ def extra_template_vars(datasette):
             for tide_time in tide_times
         ]
         minimas, maximas = get_minimas_maximas(heights)
-        place = (
-            await db.execute(
-                "select * from places where station_id = (select id from stations where station_id = :station_id)",
-                {"station_id": station_id},
-            )
-        ).first()
         location_info = LocationInfo(
             place["address"],
             "",
@@ -118,7 +125,7 @@ def extra_template_vars(datasette):
 
     return {
         "json": json,
-        "tide_data_for_station": tide_data_for_station,
+        "tide_data_for_place": tide_data_for_place,
     }
 
 
