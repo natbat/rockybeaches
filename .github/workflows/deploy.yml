@@ -35,7 +35,7 @@ jobs:
           --token $VERCEL_TOKEN \
           --project tidepools-near-me \
           --install datasette-template-sql \
-          --install datasette-graphql>=0.12.3 \
+          --install "datasette-graphql>=0.12.3" \
           --static static:static \
           --template-dir templates \
           --plugins-dir plugins
