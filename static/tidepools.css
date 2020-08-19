@@ -435,23 +435,37 @@ footer {
 }
 .tide-prediction {
 	background-color: rgba(23,106,184,0.05);
-	margin: 1rem 0;
-	padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+	margin: 1rem 0 1rem 0;
+	padding: 0 0 1rem 0;
+
+	display: grid;
+	grid-template-columns: 0.8rem 1fr 0.8rem 3fr 1rem;
+	column-gap: 0;
+	justify-items: stretch;
+	align-items: center;
 }
 .tide-prediction .tide-day {
-	margin: -0.8rem -1.5rem 0.8rem -1.5rem;
+	margin-bottom: 0.8rem;
+	margin-top: 0;
 	text-decoration: none;
-	padding: 0.8rem 1.5rem;
+	padding: 0.6rem 0.8rem 0.5rem 0.8rem;
 	background-color: rgba(23,106,184,0.2);
+	grid-column: 1 / span 5;
 }
-.tide-prediction .day-view {
+
+.tide-prediction .advice {
+	grid-column: 2 / span 3;
+	margin: 0;
+}
+
+.day-view {
 	/* colours are added with inline styles for daylight etc */
 	display: inline-block;
-	width: 50%;
 	height: 60px;
 	margin: 1rem 0 1rem 0;
+	grid-column: 4 / span 1;
 }
-.tide-prediction .minima {
+.day-view .minima {
 	padding-left: 3px;
 	border-left: 2px solid red;
 	display: block;
@@ -463,20 +477,28 @@ footer {
 	line-height: 1;
 	text-align: center;
 }
-.tide-prediction .minima span {
+.day-view .minima span {
 	display: block;
 	width: 5rem;
 	padding: 0;
 }
-.tide-prediction .minima .time {
+.day-view .minima .time {
 	margin-top: -1rem;
 	margin-left: -56%;
 
 }
-.tide-prediction .minima .depth {
+.day-view .minima .depth {
 	padding-top: 50px;
 	margin-top: 1.3rem;
 	margin-left: -56%;
+}
+
+.depth-view {
+	display: inline-block;
+	height: 60px;
+	outline: 1px solid lime;
+	grid-column: 2 / span 1;
+	margin: 0 0 0.5rem 0;
 }
 
 /* Overrides */
