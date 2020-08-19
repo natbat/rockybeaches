@@ -128,6 +128,7 @@ def extra_template_vars(datasette):
         "json": json,
         "tide_data_for_place": tide_data_for_place,
         "next_30_days": next_30_days,
+        "ordinal": ordinal,
     }
 
 
@@ -164,3 +165,15 @@ def time_to_float(s):
         ss = 0.0
     # 1 hour = 1/24th, 1 minute = 60th/hour, 1 second = 60th/minute
     return hh / 24 + ((mm / 60) * (1 / 24)) + ((ss / 60) * (1 / 24 / 60))
+
+
+def ordinal(n):
+    n = abs(n)
+    if n > 100:
+        # Normalize it to range 0-100
+        n -= 100 * (n // 100)
+    if 10 < n < 20:
+        return "th"
+    else:
+        mod_10 = n % 10
+        return {1: "st", 2: "nd", 3: "rd"}.get(mod_10, "th")

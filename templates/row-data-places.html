@@ -194,7 +194,7 @@
 
       {% for day in next_30_days() %}
         <div class="tide-prediction">
-          <p>{{ day.strftime("%A %-d %B %Y") }}</p>
+          <p>{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</p>
           {% set tide_data = tide_data_for_place(place.slug, day) %}
           <div class="day-view" style="
             background: linear-gradient(90deg,
