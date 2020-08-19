@@ -179,6 +179,12 @@ ul.bullets li {
 .content p {
 	margin-bottom: 1rem;
 }
+.content strong {
+	font-weight: bold;
+}
+.content em {
+	font-style: italic;
+}
 /* Page Furniture */
 
 .page {
@@ -430,12 +436,12 @@ footer {
 .tide-prediction {
 	background-color: rgba(23,106,184,0.05);
 	margin: 1rem 0;
-	padding: 0.8rem
+	padding: 0.8rem 1.5rem 0.8rem 1.5rem;
 }
 .tide-prediction .tide-day {
-	margin: -0.8rem -0.8rem 0.8rem -0.8rem;
+	margin: -0.8rem -1.5rem 0.8rem -1.5rem;
 	text-decoration: none;
-	padding: 0.8rem;
+	padding: 0.8rem 1.5rem;
 	background-color: rgba(23,106,184,0.2);
 }
 .tide-prediction .day-view {
@@ -443,21 +449,34 @@ footer {
 	display: inline-block;
 	width: 50%;
 	height: 60px;
+	margin: 1rem 0 1rem 0;
 }
 .tide-prediction .minima {
-	outline: 1px solid red;
-	text-shadow: 1px 1px #ffffff;
 	padding-left: 3px;
-	border-left: 2px solid black;
+	border-left: 2px solid red;
 	display: block;
 	height: 100%;
-	line-height: 60px;
 	position: absolute;
 	bottom: 0;
-	left: 0
+	left: 0;
+	font-size: 0.75rem;
+	line-height: 1;
+	text-align: center;
 }
-.tide-prediction .time {
-	
+.tide-prediction .minima span {
+	display: block;
+	width: 5rem;
+	padding: 0;
+}
+.tide-prediction .minima .time {
+	margin-top: -1rem;
+	margin-left: -56%;
+
+}
+.tide-prediction .minima .depth {
+	padding-top: 50px;
+	margin-top: 1.3rem;
+	margin-left: -56%;
 }
 
 /* Overrides */

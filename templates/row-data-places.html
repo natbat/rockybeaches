@@ -199,7 +199,11 @@
       {% for day in next_30_days() %}
         <div class="tide-prediction">
           <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
+
           {% set tide_data = tide_data_for_place(place.slug, day) %}
+          <p>The lowest tide today is <strong>{{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft</strong> at <strong>{{ tide_data.lowest_tide.time }}</strong></p>
+
+
           <div class="day-view" style="
             background: linear-gradient(90deg,
               #176AB8 0%,
@@ -219,7 +223,6 @@
               </span>
             {% endfor %}
           </div>
-          <p>Lowest tide; {{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft at {{ tide_data.lowest_tide.time }}</p>
         </div>
       {% endfor %}
 
