@@ -427,8 +427,28 @@ footer {
     height: 30vw;
     border: 1px solid #ccc;
 }
-
-
+.tide-prediction {
+	background-color: rgba(23,106,184,0.05);
+	margin-bottom: 1rem;
+	padding: 0.8rem
+}
+.day-view {
+	/* colours are added with inline styles for daylight etc */
+	display: inline-block;
+	width: 50%;
+	height: 60px;
+}
+.minima {
+	text-shadow: 1px 1px #ffffff;
+	padding-left: 3px;
+	border-left: 2px solid black;
+	display: block;
+	height: 100%;
+	line-height: 60px;
+	position: absolute;
+	bottom: 0;
+	left: 0
+}
 
 /* Overrides */
 @media (max-width: 55rem) {

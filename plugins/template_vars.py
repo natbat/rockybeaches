@@ -132,7 +132,7 @@ def extra_template_vars(datasette):
 
 def next_30_days():
     today = datetime.date.today()
-    for i in range(1, 31):
+    for i in range(0, 30):
         yield today + datetime.timedelta(days=i)
 
 
