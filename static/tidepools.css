@@ -432,13 +432,20 @@ footer {
 	margin: 1rem 0;
 	padding: 0.8rem
 }
-.day-view {
+.tide-prediction .tide-day {
+	margin: -0.8rem -0.8rem 0.8rem -0.8rem;
+	text-decoration: none;
+	padding: 0.8rem;
+	background-color: rgba(23,106,184,0.2);
+}
+.tide-prediction .day-view {
 	/* colours are added with inline styles for daylight etc */
 	display: inline-block;
 	width: 50%;
 	height: 60px;
 }
-.minima {
+.tide-prediction .minima {
+	outline: 1px solid red;
 	text-shadow: 1px 1px #ffffff;
 	padding-left: 3px;
 	border-left: 2px solid black;
@@ -448,6 +455,9 @@ footer {
 	position: absolute;
 	bottom: 0;
 	left: 0
+}
+.tide-prediction .time {
+	
 }
 
 /* Overrides */

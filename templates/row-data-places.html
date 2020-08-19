@@ -190,27 +190,32 @@
     <h2 class="stretch"><span>When to visit</span></h2>
     <div class="full">
 
-      <h3>Low tide in the next 30 days</h3>
+      <p>As a general rule it is always a good idea to get to the tidepool site
+        before the lowest tide so that you can have a good time looking at critters
+        before the tide starts to come in.</p>
+
+      <h3>Low tides in the next 30 days</h3>
 
       {% for day in next_30_days() %}
         <div class="tide-prediction">
-          <p>{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</p>
+          <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
           {% set tide_data = tide_data_for_place(place.slug, day) %}
           <div class="day-view" style="
             background: linear-gradient(90deg,
-              #000000 0%,
-              #ffff00 {{ tide_data.dawn_pct }}%,
-              #ff9300 {{ tide_data.sunrise_pct }}%,
-              #fffec5 {{ tide_data.noon_pct }}%,
-              #ffff00 {{ tide_data.sunset_pct }}%,
-              #ffc464 {{ tide_data.dusk_pct }}%,
-              #000000 100%
+              #176AB8 0%,
+              #97bcdf {{ tide_data.dawn_pct }}%,
+              #d1e1f1 {{ tide_data.sunrise_pct }}%,
+              #FFFFFF {{ tide_data.noon_pct }}%,
+              #d1e1f1 {{ tide_data.sunset_pct }}%,
+              #97bcdf {{ tide_data.dusk_pct }}%,
+              #176AB8 100%
             );
             position: relative;
           ">
             {% for minima in tide_data.minimas %}
               <span class="minima" style="left: {{ minima.time_pct }}%">
-                {{ minima.time }} {{ minima.feet }}ft
+                <span class="time">{{ minima.time }}</span>
+                <span class="depth">{{ minima.feet }}ft</span>
               </span>
             {% endfor %}
           </div>
