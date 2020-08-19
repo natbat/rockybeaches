@@ -40,64 +40,65 @@
       }
     }
   }
-  ''')["places_row"]["species_counts_list"]["nodes"] %}
+}
+''')["places_row"]["species_counts_list"]["nodes"] %}
 
-  <section class="content">
-    <div class="primary">
+<section class="content">
+  <div class="primary">
 
-          <p class="intro">{{ place.tagline|safe }}</p>
+        <p class="intro">{{ place.tagline|safe }}</p>
 
-      <ul class="subnav">
-        <!-- <li><a href="#origin">Why here?</a></li> -->
-        <li><a href="#how-to-get-there">How to get there</a></li>
-        <li><a href="#when-to-visit">When to visit</a></li>
-        <li><a href="#other-considerations">Other considerations</a></li>
+    <ul class="subnav">
+      <!-- <li><a href="#origin">Why here?</a></li> -->
+      <li><a href="#how-to-get-there">How to get there</a></li>
+      <li><a href="#when-to-visit">When to visit</a></li>
+      <li><a href="#other-considerations">Other considerations</a></li>
+    </ul>
+
+
+    {{ place.body|safe }}
+
+    <h2>What you could see</h2>
+    <div>
+      <ul class="species-list">
+        {% for species_count in species_counts %}
+          <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="taxa-link-wrap">
+            <h3 class="name"><span class="image" style="background-image: url('{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
+            <p class="latin">{{ species_count.taxon.name }}</p>
+
+          <p class="meta seen">seen here {{ species_count.count }} times</p>
+          </a>
+          </li>
+        {% endfor %}
       </ul>
-
-
-      {{ place.body|safe }}
-
-      <h2>What you could see</h2>
-      <div>
-        <ul class="species-list">
-          {% for species_count in species_counts %}
-            <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="taxa-link-wrap">
-              <h3 class="name"><span class="image" style="background-image: url('{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
-              <p class="latin">{{ species_count.taxon.name }}</p>
-
-            <p class="meta seen">seen here {{ species_count.count }} times</p>
-            </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-
-    </div> <!-- end .primary -->
-
-    <div class="secondary pull-out">
-      <h2>Tidepooling tips</h2>
-      <h3>Stay safe</h3>
-      <ul class="bullets">
-        <li>Never turn your back on the ocean.</li>
-        <li>Wear water shoes and watch your step.</li>
-        <li>Pack water and sunscreen.</li>
-      </ul>
-
-      <h3>Respect the reef</h3>
-      <ul class="bullets">
-        <li>Don't take anything from the reef, leave it for others to enjoy.</li>
-        <li>Leave the reef as you found it, careful where you step and try not to break the reef or step on living things'</li>
-        <li>Take all your litter back home with you.</li>
-      </ul>
-
-      <h3>Have fun!</h3>
-      <ul class="bullets">
-        <li>Take lots of photos, <a href="https://www.inaturalist.org/">upload to iNaturalist</a> for help identifying.</li>
-        <li>If you don't see anything, sit very still, wait and watch!</li>
-      </ul>
-      <!-- <p><a href="#">See more tips</a></p> -->
     </div>
-  </section> <!-- end .page-title -->
+
+  </div> <!-- end .primary -->
+
+  <div class="secondary pull-out">
+    <h2>Tidepooling tips</h2>
+    <h3>Stay safe</h3>
+    <ul class="bullets">
+      <li>Never turn your back on the ocean.</li>
+      <li>Wear water shoes and watch your step.</li>
+      <li>Pack water and sunscreen.</li>
+    </ul>
+
+    <h3>Respect the reef</h3>
+    <ul class="bullets">
+      <li>Don't take anything from the reef, leave it for others to enjoy.</li>
+      <li>Leave the reef as you found it, careful where you step and try not to break the reef or step on living things'</li>
+      <li>Take all your litter back home with you.</li>
+    </ul>
+
+    <h3>Have fun!</h3>
+    <ul class="bullets">
+      <li>Take lots of photos, <a href="https://www.inaturalist.org/">upload to iNaturalist</a> for help identifying.</li>
+      <li>If you don't see anything, sit very still, wait and watch!</li>
+    </ul>
+    <!-- <p><a href="#">See more tips</a></p> -->
+  </div>
+</section> <!-- end .page-title -->
 
 <section class="content">
   <a class="anchor" name="how-to-get-there"></a>
@@ -105,78 +106,77 @@
   <div class="primary">
     {{ place.directions|safe }}
 
-      <h3>Parking</h3>
-      {{ place.parking|safe }}
-    </div>
+    <h3>Parking</h3>
+    {{ place.parking|safe }}
+  </div>
 
-    <div class="secondary">
-      info
-      {{ place.address|safe }}
-      {{ place.phone|safe }}
-      {{ place.open_to_public|safe }}
-      {{ place.bathrooms|safe }}
-      {{ place.visitor_center|safe }}
-      {{ place.docents|safe }}
-      {{ place.dogs|safe }}
-      {{ place.entry_cost|safe }}
-    </div> <!-- end .secondary -->
+  <div class="secondary">
+    info
+    {{ place.address|safe }}
+    {{ place.phone|safe }}
+    {{ place.open_to_public|safe }}
+    {{ place.bathrooms|safe }}
+    {{ place.visitor_center|safe }}
+    {{ place.docents|safe }}
+    {{ place.dogs|safe }}
+    {{ place.entry_cost|safe }}
+  </div> <!-- end .secondary -->
 
-    <div class="primary">
-      <div id="map"></div>
+  <div class="primary">
+    <div id="map"></div>
 
-      <script type="text/javascript">
-      var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              maxZoom: 19,
-              detectRetina: true,
-              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
-          }),
-          latlng = L.latLng({{ place.latitude }}, {{ place.longitude }});
+    <script type="text/javascript">
+    var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            detectRetina: true,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+        }),
+        latlng = L.latLng({{ place.latitude }}, {{ place.longitude }});
 
-      var map = L.map('map', {
-          center: latlng,
-          zoom: 14,
-          layers: [tiles]
+    var map = L.map('map', {
+        center: latlng,
+        zoom: 14,
+        layers: [tiles]
+    });
+    L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km }} * 1000).addTo(map);
+    map.on('moveend', function() {
+      console.log(map.getCenter());
+    });
+    // Fetch things you might see
+    var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km }}&per_page=9";
+    fetch(url).then(
+      response => response.json()
+    ).then(data => {
+      var divs = data.results.map(item => {
+        var div = document.createElement('div');
+        div.innerHTML = `
+          <h3>${item.taxon.preferred_common_name}</h3>
+          <img width="80px" src="${item.taxon.default_photo.medium_url}">
+          <p>Seen ${item.count} time${item.count === 1 ? '' : 's'}</p>
+        `;
+        return div;
       });
-      L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km }} * 1000).addTo(map);
-      map.on('moveend', function() {
-        console.log(map.getCenter());
-      });
-      // Fetch things you might see
-      var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km }}&per_page=9";
-      fetch(url).then(
-        response => response.json()
-      ).then(data => {
-        var divs = data.results.map(item => {
-          var div = document.createElement('div');
-          div.innerHTML = `
-            <h3>${item.taxon.preferred_common_name}</h3>
-            <img width="80px" src="${item.taxon.default_photo.medium_url}">
-            <p>Seen ${item.count} time${item.count === 1 ? '' : 's'}</p>
-          `;
-          return div;
-        });
-        var wrapper = document.getElementById('species');
-        divs.map(div => wrapper.appendChild(div));
-        console.log(divs);
-      });
+      var wrapper = document.getElementById('species');
+      divs.map(div => wrapper.appendChild(div));
+      console.log(divs);
+    });
 
-      </script>
+    </script>
 
-    </div> <!-- end .primary -->
-  </section>
+  </div> <!-- end .primary -->
+</section>
 
-  {% set observations = graphql('''
-  {
-    places_row(slug: "pillar-point") {
-      observations_list(first: 20, sort_desc:observed_on) {
-        nodes {
-          id
-          observed_on
-          user
-          taxon {
-            preferred_common_name
-            name
-          }
+{% set observations = graphql('''
+{
+  places_row(slug: "pillar-point") {
+    observations_list(first: 20, sort_desc:observed_on) {
+      nodes {
+        id
+        observed_on
+        user
+        taxon {
+          preferred_common_name
+          name
         }
       }
     }
@@ -240,61 +240,33 @@
           </span>
         {% endfor %}
       </div>
+    {% endfor %}
 
-      <p>Next 30 days</p>
-
-      {% for day in next_30_days() %}
-        <p><strong>{{ day.strftime("%A %-d %B %Y") }}</strong></p>
-        {% set tide_data = tide_data_for_place(place.slug, day) %}
-        <div style="
-          width: 100%;
-          height: 60px;
-          background-color: #000000;
-          background: linear-gradient(90deg,
-            #000000 0%,
-            #ffff00 {{ tide_data.dawn_pct }}%,
-            #ff9300 {{ tide_data.sunrise_pct }}%,
-            #fffec5 {{ tide_data.noon_pct }}%,
-            #ffff00 {{ tide_data.sunset_pct }}%,
-            #ffc464 {{ tide_data.dusk_pct }}%,
-            #000000 100%
-          );
-          position: relative;
-        ">
-          {% for minima in tide_data.minimas %}
-            <span style="text-shadow: 1px 1px #ffffff; padding-left: 3px; border-left: 2px solid black; display: block; height: 100%; line-height: 60px; position: absolute; bottom: 0; left: {{ minima.time_pct }}%">
-              {{ minima.time }} {{ minima.feet }}ft
-            </span>
-          {% endfor %}
-        </div>
-      {% endfor %}
-
-      <h3>Recent observations at {{ place.address }}</h3>
-      {% for observation in observations %}
-        <p>{{ observation.taxon.preferred_common_name }} spotted <a href="https://www.inaturalist.org/observations/{{ observation.id }}">on {{ observation.observed_on }} by {{ json.loads(observation.user)["loginz"] }}</a></p>
-      {% endfor %}
-    </div>
-  </section>
+    <h3>Recent observations at {{ place.address }}</h3>
+    {% for observation in observations %}
+      <p>{{ observation.taxon.preferred_common_name }} spotted <a href="https://www.inaturalist.org/observations/{{ observation.id }}">on {{ observation.observed_on }} by {{ json.loads(observation.user)["loginz"] }}</a></p>
+    {% endfor %}
+  </div>
+</section>
 
 <section class="content">
   <a class="anchor" name="other-considerations"></a>
   <h2 class="stretch"><span>Other considerations</span></h2>
 
-    <div class="full">
-      <h3>Accessibility and Safety</h3>
-      {{ place.accessibility_and_safety|safe }}
+  <div class="full">
+    <h3>Accessibility and Safety</h3>
+    {{ place.accessibility_and_safety|safe }}
 
-      <!-- <p>TODO repeat general tips and link to read more</p> -->
+    <p>TODO repeat general tips and link to read more</p>
 
-      <h3>Pet Policy</h3>
-      {{ place.pet_policy|safe }}
+    <h3>Pet Policy</h3>
+    {{ place.pet_policy|safe }}
 
-      <h3>Food options</h3>
-      {{ place.food_options|safe }}
+    <h3>Food options</h3>
+    {{ place.food_options|safe }}
 
-    </div>
-  </section> <!-- end .content -->
-</div>
+  </div>
+</section> <!-- end .content -->
 
 <footer class="section">
     <ul class="full">
