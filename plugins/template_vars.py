@@ -102,6 +102,7 @@ def extra_template_vars(datasette):
             "minimas": minimas,
             "maximas": maximas,
             "heights": heights[1:-1],
+            "lowest_tide": list(sorted(heights, key=lambda t: t["feet"]))[0],
         }
         info.update(
             {

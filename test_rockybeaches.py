@@ -36,6 +36,7 @@ async def test_tide_data_for_place(db_path):
             {"time": "17:30", "time_pct": 72.92, "feet": 1.979},
         ],
         "maximas": [{"time": "12:12", "time_pct": 50.83, "feet": 4.97}],
+        "lowest_tide": {"feet": -0.77, "time": "05:42", "time_pct": 23.75},
         "dawn": "06:02:08",
         "sunrise": "06:30:10",
         "noon": "13:13:37",
