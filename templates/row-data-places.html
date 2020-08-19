@@ -153,16 +153,33 @@
   </div> <!-- end .primary -->
 </section>
 
+{% set observations = graphql('''
+{
+  places_row(slug: "pillar-point") {
+    observations_list(first: 20, sort_desc:observed_on) {
+      nodes {
+        id
+        observed_on
+        user
+        taxon {
+          preferred_common_name
+          name
+        }
+      }
+    }
+  }
+}
+''')["places_row"]["observations_list"]["nodes"] %}
+
 <section class="content">
   <h2 class="stretch"><span>When to visit</span></h2>
   <div class="full">
     <div class="tides">TODO: tides info here</div>
 
-    <h3>Species you'll see then </h3>
-    <p>TODO: TAXA</p>
-
     <h3>Recent observations at {{ place.address }}</h3>
-    <p>TODO: recent observations</p>
+    {% for observation in observations %}
+      <p>{{ observation.taxon.preferred_common_name }} spotted <a href="https://www.inaturalist.org/observations/{{ observation.id }}">on {{ observation.observed_on }} by {{ json.loads(observation.user)["loginz"] }}</a></p>
+    {% endfor %}
   </div>
 </section>
 
