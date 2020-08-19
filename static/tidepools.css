@@ -455,7 +455,7 @@ footer {
 
 .tide-prediction .advice {
 	grid-column: 2 / span 3;
-	margin: 0;
+	margin: 0 0 1rem 0;
 }
 
 .day-view {
@@ -486,20 +486,60 @@ footer {
 .day-view .minima .time {
 	margin-top: -1rem;
 	margin-left: -56%;
+	color: rgba(23,106,184,0.9);
 
 }
 .day-view .minima .depth {
 	padding-top: 50px;
 	margin-top: 1.3rem;
 	margin-left: -56%;
+	color: rgba(23,106,184,0.9);
 }
 
 .depth-view {
 	display: inline-block;
 	height: 60px;
-	outline: 1px solid lime;
 	grid-column: 2 / span 1;
 	margin: 1rem 0 1rem 0;
+	position: relative;
+}
+.depth-view:before {
+	position: absolute;
+	display: block;
+	content: " ";
+	width: 100%;
+	height: 1px;
+	top: 50%;
+	left: 0;
+	border-top: 1px solid rgba(23,106,184,0.2);
+	overflow: hidden;
+}
+.depth-view:after {
+	position: absolute;
+	display: block;
+	content: " ";
+	height: 100%;
+	width: 1px;
+	overflow: hidden;
+	border-left: 1px solid rgba(23,106,184,0.2);
+	top: 0;
+	left: 50%;
+}
+.depth-view .depth {
+	display: block;
+	position: absolute;
+	top: 25%;
+	height: 30px;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: #176AB8;
+}
+.depth-view .number {
+	display: inline;
+	color: rgba(23,106,184,0.9);
+	font-size: 0.75rem;
+	position: absolute;
+	top: 0;
 }
 
 /* Overrides */
