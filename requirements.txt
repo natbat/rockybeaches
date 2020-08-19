@@ -7,3 +7,5 @@ yaml-to-sqlite
 httpx
 pytz
 astral
+pytest
+pytest-asyncio
