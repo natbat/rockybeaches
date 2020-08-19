@@ -66,16 +66,9 @@ with lowest_tide_per_day as (
       select
         station_id
       from
-        stations
+        places
       where
-        id = (
-          select
-            station_id
-          from
-            places
-          where
-            slug = :place_slug
-        )
+        slug = :place_slug
     )
   group by
     date(datetime)
@@ -119,11 +112,11 @@ def extra_template_vars(datasette):
         ).first()
         station = (
             await db.execute(
-                "select * from stations where id = :station_db_id",
-                {"station_db_id": place["station_id"]},
+                "select * from stations where id = :station_id",
+                {"station_id": place["station_id"]},
             )
         ).first()
-        station_id = station["station_id"]
+        station_id = station["id"]
         results = await db.execute(
             TIDE_TIMES_SQL,
             {

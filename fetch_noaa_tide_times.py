@@ -30,12 +30,12 @@ def fetch_noaa_tide_times(filepath):
     db = sqlite_utils.Database(filepath)
     tide_predictions = db.table("tide_predictions", pk=("station_id", "datetime"))
     for station in db["stations"].rows:
-        predictions = fetch_predictions(station["station_id"])
+        predictions = fetch_predictions(station["id"])
         with db.conn:
             tide_predictions.insert_all(
                 (
                     {
-                        "station_id": station["station_id"],
+                        "station_id": station["id"],
                         "datetime": p["t"],
                         "mllw_feet": float(p["v"]),
                     }
