@@ -285,9 +285,8 @@ footer {
 	font-size: 0.8em;
 	margin-top: -5.5rem;
 	background-color: rgba(255, 255, 255, 1);
-	border: 1px solid black;
-	border-radius: 1rem;
-	padding: 1rem
+	padding: 1rem;
+	box-shadow: 1px 1px 6px rgba(0,0,0,0.4)
 }
 .pull-out h2 {
 	margin-top: 0;
