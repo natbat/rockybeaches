@@ -4,7 +4,7 @@ import datetime
 import json
 import pytz
 
-SQL = """
+TIDE_TIMES_SQL = """
 with previous_day_last_record as (
   select
     station_id,
@@ -52,9 +52,63 @@ order by
   datetime
 """
 
+BEST_TIMES_SQL = """
+with lowest_tide_per_day as (
+  select
+    station_id,
+    date(datetime) as date,
+    time(datetime) as lowest_tide_time,
+    min(mllw_feet) as lowest_tide
+  from
+    tide_predictions
+  where
+    station_id = (
+      select
+        station_id
+      from
+        stations
+      where
+        id = (
+          select
+            station_id
+          from
+            places
+          where
+            slug = :place_slug
+        )
+    )
+  group by
+    date(datetime)
+)
+select
+  lowest_tide_per_day.date,
+  lowest_tide_per_day.lowest_tide_time,
+  lowest_tide_per_day.lowest_tide,
+  sunrise_sunset.sunrise,
+  sunrise_sunset.sunset
+from
+  lowest_tide_per_day
+  join sunrise_sunset on sunrise_sunset.place = :place_slug
+  and sunrise_sunset.day = lowest_tide_per_day.date
+where
+  lowest_tide_per_day.lowest_tide_time > sunrise_sunset.sunrise
+  and lowest_tide_per_day.lowest_tide_time < sunrise_sunset.sunset
+  and date >= date('now')
+order by
+  date
+"""
+
 
 @hookimpl
 def extra_template_vars(datasette):
+    async def best_times_for_place(place_slug):
+        db = datasette.get_database()
+        best_times = await db.execute(BEST_TIMES_SQL, {"place_slug": place_slug,})
+        rows = [dict(r) for r in best_times]
+        for row in rows:
+            row["date"] = datetime.datetime.strptime(row["date"], "%Y-%m-%d").date()
+        return rows
+
     async def tide_data_for_place(place_slug, day=None):
         db = datasette.get_database()
         place = (
@@ -71,7 +125,7 @@ def extra_template_vars(datasette):
         ).first()
         station_id = station["station_id"]
         results = await db.execute(
-            SQL,
+            TIDE_TIMES_SQL,
             {
                 "station_id": station_id,
                 "day": (day or datetime.date.today()).isoformat(),
@@ -126,6 +180,7 @@ def extra_template_vars(datasette):
 
     return {
         "json": json,
+        "best_times_for_place": best_times_for_place,
         "tide_data_for_place": tide_data_for_place,
         "next_30_days": next_30_days,
         "ordinal": ordinal,
