@@ -547,6 +547,14 @@ footer {
 	top: 0;
 }
 
+
+.best {
+	background-color: rgba(248,231,28,0.05);
+}
+.best .tide-day {
+	background-color: rgba(248,231,28,0.2);
+}
+
 /* Overrides */
 @media (max-width: 55rem) {
 	.title-wrapper {

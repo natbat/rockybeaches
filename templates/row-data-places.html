@@ -215,7 +215,7 @@
           <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
 
           {% set tide_data = tide_data_for_place(place.slug, day) %}
-          <p class="advice">The lowest tide today is <strong>{{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft</strong> at <strong>{{ tide_data.lowest_tide.time }}</strong></p>
+          <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft</strong> at <strong>{{ tide_data.lowest_tide.time }}</strong></p>
 
           <div class="depth-view">
             <span class="depth negative" style="left: 25%; width: 25%">lowest tide is</span> <span class="number" style="left: 25%">-1ft</span>
