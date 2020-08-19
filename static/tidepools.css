@@ -429,7 +429,7 @@ footer {
 }
 .tide-prediction {
 	background-color: rgba(23,106,184,0.05);
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 	padding: 0.8rem
 }
 .day-view {

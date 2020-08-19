@@ -214,6 +214,7 @@
               </span>
             {% endfor %}
           </div>
+          <p>Lowest tide; {{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft at {{ tide_data.lowest_tide.time }}</p>
         </div>
       {% endfor %}
 
