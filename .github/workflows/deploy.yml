@@ -25,13 +25,12 @@ jobs:
     - name: Install Python dependencies
       run: |
         pip install -r requirements.txt
+    - name: Build database
+      run: scripts/build.sh
     - name: Run tests
       run: |
         pytest
-        datasette . --get /us/pillar-point
         datasette . --get /us/pillar-point | grep 'Rocky Beaches'
-    - name: Build database
-      run: scripts/build.sh
     - name: Deploy to Vercel
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
