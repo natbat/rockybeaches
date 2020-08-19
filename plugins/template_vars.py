@@ -126,7 +126,14 @@ def extra_template_vars(datasette):
     return {
         "json": json,
         "tide_data_for_place": tide_data_for_place,
+        "next_30_days": next_30_days,
     }
+
+
+def next_30_days():
+    today = datetime.date.today()
+    for i in range(1, 31):
+        yield today + datetime.timedelta(days=i)
 
 
 def get_minimas_maximas(tide_times):
