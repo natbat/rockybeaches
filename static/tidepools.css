@@ -461,6 +461,7 @@ footer {
 .day-view {
 	/* colours are added with inline styles for daylight etc */
 	display: inline-block;
+	position: relative;
 	height: 60px;
 	margin: 1rem 0 1rem 0;
 	grid-column: 4 / span 1;
@@ -498,7 +499,7 @@ footer {
 	height: 60px;
 	outline: 1px solid lime;
 	grid-column: 2 / span 1;
-	margin: 0 0 0.5rem 0;
+	margin: 1rem 0 1rem 0;
 }
 
 /* Overrides */
