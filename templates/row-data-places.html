@@ -63,7 +63,7 @@
       <div>
         <ul class="species-list">
           {% for species_count in species_counts %}
-            <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="taxa-link-wrap">
+            <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="link-wrap">
               <h3 class="name"><span class="image" style="background-image: url('{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
               <p class="latin">{{ species_count.taxon.name }}</p>
 
@@ -192,24 +192,6 @@
     </div> <!-- end .primary -->
   </section>
 
-  {% set observations = graphql('''
-  {
-    places_row(slug: "pillar-point") {
-      observations_list(first: 20, sort_desc:observed_on) {
-        nodes {
-          id
-          observed_on
-          user
-          taxon {
-            preferred_common_name
-            name
-          }
-        }
-      }
-    }
-  }
-  ''')["places_row"]["observations_list"]["nodes"] %}
-
   <section class="content">
     <!-- <a class="anchor" name="when-to-visit"></a> -->
     <h2 class="stretch"><span>When to visit</span></h2>
@@ -250,7 +232,7 @@
             );
           ">
             <svg style="width: 100%; height: 60px; opacity: 0.5" viewBox="0 -2 240 104" preserveAspectRatio="none">
-              <polyline fill="none" stroke="#0074d9" stroke-width="2"
+              <polyline fill="none" stroke="#176AB8" stroke-width="2"
                 points="{{ tide_data.svg_points }}"
               />
             </svg>
@@ -265,9 +247,41 @@
       {% endfor %}
 
       <h3>Recent observations at {{ place.address }}</h3>
-      {% for observation in observations %}
-        <p>{{ observation.taxon.preferred_common_name }} spotted <a href="https://www.inaturalist.org/observations/{{ observation.id }}">on {{ observation.observed_on }} by {{ json.loads(observation.user)["login"] }}</a></p>
-      {% endfor %}
+
+
+        {% set observations = graphql('''
+        {
+          places_row(slug: "pillar-point") {
+            observations_list(first: 24, sort_desc:observed_on) {
+              nodes {
+                id
+                observed_on
+                user
+                taxon {
+                  preferred_common_name
+                  default_photo
+                  name
+                }
+              }
+            }
+          }
+        }
+        ''')["places_row"]["observations_list"]["nodes"] %}
+
+      <ul class="observation-list">
+        {% for observation in observations %}
+          <li class="observation"><a href="https://www.inaturalist.org/observations/{{ observation.id }}" class="link-wrap">
+            <h4 class="context-text">{{ observation.taxon.preferred_common_name }}. Seen</h4>
+            <span class="image" style="background-image: url('{{ json.loads(observation.taxon.default_photo)["medium_url"] }}')"></span>
+            <p class="name header3">{{ observation.taxon.preferred_common_name }}</p>
+            <p class="latin">{{ observation.taxon.name }}</p>
+
+          <p class="meta seen">spotted here {{ observation.taxon.name }}<!-- TODO 5 days ago --> by {{ json.loads(observation.user)["login"] }}</p>
+          </a>
+          </li>
+        {% endfor %}
+      </ul>
+
     </div>
   </section>
 

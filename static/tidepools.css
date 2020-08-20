@@ -382,7 +382,8 @@ footer {
 	border-color: #176AB8;
 }
 
-.species-list {
+.species-list,
+.observation-list {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -392,17 +393,18 @@ footer {
 	margin-bottom: 1rem;
 	margin-top: 1rem;
 }
-.species {
+.species,
+.observation {
 	flex-basis: 32%;
 	margin-bottom: 2rem;
 	display: block;
 }
-.species .taxa-link-wrap,
-.species .taxa-link-wrap:link,
-.species .taxa-link-wrap:visited,
-.species .taxa-link-wrap:hover,
-.species .taxa-link-wrap:focus,
-.species .taxa-link-wrap:active {
+.link-wrap,
+.link-wrap:link,
+.link-wrap:visited,
+.link-wrap:hover,
+.link-wrap:focus,
+.link-wrap:active {
 	color: black;
 	text-decoration: none;
 	border: none;
