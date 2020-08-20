@@ -2,7 +2,7 @@
 
 [rockybeaches.com](https://www.rockybeaches.com/) helps you find places to go tidepooling, and figure out the best times to go.
 
-The site was built by Natalie Downe ([@natbat](https://twitter.com/natbat)) and Simon Willison ([@simonw](https://twitter.com/simonw)).
+The site was designed by Natalie Downe ([@natbat](https://twitter.com/natbat)) and built by Natalie Downe and Simon Willison ([@simonw](https://twitter.com/simonw)).
 
 It uses data pulled from [iNaturalist](https://www.inaturalist.org/) and the [NOAA Tides & Currents API](https://tidesandcurrents.noaa.gov/web_services_info.html).
 
