@@ -1,6 +1,7 @@
 from datasette.app import Datasette
 from yaml_to_sqlite.cli import cli as yaml_to_sqlite_cli
 from plugins.template_vars import extra_template_vars, get_minimas_maximas
+import datetime
 import pytest
 import pathlib
 import sqlite_utils
@@ -28,7 +29,7 @@ def db_path(tmpdir):
 async def test_tide_data_for_place(db_path):
     datasette = Datasette([db_path])
     tide_data_for_place = extra_template_vars(datasette)["tide_data_for_place"]
-    tide_data = await tide_data_for_place("pillar-point")
+    tide_data = await tide_data_for_place("pillar-point", datetime.date(2020, 8, 18))
     heights = tide_data.pop("heights")
     expected = {
         "minimas": [
