@@ -156,7 +156,7 @@ def extra_template_vars(datasette):
             "maximas": maximas,
             "heights": heights[1:-1],
             "lowest_tide": list(sorted(heights[1:-1], key=lambda t: t["feet"]))[0],
-            "svg_points": " ".join("{},{}".format(i, pct) for i, pct in svg_points),
+            "svg_points": " ".join("{},{:.2f}".format(i, pct) for i, pct in svg_points),
         }
         info.update(
             {
