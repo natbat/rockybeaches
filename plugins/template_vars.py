@@ -142,11 +142,21 @@ def extra_template_vars(datasette):
         )
         tz = pytz.timezone(place["time_zone"])
         astral_info = sun.sun(location_info.observer, date=day)
+        # Calculate SVG points, refs https://github.com/natbat/rockybeaches/issues/31
+        min_feet = min(h["feet"] for h in heights[1:-1])
+        max_feet = max(h["feet"] for h in heights[1:-1])
+        feet_delta = max_feet - min_feet
+        svg_points = []
+        for i, height in enumerate(heights[1:-1]):
+            ratio = (height["feet"] - min_feet) / feet_delta
+            line_height_pct = 100 - (ratio * 100)
+            svg_points.append((i, line_height_pct))
         info = {
             "minimas": minimas,
             "maximas": maximas,
             "heights": heights[1:-1],
             "lowest_tide": list(sorted(heights[1:-1], key=lambda t: t["feet"]))[0],
+            "svg_points": " ".join("{},{}".format(i, pct) for i, pct in svg_points),
         }
         info.update(
             {
