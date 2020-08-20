@@ -419,9 +419,10 @@ footer {
 	box-sizing: border-box;
 	flex-basis: 23%;
 	margin-left: 2.6%;
+	margin-bottom: 1rem;
 }
 .observation:first-child,
-.observation:nth-child(5n) {
+.observation:nth-child(4n+1) {
 	margin-left: 0;
 }
 .link-wrap,
@@ -434,41 +435,73 @@ footer {
 	text-decoration: none;
 	border: none;
 }
-.species .image {
+.species .image,
+.observation .image {
 	display: block;
-	height: 16vw;
-	width: 16vw;
 	max-width: 100%;
 	margin: 0 auto 1rem auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
+}
+.observation .image {
+	margin-bottom: 0.75rem;
+}
+.species .image {
+	height: 16vw;
+	width: 16vw;
 	border-radius: 50%;
 	opacity: 1;
 	transition: opacity 0.3s;
 }
-.species .name {
+.observation .image {
+	height: 18vw;
+	position: relative;
+}
+.observation .by {
+	position: absolute;
+	display: block;;
+	bottom: 0;
+	width: 100%;
+	padding: 0.32rem 0.32rem 0.25rem 0.32rem;
+	box-sizing: border-box;
+	color: rgba(255,255,255,0.5);
+	text-shadow: 1px 1px 1px black;
+	background-color: rgba(0,0,0,0.5);
+	font-size: 0.75rem;
+}
+.species .name,
+.observation .name {
 	margin: 0 0 0.1rem 0;
 	display: block;
 	font-family: 'Nunito', Avenir, sans-serif;
   font-weight: 400;
 	font-size: 1.125rem;
+	text-decoration: none;
 }
-.species .latin {
+.species .latin,
+.observation .latin {
 	margin: 0;
 	display: block;
 	font-size: 0.75rem;
 	font-style: italic;
 	margin-bottom: 0.3rem
 }
-.species .seen {
+.species .seen,
+.observation .seen, {
 	margin: 0;
 	display: block;
 }
-.link-wrap:hover .image,
-.link-wrap:focus .image,
-.link-wrap:active .image {
+.species .link-wrap:hover .image,
+.species .link-wrap:focus .image,
+.species .link-wrap:active .image {
 	opacity: 0.6;
+}
+.observation .link-wrap:hover .by,
+.observation .link-wrap:focus .by,
+.observation .link-wrap:active .by {
+	background-color: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,0.9);
 }
 .link-wrap:hover .name,
 .link-wrap:focus .name,
@@ -651,6 +684,20 @@ footer {
 		height: 19vw;
 		width: 19vw;
 	}
+	.observation {
+		flex-basis: 30%;
+	}
+	.observation .image {
+		height: 25vw;
+	}
+	.observation,
+	.observation:nth-child(4n+1) {
+		margin-left: 1.4%;
+	}
+	.observation:first-child,
+	.observation:nth-child(3n+1) {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 40rem) {
@@ -695,6 +742,21 @@ footer {
 	}
 	.tide-prediction {
 		grid-template-columns: 0.8rem 1fr 1rem 3fr 1rem;
+	}
+	.observation {
+		flex-basis: 49%;
+	}
+	.observation .image {
+		height: 40vw;
+	}
+	.observation,
+	.observation:nth-child(4n+1),
+	.observation:nth-child(3n+1) {
+		margin-left: 2%;
+	}
+	.observation:first-child,
+	.observation:nth-child(2n+1) {
+		margin-left: 0;
 	}
 }
 
