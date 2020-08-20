@@ -575,6 +575,13 @@ footer {
 	background-color: rgba(248,231,28,0.2);
 }
 
+.good-tide {
+	background-image: url('tide.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
 /* Overrides */
 @media (max-width: 55rem) {
 	.title-wrapper {

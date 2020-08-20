@@ -85,7 +85,7 @@
             fun on the tidepools before the tide rises again. Below are the four
             best low tides for {{ place.tagline|safe }} in the next 30 days.</p>
         {% for best_time in best_times %}
-          <p>
+          <p class="good-tide">
             {{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}
             at {{ best_time.lowest_tide_time }} for a {{ best_time.lowest_tide }}ft low tide
             sunrise is {{ best_time.sunrise }} and sunset is {{ best_time.sunset }}
