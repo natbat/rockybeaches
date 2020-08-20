@@ -85,7 +85,10 @@
             fun on the tidepools before the tide rises again. Below are the four
             best low tides for {{ place.tagline|safe }} in the next 30 days during
             daylight hours.</p>
-        {% for best_time in best_times %}
+
+            <pre>best_times: {{ best_times }}</pre>
+
+        {% for best_time in best_times.best_details %}
           <p class="good-tide">
             <strong>{{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}</strong>
             at {{ nice_time(best_time.lowest_tide_time) }} for a low tide of {{ best_time.lowest_tide }}ft.
@@ -221,7 +224,7 @@
       <h3>Low tides in the next 30 days</h3>
 
       {% for day in next_30_days() %}
-        <div class="tide-prediction">
+        <div class="tide-prediction{% if day in best_times.best_dates %} best{% endif %}">
           <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
 
           {% set tide_data = tide_data_for_place(place.slug, day) %}

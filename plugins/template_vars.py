@@ -100,7 +100,10 @@ def extra_template_vars(datasette):
         rows = [dict(r) for r in best_times]
         for row in rows:
             row["date"] = datetime.datetime.strptime(row["date"], "%Y-%m-%d").date()
-        return rows
+        return {
+            "best_details": rows,
+            "best_dates": [r["date"] for r in rows],
+        }
 
     async def tide_data_for_place(place_slug, day=None):
         day = day or datetime.date.today()
