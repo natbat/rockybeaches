@@ -216,7 +216,7 @@
           {% if tide_data.lowest_daylight_minima %}
             {% set depth_view = calculate_depth_view(-2, 2, tide_data.lowest_daylight_minima.feet) %}
             <div class="depth-view">
-              <span class="depth negative" style="left: {{ depth_view.left }}%; width: {{ depth_view.width }}%">lowest tide is</span> <span class="number" style="left: {{ depth_view.left }}%">{{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft</span>
+              <span class="depth negative" style="left: {{ depth_view.left }}%; width: {{ depth_view.width }}%">lowest tide is</span> <span class="number" style="left: {{ depth_view.left }}%">{{ "%.2f"|format(tide_data.lowest_daylight_minima.feet) }}ft</span>
             </div>
           {% endif %}
 
