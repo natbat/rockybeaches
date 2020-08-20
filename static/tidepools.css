@@ -180,7 +180,12 @@ ul.bullets li {
 	list-style-type: circle;
 	margin-bottom: 0.4rem;
 }
-
+.anchor {
+	display: block;
+	position: relative;
+	top: -90px;
+	visibility: hidden;
+}
 .content p {
 	margin-bottom: 1rem;
 }
@@ -190,6 +195,7 @@ ul.bullets li {
 .content em {
 	font-style: italic;
 }
+
 /* Page Furniture */
 
 .page {
@@ -205,6 +211,7 @@ section {
 	justify-items: stretch;
 	align-items: stretch;
 	margin: 0 0 1rem 0;
+	outline: 1px solid red;
 }
 .primary {
 	grid-column: 2 / span 7;
@@ -213,15 +220,18 @@ section {
 .secondary {
 	grid-column: 9 / span 3;
 	margin: 0 0 0.5rem 0;
+	box-sizing: border-box;
 }
 .full {
 	grid-column: 2 / span 10;
 	margin: 0 0 0.5rem 0;
+	box-sizing: border-box;
 }
 .stretch {
 	grid-column: 1 / span 12;
 	padding: 0.5rem 10% 0.3rem 10%;
 	margin: 0 0 0.5rem 0;
+	box-sizing: border-box;
 }
 h1.stretch,
 h2.stretch,
@@ -245,7 +255,6 @@ h6.stretch span {
 header.section {
   background-color: white;
   position: fixed;
-  width: 100%;
   z-index: 20;
 	box-shadow: 0 0 10px rgba(0,0,0,0.7);
 	border-top: 2px solid #176AB8;
@@ -278,12 +287,11 @@ footer {
 }
 .page-title {
   background-image: url('img/content/pillar-point.jpg');
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: 50% 10%;
   background-repeat: no-repeat;
 	background-color: #176AB8;
   padding: 1em 0 0 0;
+	background-size: cover;
 }
 /* .home .page-title {
   background-image: url('img/ripples-in-a-tidepool.jpg'); */
@@ -647,10 +655,4 @@ footer {
 	html {
 		scroll-behavior: auto;
 	}
-}
-.anchor {
-	display: block;
-	position: relative;
-	top: -90px;
-	visibility: hidden;
 }
