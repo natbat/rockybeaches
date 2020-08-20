@@ -252,7 +252,7 @@
               />
             </svg>
             {% for minima in tide_data.minimas %}
-              <span class="minima best-minima" style="left: {{ minima.time_pct }}%">
+              <span class="minima{% if minima == tide_data.lowest_daylight_minima %} best-minima{% endif %}" style="left: {{ minima.time_pct }}%">
                 <span class="time">{{ nice_time(minima.time) }}</span>
                 <span class="depth">{{ "%.2f"|format(minima.feet) }}ft</span>
               </span>
