@@ -137,7 +137,7 @@
       <h3>About {{ place.address }}</h3>
         <ul class="spaced">
           {% if place.phone %}<li>{{ place.phone }}</li>{% endif %}
-          <li><a href="#">Get directions</a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&destination={{ place.directions_latitude or place.latitude }},{{ place.directions_longitude or place.longitude }}">Get directions</a></li>
           {% if place.open_to_public %}<li><strong>Open to the public:</strong> {{ place.open_to_public }}</li>{% endif %}
           {% if place.entry_cost %}<li><strong>Entry cost:</strong> {{ place.entry_cost }}</li>{% endif %}
           {% if place.bathrooms %}<li><strong>Bathrooms nearby:</strong> {{ place.bathrooms }}</li>{% endif %}
