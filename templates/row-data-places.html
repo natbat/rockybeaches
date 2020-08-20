@@ -248,35 +248,37 @@
 
       <h3>Recent observations at {{ place.address }}</h3>
 
+      <!-- TODO only show verified observations -->
+      <!-- TODO use observation photo not taxon photo -->
 
-        {% set observations = graphql('''
-        {
-          places_row(slug: "pillar-point") {
-            observations_list(first: 24, sort_desc:observed_on) {
-              nodes {
-                id
-                observed_on
-                user
-                taxon {
-                  preferred_common_name
-                  default_photo
-                  name
-                }
+      {% set observations = graphql('''
+      {
+        places_row(slug: "pillar-point") {
+          observations_list(first: 24, sort_desc:observed_on) {
+            nodes {
+              id
+              observed_on
+              user
+              taxon {
+                preferred_common_name
+                default_photo
+                name
               }
             }
           }
         }
-        ''')["places_row"]["observations_list"]["nodes"] %}
+      }
+      ''')["places_row"]["observations_list"]["nodes"] %}
 
       <ul class="observation-list">
         {% for observation in observations %}
           <li class="observation"><a href="https://www.inaturalist.org/observations/{{ observation.id }}" class="link-wrap">
             <h4 class="context-text">{{ observation.taxon.preferred_common_name }}. Seen</h4>
-            <span class="image" style="background-image: url('{{ json.loads(observation.taxon.default_photo)["medium_url"] }}')"></span>
-            <p class="name header3">{{ observation.taxon.preferred_common_name }}</p>
+            <div class="image" style="background-image: url('{{ json.loads(observation.taxon.default_photo)["medium_url"] }}')">by {{ json.loads(observation.user)["login"] }} </div>
+            <p class="name header4">{{ observation.taxon.preferred_common_name }}</p>
             <p class="latin">{{ observation.taxon.name }}</p>
 
-          <p class="meta seen">spotted here {{ observation.taxon.name }}<!-- TODO 5 days ago --> by {{ json.loads(observation.user)["login"] }}</p>
+          <p class="meta seen">spotted here {{ observation.taxon.name }}<!-- TODO 5 days ago --> by </p>
           </a>
           </li>
         {% endfor %}

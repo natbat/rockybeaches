@@ -96,7 +96,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.header1,
+.header2,
+.header3,
+.header4,
+.header5,
+.header6  {
   font-family: 'Amaranth', sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -203,7 +209,16 @@ ul.bullets li {
 .content em {
 	font-style: italic;
 }
-
+.context-text {
+	/* for accessibility and hiden from sight */
+	text-indent: -999em;
+	display: block;
+	width:0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
 /* Page Furniture */
 
 .page {
@@ -399,6 +414,16 @@ footer {
 	margin-bottom: 2rem;
 	display: block;
 }
+
+.observation {
+	box-sizing: border-box;
+	flex-basis: 23%;
+	margin-left: 2.6%;
+}
+.observation:first-child,
+.observation:nth-child(5n) {
+	margin-left: 0;
+}
 .link-wrap,
 .link-wrap:link,
 .link-wrap:visited,
@@ -440,14 +465,14 @@ footer {
 	margin: 0;
 	display: block;
 }
-.species .taxa-link-wrap:hover .image,
-.species .taxa-link-wrap:focus .image,
-.species .taxa-link-wrap:active .image {
+.link-wrap:hover .image,
+.link-wrap:focus .image,
+.link-wrap:active .image {
 	opacity: 0.6;
 }
-.species .taxa-link-wrap:hover .name,
-.species .taxa-link-wrap:focus .name,
-.species .taxa-link-wrap:active .name {
+.link-wrap:hover .name,
+.link-wrap:focus .name,
+.link-wrap:active .name {
 	text-decoration: underline;
 }
 
