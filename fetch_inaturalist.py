@@ -24,6 +24,7 @@ def fetch_observations(place):
             "lat": place["latitude"],
             "lng": place["longitude"],
             "radius": place["radius_km"],
+            "quality_grade": "research",
         }
     )
     return httpx.get(url).json()["results"]
