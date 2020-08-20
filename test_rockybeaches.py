@@ -35,6 +35,7 @@ async def test_tide_data_for_place(db_path):
     tide_data_for_place = extra_template_vars(datasette)["tide_data_for_place"]
     tide_data = await tide_data_for_place("pillar-point", datetime.date(2020, 8, 19))
     heights = tide_data.pop("heights")
+    svg_points = tide_data.pop("svg_points")
     expected = {
         "minimas": [
             {"time": "05:42", "time_pct": 23.75, "feet": -0.77},
@@ -64,6 +65,8 @@ async def test_tide_data_for_place(db_path):
         "time": "22:48",
         "time_pct": 95.0,
     }
+    assert svg_points.startswith("0,6.7")
+    assert len(svg_points.split()) == 240
 
 
 @pytest.mark.parametrize(
