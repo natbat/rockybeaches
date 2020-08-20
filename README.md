@@ -1,9 +1,28 @@
 # Rocky Beaches
 
-To build the SQLite database from the YAML in `data/`:
+[rockybeaches.com](https://www.rockybeaches.com/) helps you find places to go tidepooling, and figure out the best times to go.
+
+The site was built by Natalie Downe ([@natbat](https://twitter.com/natbat)) and Simon Willison ([@simonw](https://twitter.com/simonw)).
+
+It uses data pulled from [iNaturalist](https://www.inaturalist.org/) and the [NOAA Tides & Currents API](https://tidesandcurrents.noaa.gov/web_services_info.html).
+
+## Technology used
+
+- [Datasette](https://datasette.io/) and [datasette-graphql](https://github.com/simonw/datasette-graphql)
+- [sqlite-utils](https://sqlite-utils.readthedocs.io/)
+- [yaml-to-sqlite](https://github.com/simonw/yaml-to-sqlite)
+- [astral](https://astral.readthedocs.io/)
+
+## Development
+
+Install dependencies (ideally into a Python virtual environment, e.g. one created with `pipenv shell`):
+
+    pip install -r requirements.txt
+
+Build the SQLite database from the YAML in `data/` plus data fetched from NOAA and iNaturalist:
 
     scripts/build.sh
 
-To run the server:
+Run the development server:
 
     datasette .
