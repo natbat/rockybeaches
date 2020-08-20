@@ -252,7 +252,7 @@
 
       <h3>Recent observations at {{ place.address }}</h3>
       {% for observation in observations %}
-        <p>{{ observation.taxon.preferred_common_name }} spotted <a href="https://www.inaturalist.org/observations/{{ observation.id }}">on {{ observation.observed_on }} by {{ json.loads(observation.user)["loginz"] }}</a></p>
+        <p>{{ observation.taxon.preferred_common_name }} spotted <a href="https://www.inaturalist.org/observations/{{ observation.id }}">on {{ observation.observed_on }} by {{ json.loads(observation.user)["login"] }}</a></p>
       {% endfor %}
     </div>
   </section>
