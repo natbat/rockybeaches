@@ -195,7 +195,6 @@ def extra_template_vars(datasette):
         return info
 
     return {
-        "json": json,
         "best_times_for_place": best_times_for_place,
         "tide_data_for_place": tide_data_for_place,
         "next_30_days": next_30_days,

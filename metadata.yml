@@ -1,0 +1,37 @@
+databases:
+  data:
+    tables:
+      observations:
+        plugins:
+          datasette-graphql:
+            json_columns:
+            - annotations
+            - observed_on_details
+            - created_at_details
+            - reviewed_by
+            - flags
+            - sounds
+            - place_ids
+            - ident_taxon_ids
+            - ofvs
+            - preferences
+            - comments
+            - project_ids
+            - geojson
+            - votes
+            - user
+            - project_ids_without_curator_id
+            - identifications
+            - project_observations
+            - photos
+            - observation_photos
+            - faves
+            - non_owner_ids
+      taxons:
+        plugins:
+          datasette-graphql:
+            json_columns:
+            - flag_counts
+            - default_photo
+            - ancestor_ids
+            - conservation_status

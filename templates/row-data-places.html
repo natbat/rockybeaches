@@ -64,7 +64,7 @@
         <ul class="species-list">
           {% for species_count in species_counts %}
             <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="link-wrap">
-              <h3 class="name"><span class="image" style="background-image: url('{{ json.loads(species_count.taxon.default_photo)["medium_url"] }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
+              <h3 class="name"><span class="image" style="background-image: url('{{ species_count.taxon.default_photo.medium_url }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
               <p class="latin">{{ species_count.taxon.name }}</p>
 
             <p class="meta seen">seen here {{ species_count.count }} times</p>
@@ -274,11 +274,11 @@
         {% for observation in observations %}
           <li class="observation"><a href="https://www.inaturalist.org/observations/{{ observation.id }}" class="link-wrap">
             <h4 class="context-text">{{ observation.taxon.preferred_common_name }}. Seen</h4>
-            <div class="image" style="background-image: url('{{ json.loads(observation.taxon.default_photo)["medium_url"] }}')">by {{ json.loads(observation.user)["login"] }} </div>
-            <p class="name header4">{{ observation.taxon.preferred_common_name }}</p>
+            <span class="image" style="background-image: url('{{ observation.taxon.default_photo.medium_url }}')"></span>
+            <p class="name header3">{{ observation.taxon.preferred_common_name }}</p>
             <p class="latin">{{ observation.taxon.name }}</p>
 
-          <p class="meta seen">spotted here {{ observation.taxon.name }}<!-- TODO 5 days ago --> by </p>
+          <p class="meta seen">spotted here {{ observation.taxon.name }}<!-- TODO 5 days ago --> by {{ observation.user.login }}</p>
           </a>
           </li>
         {% endfor %}
