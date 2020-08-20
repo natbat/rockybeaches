@@ -33,7 +33,7 @@ def db_path(tmpdir):
 async def test_tide_data_for_place(db_path):
     datasette = Datasette([db_path])
     tide_data_for_place = extra_template_vars(datasette)["tide_data_for_place"]
-    tide_data = await tide_data_for_place("pillar-point", datetime.date(2020, 8, 18))
+    tide_data = await tide_data_for_place("pillar-point", datetime.date(2020, 8, 19))
     heights = tide_data.pop("heights")
     expected = {
         "minimas": [
