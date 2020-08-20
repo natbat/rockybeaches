@@ -102,6 +102,21 @@ def extra_template_vars(datasette):
             row["date"] = datetime.datetime.strptime(row["date"], "%Y-%m-%d").date()
         return rows
 
+    async def min_max_for_station(station_id):
+        db = datasette.get_database()
+        result = await db.execute("""
+        select
+            min(mllw_feet) as min_feet,
+            max(mllw_feet) as max_feet
+        from
+            tide_predictions
+        where
+            station_id = :station_id
+            and date(datetime) >= date('now', '-1 days')
+            and datetime < date('now', '30 days')
+        """, {"station_id": station_id})
+        return dict(result.first())
+
     async def tide_data_for_place(place_slug, day=None):
         db = datasette.get_database()
         place = (
@@ -177,6 +192,7 @@ def extra_template_vars(datasette):
         "tide_data_for_place": tide_data_for_place,
         "next_30_days": next_30_days,
         "ordinal": ordinal,
+        "min_max_for_station": min_max_for_station,
     }
 
 
