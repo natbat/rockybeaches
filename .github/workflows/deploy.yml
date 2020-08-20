@@ -37,6 +37,7 @@ jobs:
       run: |-
         datasette publish vercel data.db \
           --token $VERCEL_TOKEN \
+          --metadata metadata.yml \
           --project tidepools-near-me \
           --install datasette-template-sql \
           --install "datasette-graphql>=0.14" \
