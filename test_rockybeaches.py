@@ -88,7 +88,13 @@ def test_get_minimas_maximas(input, expected_minimas, expected_maximas):
 
 @pytest.mark.parametrize(
     "min_tide,max_tide,today_lowest_tide,expected_left,expected_width",
-    [(0, 10, 3, 30, 20), (0, 10, 7, 50, 20),],
+    [
+        (0, 10, 3, 30, 20),
+        (0, 10, 7, 50, 20),
+        # Capped at min/max values
+        (0, 10, -1, 0, 50),
+        (0, 10, 11, 50, 50),
+    ],
 )
 def test_calculate_depth_view(
     min_tide, max_tide, today_lowest_tide, expected_left, expected_width

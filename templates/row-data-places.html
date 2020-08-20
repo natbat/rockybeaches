@@ -216,8 +216,6 @@
 
       <h3>Low tides in the next 30 days</h3>
 
-      {% set min_max = min_max_for_station(place.station_id) %}
-
       {% for day in next_30_days() %}
         <div class="tide-prediction">
           <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
@@ -225,7 +223,7 @@
           {% set tide_data = tide_data_for_place(place.slug, day) %}
           <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft</strong> at <strong>{{ tide_data.lowest_tide.time }}</strong></p>
 
-          {% set depth_view = calculate_depth_view(min_max.min_feet, min_max.max_feet, tide_data.lowest_tide.feet) %}
+          {% set depth_view = calculate_depth_view(-2, 2, tide_data.lowest_tide.feet) %}
           <div class="depth-view" title="{{ depth_view }}">
             <span class="depth negative" style="left: {{ depth_view.left }}%; width: {{ depth_view.width }}%">lowest tide is</span> <span class="number" style="left: {{ depth_view.left }}%">{{ tide_data.lowest_tide.feet }}ft</span>
           </div>

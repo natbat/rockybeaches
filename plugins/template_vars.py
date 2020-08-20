@@ -102,24 +102,6 @@ def extra_template_vars(datasette):
             row["date"] = datetime.datetime.strptime(row["date"], "%Y-%m-%d").date()
         return rows
 
-    async def min_max_for_station(station_id):
-        db = datasette.get_database()
-        result = await db.execute(
-            """
-        select
-            min(mllw_feet) as min_feet,
-            max(mllw_feet) as max_feet
-        from
-            tide_predictions
-        where
-            station_id = :station_id
-            and date(datetime) >= date('now', '-1 days')
-            and datetime < date('now', '30 days')
-        """,
-            {"station_id": station_id},
-        )
-        return dict(result.first())
-
     async def tide_data_for_place(place_slug, day=None):
         day = day or datetime.date.today()
         db = datasette.get_database()
@@ -192,7 +174,6 @@ def extra_template_vars(datasette):
         "tide_data_for_place": tide_data_for_place,
         "next_30_days": next_30_days,
         "ordinal": ordinal,
-        "min_max_for_station": min_max_for_station,
         "calculate_depth_view": calculate_depth_view,
     }
 
@@ -249,6 +230,8 @@ def ordinal(n):
 
 
 def calculate_depth_view(min_tide, max_tide, today_lowest_tide):
+    today_lowest_tide = max(min_tide, today_lowest_tide)
+    today_lowest_tide = min(max_tide, today_lowest_tide)
     total_width = max_tide - min_tide
     distance_from_edge = today_lowest_tide - min_tide
     left = distance_from_edge / total_width * 100
