@@ -89,7 +89,7 @@
           <p class="good-tide">
             <strong>{{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}</strong>
             at {{ nice_time(best_time.lowest_tide_time) }} for a low tide of {{ best_time.lowest_tide }}ft.
-            <span class="meta">sunrise is {{ best_time.sunrise }} and sunset is {{ best_time.sunset }}</span>
+            <span class="meta">sunrise is {{ nice_time(best_time.sunrise) }} and sunset is {{ nice_time(best_time.sunset) }}</span>
           </p>
         {% endfor %}
         <p><a href="#when-to-visit">See more good times to visit.</a></p>
