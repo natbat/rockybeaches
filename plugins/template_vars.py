@@ -175,6 +175,7 @@ def extra_template_vars(datasette):
         "next_30_days": next_30_days,
         "ordinal": ordinal,
         "calculate_depth_view": calculate_depth_view,
+        "nice_time": nice_time,
     }
 
 
@@ -227,6 +228,12 @@ def ordinal(n):
     else:
         mod_10 = n % 10
         return {1: "st", 2: "nd", 3: "rd"}.get(mod_10, "th")
+
+
+def nice_time(s):
+    # Input: 07:42:00 - Output: 2:15pm
+    time = datetime.time(*map(int, s.split(":")))
+    return time.strftime("%-I:%M%p").lower()
 
 
 def calculate_depth_view(min_tide, max_tide, today_lowest_tide):
