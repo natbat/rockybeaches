@@ -254,14 +254,14 @@
       {% set observations = graphql('''
       {
         places_row(slug: "pillar-point") {
-          observations_list(first: 24, sort_desc:observed_on) {
+          observations_list(first: 24, sort_desc:observed_on, filter: {quality_grade: {eq: "research"}}) {
             nodes {
               id
               observed_on
               user
+              observation_photos
               taxon {
                 preferred_common_name
-                default_photo
                 name
               }
             }
@@ -274,11 +274,10 @@
         {% for observation in observations %}
           <li class="observation"><a href="https://www.inaturalist.org/observations/{{ observation.id }}" class="link-wrap">
             <h4 class="context-text">{{ observation.taxon.preferred_common_name }}. Seen</h4>
-            <span class="image" style="background-image: url('{{ observation.taxon.default_photo.medium_url }}')"></span>
+            <div class="image" style="background-image: url('{{ observation.observation_photos.0.photo.url|replace("/square.", "/medium.") }}')"><span class="by">by {{ observation.user.login }}</span></div>
             <p class="name header3">{{ observation.taxon.preferred_common_name }}</p>
             <p class="latin">{{ observation.taxon.name }}</p>
-
-          <p class="meta seen">spotted here {{ observation.taxon.name }}<!-- TODO 5 days ago --> by {{ observation.user.login }}</p>
+            <p class="meta seen">spotted here {{ observation.observed_on }}</p>
           </a>
           </li>
         {% endfor %}
