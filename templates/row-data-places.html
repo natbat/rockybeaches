@@ -28,7 +28,7 @@
   {% set species_counts = graphql('''
   {
     places_row(slug: "pillar-point") {
-      species_counts_list(first: 9, sort_desc: count) {
+      species_counts_list(first: 12, sort_desc: count) {
         nodes {
           count
           taxon {
