@@ -627,6 +627,15 @@ footer {
 }
 
 @media (max-width: 40rem) {
+	.section,
+	section {
+		grid-template-columns: 1% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1%;
+		margin-bottom: 0.8rem;
+	}
+	.stretch {
+		padding-left: 1%;
+		padding-right: 1%
+	}
 	.title-wrapper {
 	  margin-top: 40vw;
 	}
