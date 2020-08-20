@@ -577,9 +577,14 @@ footer {
 
 .good-tide {
 	background-image: url('tide.png');
-	background-position: 0 0;
+	background-position: 0 0.3rem;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 2.5rem;
+	min-height: 2.8rem;
+	padding-left: 3rem;
+}
+.good-tide span {
+	display: block;
 }
 
 /* Overrides */

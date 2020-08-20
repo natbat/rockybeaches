@@ -83,12 +83,13 @@
           see lots of fun critters!</p>
           <p>Try to arrive before the lowest tide time, so that you can have some
             fun on the tidepools before the tide rises again. Below are the four
-            best low tides for {{ place.tagline|safe }} in the next 30 days.</p>
+            best low tides for {{ place.tagline|safe }} in the next 30 days during
+            daylight hours.</p>
         {% for best_time in best_times %}
           <p class="good-tide">
-            {{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}
-            at {{ best_time.lowest_tide_time }} for a {{ best_time.lowest_tide }}ft low tide
-            sunrise is {{ best_time.sunrise }} and sunset is {{ best_time.sunset }}
+            <strong>{{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}</strong>
+            at {{ best_time.lowest_tide_time }} 9am 2:15pm for a low tide of {{ best_time.lowest_tide }}ft.
+            <span class="meta">sunrise is {{ best_time.sunrise }} and sunset is {{ best_time.sunset }}</span>
           </p>
         {% endfor %}
         <p><a href="#when-to-visit">See more good times to visit.</a></p>
