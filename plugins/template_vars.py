@@ -104,7 +104,8 @@ def extra_template_vars(datasette):
 
     async def min_max_for_station(station_id):
         db = datasette.get_database()
-        result = await db.execute("""
+        result = await db.execute(
+            """
         select
             min(mllw_feet) as min_feet,
             max(mllw_feet) as max_feet
@@ -114,10 +115,13 @@ def extra_template_vars(datasette):
             station_id = :station_id
             and date(datetime) >= date('now', '-1 days')
             and datetime < date('now', '30 days')
-        """, {"station_id": station_id})
+        """,
+            {"station_id": station_id},
+        )
         return dict(result.first())
 
     async def tide_data_for_place(place_slug, day=None):
+        day = day or datetime.date.today()
         db = datasette.get_database()
         place = (
             await db.execute(
@@ -133,11 +137,7 @@ def extra_template_vars(datasette):
         ).first()
         station_id = station["id"]
         results = await db.execute(
-            TIDE_TIMES_SQL,
-            {
-                "station_id": station_id,
-                "day": (day or datetime.date.today()).isoformat(),
-            },
+            TIDE_TIMES_SQL, {"station_id": station_id, "day": day.isoformat(),},
         )
         tide_times = list(dict(r) for r in results)
         heights = [
@@ -193,6 +193,7 @@ def extra_template_vars(datasette):
         "next_30_days": next_30_days,
         "ordinal": ordinal,
         "min_max_for_station": min_max_for_station,
+        "calculate_depth_view": calculate_depth_view,
     }
 
 
@@ -245,3 +246,18 @@ def ordinal(n):
     else:
         mod_10 = n % 10
         return {1: "st", 2: "nd", 3: "rd"}.get(mod_10, "th")
+
+
+def calculate_depth_view(min_tide, max_tide, today_lowest_tide):
+    total_width = max_tide - min_tide
+    distance_from_edge = today_lowest_tide - min_tide
+    left = distance_from_edge / total_width * 100
+    if left > 50:
+        width = left - 50
+        left = 50
+    else:
+        width = 50 - left
+    return {
+        "left": left,
+        "width": width,
+    }

@@ -1,6 +1,10 @@
 from datasette.app import Datasette
 from yaml_to_sqlite.cli import cli as yaml_to_sqlite_cli
-from plugins.template_vars import extra_template_vars, get_minimas_maximas
+from plugins.template_vars import (
+    extra_template_vars,
+    get_minimas_maximas,
+    calculate_depth_view,
+)
 import datetime
 import pytest
 import pathlib
@@ -80,6 +84,20 @@ def test_get_minimas_maximas(input, expected_minimas, expected_maximas):
     minimas, maximas = get_minimas_maximas(input_reformatted)
     assert minimas == expected_minimas_reformatted
     assert maximas == expected_maximas_reformatted
+
+
+@pytest.mark.parametrize(
+    "min_tide,max_tide,today_lowest_tide,expected_left,expected_width",
+    [(0, 10, 3, 30, 20), (0, 10, 7, 50, 20),],
+)
+def test_calculate_depth_view(
+    min_tide, max_tide, today_lowest_tide, expected_left, expected_width
+):
+    actual = calculate_depth_view(min_tide, max_tide, today_lowest_tide)
+    assert actual == {
+        "left": expected_left,
+        "width": expected_width,
+    }
 
 
 TIDE_DATA = [
