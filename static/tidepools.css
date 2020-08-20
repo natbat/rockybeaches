@@ -471,6 +471,27 @@ footer {
 	margin: 1rem 0 1rem 0;
 	grid-column: 4 / span 1;
 }
+.day-view:before,
+.day-view:after {
+	content:" ";
+	display: block;
+	position: absolute;
+	top: 17px;
+	height: 26px;
+	width: 26px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0.4;
+}
+.day-view:before {
+	left: 15px;
+	background-image: url('stars-left.png');
+}
+.day-view:after {
+	right: 15px;
+	background-image: url('stars-right.png');
+
+}
 .day-view .minima {
 	padding-left: 3px;
 	border-left: 2px solid red;
@@ -546,7 +567,6 @@ footer {
 	position: absolute;
 	top: 0;
 }
-
 
 .best {
 	background-color: rgba(248,231,28,0.05);

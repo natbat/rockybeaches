@@ -74,6 +74,26 @@
         </ul>
       </div>
 
+      {% set best_times = best_times_for_place(place.slug) %}
+      {% if best_times %}
+        <h3>Good times to visit in the next 30 days</h3>
+        <p>To get the most out of tidepooling, you'll want to go when the tide
+          is low so that the rocks of the beaches are visible and as the ocean
+          tide gets lower it leaves behind little pools of water in which you can
+          see lots of fun critters!</p>
+          <p>Try to arrive before the lowest tide time, so that you can have some
+            fun on the tidepools before the tide rises again. Below are the four
+            best low tides for {{ place.tagline|safe }} in the next 30 days.</p>
+        {% for best_time in best_times %}
+          <p>
+            {{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}
+            at {{ best_time.lowest_tide_time }} for a {{ best_time.lowest_tide }}ft low tide
+            sunrise is {{ best_time.sunrise }} and sunset is {{ best_time.sunset }}
+          </p>
+        {% endfor %}
+        <p><a href="#when-to-visit">See more good times to visit.</a></p>
+      {% endif %}
+
     </div> <!-- end .primary -->
 
     <div class="secondary pull-out">
@@ -193,20 +213,6 @@
       <p>As a general rule it is always a good idea to get to the tidepool site
         before the lowest tide so that you can have a good time looking at critters
         before the tide starts to come in.</p>
-
-        {% set best_times = best_times_for_place(place.slug) %}
-        {% if best_times %}
-          <p>
-            <strong>Good times to go in the next 30 days:</strong>
-            {% for best_time in best_times %}
-              <p>
-                {{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}
-                at {{ best_time.lowest_tide_time }} for a {{ best_time.lowest_tide }}ft low tide
-                sunrise is {{ best_time.sunrise }} and sunset is {{ best_time.sunset }}
-              </p>
-            {% endfor %}
-          </p>
-        {% endif %}
 
       <h3>Low tides in the next 30 days</h3>
 
