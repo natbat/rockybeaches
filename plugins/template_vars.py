@@ -84,8 +84,8 @@ from
   join sunrise_sunset on sunrise_sunset.place = :place_slug
   and sunrise_sunset.day = lowest_tide_per_day.date
 where
-  lowest_tide_per_day.lowest_tide_time > sunrise_sunset.sunrise
-  and lowest_tide_per_day.lowest_tide_time < sunrise_sunset.sunset
+  lowest_tide_per_day.lowest_tide_time >= sunrise_sunset.sunrise
+  and lowest_tide_per_day.lowest_tide_time <= sunrise_sunset.sunset
   and date >= date('now')
 order by
   date
@@ -151,9 +151,22 @@ def extra_template_vars(datasette):
             ratio = (height["feet"] - min_feet) / feet_delta
             line_height_pct = 100 - (ratio * 100)
             svg_points.append((i, line_height_pct))
+        # Figure out the lowest minima that's during daylight
+        sunrise = (
+            astral_info["sunrise"].astimezone(tz).time().isoformat(timespec="minutes")
+        )
+        sunset = (
+            astral_info["sunset"].astimezone(tz).time().isoformat(timespec="minutes")
+        )
+        daytime_minimas = [m for m in minimas if sunrise <= m["time"] <= sunset]
+        if daytime_minimas:
+            lowest_daylight_minima = sorted(daytime_minimas, key=lambda m: m["feet"])[0]
+        else:
+            lowest_daylight_minima = None
         info = {
             "minimas": minimas,
             "maximas": maximas,
+            "lowest_daylight_minima": lowest_daylight_minima,
             "heights": heights[1:-1],
             "lowest_tide": list(sorted(heights[1:-1], key=lambda t: t["feet"]))[0],
             "svg_points": " ".join("{},{:.2f}".format(i, pct) for i, pct in svg_points),

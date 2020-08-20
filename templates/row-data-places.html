@@ -225,7 +225,10 @@
           <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
 
           {% set tide_data = tide_data_for_place(place.slug, day) %}
-          <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_tide.feet) }}ft</strong> at <strong>{{ tide_data.lowest_tide.time }}</strong></p>
+
+          {% if tide_data.lowest_daylight_minima %}
+            <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_daylight_minima.feet) }}ft</strong> at <strong>{{ nice_time(tide_data.lowest_daylight_minima.time) }}</strong></p>
+          {% endif %}
 
           {% set depth_view = calculate_depth_view(-2, 2, tide_data.lowest_tide.feet) %}
           <div class="depth-view">
@@ -250,8 +253,8 @@
             </svg>
             {% for minima in tide_data.minimas %}
               <span class="minima best-minima" style="left: {{ minima.time_pct }}%">
-                <span class="time">{{ minima.time }}</span>
-                <span class="depth">{{ minima.feet }}ft</span>
+                <span class="time">{{ nice_time(minima.time) }}</span>
+                <span class="depth">{{ "%.2f"|format(minima.feet) }}ft</span>
               </span>
             {% endfor %}
           </div>
