@@ -1,4 +1,4 @@
-<!DOCTYPE html lang="en">
+<!DOCTYPE htmllang="en">
 {% set place = rows[0] %}
 <html>
 <head>
@@ -241,7 +241,7 @@
             );
           ">
             {% for minima in tide_data.minimas %}
-              <span class="minima" style="left: {{ minima.time_pct }}%">
+              <span class="minima best-minima" style="left: {{ minima.time_pct }}%">
                 <span class="time">{{ minima.time }}</span>
                 <span class="depth">{{ minima.feet }}ft</span>
               </span>

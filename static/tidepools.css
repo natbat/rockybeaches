@@ -211,7 +211,6 @@ section {
 	justify-items: stretch;
 	align-items: stretch;
 	margin: 0 0 1rem 0;
-	outline: 1px solid red;
 }
 .primary {
 	grid-column: 2 / span 7;
@@ -255,6 +254,7 @@ h6.stretch span {
 header.section {
   background-color: white;
   position: fixed;
+	width: 100%;
   z-index: 20;
 	box-shadow: 0 0 10px rgba(0,0,0,0.7);
 	border-top: 2px solid #176AB8;
@@ -473,7 +473,7 @@ footer {
 
 .day-view {
 	/* colours are added with inline styles for daylight etc */
-	display: inline-block;
+
 	position: relative;
 	height: 60px;
 	margin: 1rem 0 1rem 0;
@@ -502,7 +502,7 @@ footer {
 }
 .day-view .minima {
 	padding-left: 3px;
-	border-left: 2px solid red;
+	border-left: 2px solid black;
 	display: block;
 	height: 100%;
 	position: absolute;
@@ -512,26 +512,29 @@ footer {
 	line-height: 1;
 	text-align: center;
 }
+.day-view .best-minima {
+		border-left-color: red;
+}
 .day-view .minima span {
 	display: block;
-	width: 5rem;
+	width: 1px;
+	overflow: visible;
 	padding: 0;
+	margin-left: -1.25rem;
 }
 .day-view .minima .time {
 	margin-top: -1rem;
-	margin-left: -56%;
 	color: rgba(23,106,184,0.9);
 
 }
 .day-view .minima .depth {
 	padding-top: 50px;
 	margin-top: 1.3rem;
-	margin-left: -56%;
 	color: rgba(23,106,184,0.9);
 }
 
 .depth-view {
-	display: inline-block;
+
 	height: 60px;
 	grid-column: 2 / span 1;
 	margin: 1rem 0 1rem 0;
