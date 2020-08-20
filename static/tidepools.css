@@ -172,13 +172,21 @@ a img {
 	vertical-align: bottom;
 }
 
+ul.bullets,
+ul.spaced,
+ol.spaced {
+	margin-bottom: 0.8rem;
+}
 ul.bullets {
 	padding-left: 0.9rem;
-	margin-bottom: 0.8rem;
+}
+ul.bullets li,
+ul.spaced li,
+ol.spaced li {
+	margin-bottom: 0.4rem;
 }
 ul.bullets li {
 	list-style-type: circle;
-	margin-bottom: 0.4rem;
 }
 .anchor {
 	display: block;

@@ -133,15 +133,18 @@
     </div>
 
     <div class="secondary">
-      info
-      {{ place.address|safe }}
-      {{ place.phone|safe }}
-      {{ place.open_to_public|safe }}
-      {{ place.bathrooms|safe }}
-      {{ place.visitor_center|safe }}
-      {{ place.docents|safe }}
-      {{ place.dogs|safe }}
-      {{ place.entry_cost|safe }}
+      <h3>About {{ place.address }}</h3>
+        <ul class="spaced">
+          {% if place.phone %}<li>{{ place.phone }}</li>{% endif %}
+          <li><a href="#">Get directions</a></li>
+          {% if place.open_to_public %}<li><strong>Open to the public:</strong> {{ place.open_to_public }}</li>{% endif %}
+          {% if place.entry_cost %}<li><strong>Entry cost:</strong> {{ place.entry_cost }}</li>{% endif %}
+          {% if place.bathrooms %}<li><strong>Bathrooms nearby:</strong> {{ place.bathrooms }}</li>{% endif %}
+          {% if place.visitor_center %}<li><strong>Visitor center:</strong> {{ place.visitor_center }}</li>{% endif %}
+          {% if place.docents %}<li><strong>Docents and guides:</strong> {{ place.docents }}</li>{% endif %}
+          {% if place.dogs %}<li><strong>Dogs allowed:</strong> {% if place.pet_policy %}<a href="#pets" title="view pet policy">{% endif %}{{ place.dogs }}{% if place.pet_policy %}</a>{% endif %}</li>{% endif %}
+        </ul>
+
     </div> <!-- end .secondary -->
 
     <div class="primary">
@@ -267,7 +270,7 @@
 
       <!-- <p>TODO repeat general tips and link to read more</p> -->
 
-      <h3>Pet Policy</h3>
+      <h3 id="pets">Pet Policy</h3>
       {{ place.pet_policy|safe }}
 
       <h3>Food options</h3>

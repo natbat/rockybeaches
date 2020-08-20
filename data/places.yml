@@ -8,6 +8,7 @@
   latitude: 37.4954239229958
   longitude: -122.4986519292
   radius_km: 0.5
+  variance: 2 #variance between high and low tide in ft
   body: |-
     <p>Pillar Point is awesome! there is a lot of varity in the types of pool
     left by the tide. The left hand side (looking out to sea) has some small
@@ -46,11 +47,11 @@
     in the marsh to the left, Harbor Seals in the secluded harbor before the
     Jetty and nesting Great Blue Herons in the trees on the walk to the tide
     pools.</p>
-  open_to_public: 1
-  visitor_center: 0
-  bathrooms: 1
-  docents: 0
-  dogs: 1
+  open_to_public: "yes"
+  visitor_center: "no"
+  bathrooms: "yes"
+  docents: "no"
+  dogs: "yes"
   entry_cost: Free
   food_options: |-
     <p>There are lots of restaurants in the nearby town of Granada or in Half Moon Bay.</p>
