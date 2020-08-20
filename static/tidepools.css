@@ -295,10 +295,21 @@ header .title {
 	background-size: cover;
 }
 
-
 footer {
-  min-height: 30vw;
-	background-color: #176AB8;
+  background-color: #176AB8;
+}
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:focus,
+footer a:active {
+  display: inline;
+  color: white;
+  text-decoration: none;
+}
+footer li {
+  display: inline;
+  margin-right: 1em;
 }
 
 .title-wrapper {
