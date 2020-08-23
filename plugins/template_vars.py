@@ -135,6 +135,8 @@ def extra_template_vars(datasette):
             }
             for tide_time in tide_times
         ]
+        if len(heights) < 3:
+            return None
         minimas, maximas = get_minimas_maximas(heights)
         location_info = LocationInfo(
             place["address"],

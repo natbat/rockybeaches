@@ -70,6 +70,14 @@ async def test_tide_data_for_place(db_path):
     assert len(svg_points.split()) == 240
 
 
+@pytest.mark.asyncio
+async def test_tide_data_for_place_if_day_not_available(db_path):
+    datasette = Datasette([db_path])
+    tide_data_for_place = extra_template_vars(datasette)["tide_data_for_place"]
+    tide_data = await tide_data_for_place("pillar-point", datetime.date(2020, 8, 25))
+    assert tide_data is None
+
+
 @pytest.mark.parametrize(
     "input,expected_minimas,expected_maximas",
     [
