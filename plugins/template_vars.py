@@ -106,7 +106,6 @@ def extra_template_vars(datasette):
         }
 
     async def tide_data_for_place(place_slug, day=None):
-        day = day or datetime.date.today()
         db = datasette.get_database()
         place = (
             await db.execute(
@@ -114,6 +113,9 @@ def extra_template_vars(datasette):
                 {"place_slug": place_slug},
             )
         ).first()
+        # Use the timezone to figure out today
+        if day is None:
+            day = datetime.datetime.now(pytz.timezone(place["time_zone"])).date()
         station = (
             await db.execute(
                 "select * from stations where id = :station_id",

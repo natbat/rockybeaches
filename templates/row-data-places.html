@@ -57,23 +57,7 @@
         <li><a href="#other-considerations">Other considerations</a></li>
       </ul>
 
-
       {{ place.body|safe }}
-
-      <h2>What you could see</h2>
-      <div>
-        <ul class="species-list">
-          {% for species_count in species_counts %}
-            <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="link-wrap">
-              <h3 class="name"><span class="image" style="background-image: url('{{ species_count.taxon.default_photo.medium_url }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
-              <p class="latin">{{ species_count.taxon.name }}</p>
-
-            <p class="meta seen">seen here {{ species_count.count }} times</p>
-            </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
 
       {% set best_times = best_times_for_place(place.slug) %}
       {% if best_times %}
@@ -94,9 +78,56 @@
             <span class="meta">sunrise is {{ nice_time(best_time.sunrise) }} and sunset is {{ nice_time(best_time.sunset) }}</span>
           </p>
         {% endfor %}
-        <p><a href="#when-to-visit">See more good times to visit.</a></p>
+        <p><a href="#when-to-visit">See more good times to visit</a></p>
       {% endif %}
 
+      {% set tide_data = tide_data_for_place(place.slug) %}
+      {% if tide_data %}
+        <div class="tide-prediction{% if day in best_times.best_dates %} best{% endif %}">
+          <h4 class="tide-day header3">Low tides today</h4>
+          {% if tide_data.lowest_daylight_minima %}
+            <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_daylight_minima.feet) }}ft</strong> at <strong>{{ nice_time(tide_data.lowest_daylight_minima.time) }}</strong></p>
+          {% endif %}
+          <div class="day-view wider" style="
+            background: linear-gradient(90deg,
+              #176AB8 0%,
+              #97bcdf {{ tide_data.dawn_pct }}%,
+              #d1e1f1 {{ tide_data.sunrise_pct }}%,
+              #FFFFFF {{ tide_data.noon_pct }}%,
+              #d1e1f1 {{ tide_data.sunset_pct }}%,
+              #97bcdf {{ tide_data.dusk_pct }}%,
+              #176AB8 100%
+            );
+          ">
+            <svg style="width: 100%; height: 60px; opacity: 0.5" viewBox="0 -2 240 104" preserveAspectRatio="none">
+              <polyline fill="none" stroke="#176AB8" stroke-width="2"
+                points="{{ tide_data.svg_points }}"
+              />
+            </svg>
+            {% for minima in tide_data.minimas %}
+              <span class="minima{% if minima == tide_data.lowest_daylight_minima %} best-minima{% endif %}" style="left: {{ minima.time_pct }}%">
+                <span class="time">{{ nice_time(minima.time) }}</span>
+                <span class="depth">{{ "%.2f"|format(minima.feet) }}ft</span>
+              </span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <h2>What you could see</h2>
+      <div>
+        <ul class="species-list">
+          {% for species_count in species_counts %}
+            <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="link-wrap">
+              <h3 class="name"><span class="image" style="background-image: url('{{ species_count.taxon.default_photo.medium_url }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
+              <p class="latin">{{ species_count.taxon.name }}</p>
+
+            <p class="meta seen">seen here {{ species_count.count }} times</p>
+            </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div> <!-- end .primary -->
 
     <div class="secondary pull-out">

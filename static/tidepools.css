@@ -552,11 +552,13 @@ footer li {
 
 .day-view {
 	/* colours are added with inline styles for daylight etc */
-
 	position: relative;
 	height: 60px;
 	margin: 1rem 0 1rem 0;
 	grid-column: 4 / span 1;
+}
+.day-view.wider {
+	grid-column: 2 / span 3;
 }
 .day-view:before,
 .day-view:after {
