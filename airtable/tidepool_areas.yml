@@ -93,7 +93,7 @@
   station_id: 9414131
   docents: 'Yes'
   area: Half moon bay
-  slug: firzgerald-marine-reserve
+  slug: fitzgerald-marine-reserve
   rules_and_collecting_url: http://www.fitzgeraldreserve.org/newffmrsite/good-tidepooler-rules-of-conduct/
   live_on_site: true
   tidepool_height: 1
@@ -168,12 +168,15 @@
     \ up.</p>\n\n<p>Do not disturb the Harbor seals, Stay a safe 50ft distance away\
     \ from them.  If there are orange cones present on the beach or reef, stay on\
     \ the side of the cones farthest away from the seals.</p>\n\n<p>USE SPECIAL CAUTION\
-    \ during the March-to-June pupping season, because if a mother seal is scared\
-    \ away from her baby, she is likely to abandon the pup, which will die. If you\
-    \ see a pup that looks abandoned, STAY AWAY and call the reserve staff. They will\
-    \ monitor the pup and contact the Marine Mammal Center for a rescue if necessary.</p>"
+    \ during the March-to-June harbour seal pupping season, because if a mother seal\
+    \ is scared away from her baby, she is very likely to abandon the pup, which will\
+    \ die. If you see a pup that looks abandoned, STAY AWAY and call the reserve staff.\
+    \ They will monitor the pup and contact the Marine Mammal Center for a rescue\
+    \ if necessary.</p>"
   address: 200 Nevada Ave. Moss Beach, Ca
   visitor_center: 'Yes'
+  tagline: Magnificent reef to visit for first-time tidepoolers and experienced naturalists
+    alike.
   airtable_createdTime: '2017-11-26T01:40:01.000Z'
 - airtable_id: recDbQJmfGBK4ra5S
   area: Pescadero
