@@ -143,6 +143,8 @@
     \ use either Highway 1 or Highway 92).</p>\n\n<p>Buses will be directed where\
     \ to park upon arrival.</p>\n\n<p>Parking is extremely limited. If your group\
     \ is traveling by car, carpooling is required.</p>"
+  tagline: Magnificent reef to visit for first-time tidepoolers and experienced naturalists
+    alike.
   phone: (650) 728-3584
   latitude: 37.510556
   body: "Great selection of tide-pools with an excellent visitors Center \n\nThis\
@@ -189,8 +191,6 @@
     \ if necessary.</p>"
   address: 200 Nevada Ave. Moss Beach, Ca
   visitor_center: 'Yes'
-  tagline: Magnificent reef to visit for first-time tidepoolers and experienced naturalists
-    alike.
   airtable_createdTime: '2017-11-26T01:40:01.000Z'
 - airtable_id: recDbQJmfGBK4ra5S
   area: Pescadero
