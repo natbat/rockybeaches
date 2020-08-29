@@ -97,7 +97,7 @@
   rules_and_collecting_url: http://www.fitzgeraldreserve.org/newffmrsite/good-tidepooler-rules-of-conduct/
   live_on_site: true
   tidepool_height: 1
-  radius: 0.5
+  radius_km: 0.5
   header_image:
   - id: attrjkoiKpEvxvSzg
     url: https://dl.airtable.com/.attachments/d460d58b2e6c73b2d4cb0269c08fde3a/edef3bb4/2020-08-2821.59.14.jpg
@@ -125,7 +125,7 @@
     specific openings.
   header_credit: Anlace
   longitude: -122.509722
-  variance: 2
+  variance_ft: 2
   managment:
   - San Mateo County Parks
   pet_policy: No dogs at all, do not bring dogs with you.
@@ -133,7 +133,7 @@
     in Half Moon Bay. The historic cliff-top restaurant Moss Beach Distillery is just
     South of the reserve and has been operating since 1927. </p>
   wikipedia: https://en.m.wikipedia.org/wiki/Fitzgerald_Marine_Reserve
-  timezone: America/Los_Angeles
+  time_zone: America/Los_Angeles
   dogs: 'No'
   cost: Free
   parking: "<p>From Highway 1 at Moss Beach, turn west on California Avenue and proceed\
@@ -390,18 +390,18 @@
   live_on_site: true
   official_open: true
   tidepool_height: 1
-  radius: 0.5
+  radius_km: 0.5
   groups: <p>Groups are allowed</p>
   name: Pillar point
   picnic_options: <p>Lots of space on the beach for picnics, no fires allowed though.
     Be careful not to sit too close to the cliffs because rock fall is common.</p>
   longitude: -122.4986519292
-  variance: 2
+  variance_ft: 2
   pet_policy: <p>Dogs are allowed on-leash on the beach here.</p>
   food_options: <p>There are lots of restaurants in the nearby town of Granada or
     in Half Moon Bay.</p>
   wikipedia: https://en.m.wikipedia.org/wiki/Pillar_Point_Harbor
-  timezone: America/Los_Angeles
+  time_zone: America/Los_Angeles
   dogs: 'Yes'
   cost: Free
   parking: ' <p>Parking available at the radar station and in the overflow carpark.
