@@ -41,5 +41,5 @@ if __name__ == "__main__":
         pk=("place", "day"),
         foreign_keys=(("place", "places", "slug"),),
     )
-    for place in db["places"].rows:
+    for place in db["places"].rows_where("live_on_site = 1"):
         table.insert_all(calculate_sunrise_sunset(place), replace=True)

@@ -1,6 +1,6 @@
 sqlite-utils
 datasette
-datasette-graphql>=0.14
+datasette-graphql>=1.0.1
 datasette-publish-vercel>=0.8
 yaml-to-sqlite
 httpx

@@ -33,7 +33,7 @@ def fetch_observations(place):
 if __name__ == "__main__":
     assert sys.argv[-1].endswith(".db")
     db = sqlite_utils.Database(sys.argv[-1])
-    for place in db["places"].rows:
+    for place in db["places"].rows_where("live_on_site = 1"):
         for species_count in fetch_species_counts(place):
             db["taxons"].insert(
                 species_count["taxon"], pk="id", replace=True, alter=True

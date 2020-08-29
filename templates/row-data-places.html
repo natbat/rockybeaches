@@ -2,7 +2,7 @@
 {% set place = rows[0] %}
 <html>
 <head>
-<title>Rocky Beaches. {{ place.address }}</title>
+<title>Rocky Beaches. {{ place.name }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -22,13 +22,13 @@
 <div class="page">
   <section class="page-title">
     <div class="title-wrapper stretch">
-      <h1 class="text"><span>{{ place.address }}</span></h1>
+      <h1 class="text"><span>{{ place.name }}</span></h1>
     </div>
   </section> <!-- end .page-title -->
 
   {% set species_counts = graphql('''
-  {
-    places_row(slug: "pillar-point") {
+  query ($slug: String) {
+    places_row(slug: $slug) {
       species_counts_list(first: 12, sort_desc: count) {
         nodes {
           count
@@ -43,12 +43,12 @@
       }
     }
   }
-  ''')["places_row"]["species_counts_list"]["nodes"] %}
+  ''', variables={"slug": place.slug})["places_row"]["species_counts_list"]["nodes"] %}
 
   <section class="content">
     <div class="primary">
 
-          <p class="intro">{{ place.tagline|safe }}</p>
+      {% if place.tagline %}<p class="intro">{{ place.tagline }}</p>{% endif %}
 
       <ul class="subnav">
         <!-- <li><a href="#origin">Why here?</a></li> -->
@@ -166,7 +166,8 @@
     </div>
 
     <div class="secondary">
-      <h3>About {{ place.address }}</h3>
+      <h3>About {{ place.name }}</h3>
+      {% if place.address %}<p>{{ place.address }}</p>{% endif %}
         <ul class="spaced">
           {% if place.phone %}<li>{{ place.phone }}</li>{% endif %}
           <li><a href="https://www.google.com/maps/dir/?api=1&destination={{ place.directions_latitude or place.latitude }},{{ place.directions_longitude or place.longitude }}">Get directions</a></li>
@@ -278,14 +279,11 @@
         {% endif %}
       {% endfor %}
 
-      <h3>Recent observations at {{ place.address }}</h3>
-
-      <!-- TODO only show verified observations -->
-      <!-- TODO use observation photo not taxon photo -->
+      <h3>Recent observations at {{ place.name }}</h3>
 
       {% set observations = graphql('''
-      {
-        places_row(slug: "pillar-point") {
+      query ($slug: String) {
+        places_row(slug: $slug) {
           observations_list(first: 24, sort_desc:observed_on, filter: {quality_grade: {eq: "research"}}) {
             nodes {
               id
@@ -300,7 +298,7 @@
           }
         }
       }
-      ''')["places_row"]["observations_list"]["nodes"] %}
+      ''', variables={"slug": place.slug})["places_row"]["observations_list"]["nodes"] %}
 
       <ul class="observation-list">
         {% for observation in observations %}

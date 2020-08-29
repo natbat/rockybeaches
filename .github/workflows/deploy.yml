@@ -43,7 +43,7 @@ jobs:
           --metadata metadata.yml \
           --project tidepools-near-me \
           --install datasette-template-sql \
-          --install "datasette-graphql>=0.14" \
+          --install "datasette-graphql>=1.0.1" \
           --install astral \
           --static static:static \
           --template-dir templates \
