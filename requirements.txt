@@ -8,4 +8,4 @@ pytz
 astral
 pytest
 pytest-asyncio
-airtable-export
+airtable-export>=0.3
