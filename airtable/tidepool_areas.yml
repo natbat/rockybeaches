@@ -95,7 +95,7 @@
   area: Half moon bay
   slug: firzgerald-marine-reserve
   rules_and_collecting_url: http://www.fitzgeraldreserve.org/newffmrsite/good-tidepooler-rules-of-conduct/
-  live-on-site: true
+  live_on_site: true
   tidepool_height: 1
   radius: 0.5
   header_image:
@@ -387,7 +387,7 @@
   area: Half moon bay
   slug: pillar-point
   rules_and_collecting_url: https://wildlife.ca.gov/Fishing/Ocean
-  live-on-site: true
+  live_on_site: true
   official_open: true
   tidepool_height: 1
   radius: 0.5
