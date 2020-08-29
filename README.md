@@ -11,6 +11,7 @@ It uses data pulled from [iNaturalist](https://www.inaturalist.org/) and the [NO
 - [Datasette](https://datasette.io/) and [datasette-graphql](https://github.com/simonw/datasette-graphql)
 - [sqlite-utils](https://sqlite-utils.readthedocs.io/)
 - [yaml-to-sqlite](https://github.com/simonw/yaml-to-sqlite)
+- [airtable-export](https://github.com/simonw/airtable-export)
 - [astral](https://astral.readthedocs.io/)
 
 ## Development
