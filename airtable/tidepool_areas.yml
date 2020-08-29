@@ -120,7 +120,7 @@
   groups: "<p>If you\u2019re bringing a group of 15 or more, you must reserve a time\
     \ and date for a docent-led tour. Consult <a href=\"http://www.fitzgeraldreserve.org/newffmrsite/lowtides/group-tour-times\"\
     >their website for tour dates and reservations</a>.</p>"
-  name: 'James Fitzgerald marine reserve '
+  name: 'James Fitzgerald Marine Reserve '
   hours: Opens at 8am. Closing time varies seasonally, check the reserve website for
     specific openings.
   header_credit: Anlace
@@ -145,12 +145,26 @@
     \ is traveling by car, carpooling is required.</p>"
   phone: (650) 728-3584
   latitude: 37.510556
-  body: |-
-    Adjacent to and possibly within the reserve is an endangered species of butterfly, the San Bruno elfin butterfly.
-
-    This is the place to marvel at the diversity of California tide pool geology and aquatic life. At low tide the exposed Bay Area tide pools and concentric rings of offshore rocks beckon you to explore. In quiet pools, look for hermit crabs, purple shore crabs and starfish. One of the more common algae is the brown, thirty-foot long feather boa kelp. If you look up quickly, you may catch a harbor seal watching you. From the sheltered sandy cove at the south end of the Reserve, take the trail to the bluff tops to return to the parking lot. Walk through the tangled garden of an old estate and through a century-old forest of wind-sculpted Monterey cypress trees. In the spring, California gray whales migrate north offshore. In the summer and fall, brown pelicans skim wave tops.
-
-    Just a short drive from scenic Half Moon Bay you will find the James Fitzgerald Marine Reserve. This 3-mile stretch of protected beach, tide pools, marshes and bluffs is a great place to bring the kids. Admission is free and on weekends and holidays you can find volunteer naturalists roaming the tide pools who are willing to point out sea urchins, barnacles, seastars and more. Very close to the tide pools is an area that is reserved for the harbor seals, a fun sight in their own right. No dogs allowed and remember to wear some good shoes for gripping the slippery rocks.
+  body: "Great selection of tide-pools with an excellent visitors Center \n\nThis\
+    \ 3-mile stretch of protected beach, tide pools, marshes and bluffs is a great\
+    \ \n\nAdjacent to and possibly within the reserve is an endangered species of\
+    \ butterfly, the San Bruno elfin butterfly.\n\nThis is the place to marvel at\
+    \ the diversity of California tide pool geology and aquatic life. At low tide\
+    \ the exposed Bay Area tide pools and concentric rings of offshore rocks beckon\
+    \ you to explore. In quiet pools, look for hermit crabs, purple shore crabs and\
+    \ starfish. One of the more common algae is the brown, thirty-foot long feather\
+    \ boa kelp. If you look up quickly, you may catch a harbor seal watching you.\
+    \ From the sheltered sandy cove at the south end of the Reserve, take the trail\
+    \ to the bluff tops to return to the parking lot. Walk through the tangled garden\
+    \ of an old estate and through a century-old forest of wind-sculpted Monterey\
+    \ cypress trees. In the spring, California gray whales migrate north offshore.\
+    \ In the summer and fall, brown pelicans skim wave tops.\n\nThis 3-mile stretch\
+    \ of protected beach, tide pools, marshes and bluffs is a great place to bring\
+    \ the kids. Admission is free and on weekends and holidays you can find volunteer\
+    \ naturalists roaming the tide pools who are willing to point out sea urchins,\
+    \ barnacles, seastars and more. Very close to the tide pools is an area that is\
+    \ reserved for the harbor seals, a fun sight in their own right. No dogs allowed\
+    \ and remember to wear some good shoes for gripping the slippery rocks."
   bathrooms: 'Yes'
   open_to_public: 'Yes'
   website_url: http://fitzgeraldreserve.org/
@@ -395,7 +409,7 @@
   tidepool_height: 1
   radius_km: 0.5
   groups: <p>Groups are allowed</p>
-  name: Pillar point
+  name: Pillar Point
   picnic_options: <p>Lots of space on the beach for picnics, no fires allowed though.
     Be careful not to sit too close to the cliffs because rock fall is common.</p>
   longitude: -122.4986519292
