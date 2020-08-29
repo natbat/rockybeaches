@@ -20,7 +20,7 @@ def db_path(tmpdir):
         db_path, "stations", open(root / "data" / "stations.yml"), "id"
     )
     yaml_to_sqlite_cli.callback(
-        db_path, "places", open(root / "data" / "places.yml"), "slug"
+        db_path, "places", open(root / "airtable" / "tidepool_areas.yml"), "slug"
     )
     # Fake tide data
     sqlite_utils.Database(db_path)["tide_predictions"].insert_all(
