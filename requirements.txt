@@ -8,3 +8,4 @@ pytz
 astral
 pytest
 pytest-asyncio
+airtable-to-yaml
