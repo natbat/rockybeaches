@@ -291,25 +291,50 @@
   name: 'Shell beach '
   phone: (707) 875-3483
   slug: shell-beach
-- address: Sea Cliff Ave., San Francisco, Ca
+- accessibility_and_safety: There are no lifeguards are on duty And there are really
+    unpredictable surf conditions so swimming is not recommended.
+  address: Sea Cliff Ave., San Francisco, Ca
   airtable_createdTime: '2017-11-26T03:05:15.000Z'
   airtable_id: recN7luusZmaXjtOj
   area: Bay area
   bathrooms: 'Yes'
-  body: 'China Beach is in a tiny cove tucked between Lands End and Baker Beach in
-    the Sea Cliff neighborhood of San Francisco. A great spot for a photo of the kids
-    with the Golden Gate Bridge in the background, this beach has a grill and picnic
-    tables (plus bathrooms, yay!) available for public use. At low tide, head down
-    the long flight of stairs to the sand and take a walk along the shore towards
-    Baker Beach to check out the sea anemones, mussels and seastars clinging to the
-    rocky crevices. '
+  body: "beach is via a paved drive or stairway down from the parking lot to water\
+    \ level.\n\nTucked between Lands End and Baker Beach, Down a paved drive or stairway\
+    \ from the parking lot, China Beach in San Francisco is a national park site.\
+    \ Well loved for its beach access, tide pools, picnic area, and spectacular views\
+    \ of the Marin Headlands and Golden Gate Bridge.\n\nChina Beach is in a tiny cove\
+    \ tucked between Lands End and Baker Beach in the Sea Cliff neighborhood of San\
+    \ Francisco. A great spot for a photo of the kids with the Golden Gate Bridge\
+    \ in the background, this beach has a grill and picnic tables (plus bathrooms,\
+    \ yay!) available for public use. At low tide, head down the long flight of stairs\
+    \ to the sand and take a walk along the shore towards Baker Beach to check out\
+    \ the sea anemones, mussels and seastars clinging to the rocky crevices. "
   cost: Free
+  directions_to_tidepools: Access to the beach is via a paved drive or stairway down
+    from the parking lot to water level.
+  docents: 'No'
+  dogs: 'No'
+  managment:
+  - National park
   name: China beach
+  official_open: true
   open_to_public: 'Yes'
   parking: Parking can be tricky so arrive early in the day for the best chance of
     grabbing a spot in the small parking lot.
-  picnic_options: checked
+  pet_policy: No pets allowed.
+  picnic_options: "<p>Picnic tables are on a first come first served above beach level,\
+    \ there\u2019s a sheltered sandy cove for picnics too. </p>\n\n<p>To sunbathe\
+    \ out of the wind, there is a small deck on top of the lifeguard equipment pick-up\
+    \ station.</p>\n\n<p>There\u2019s no fires allowed on the beach but there are\
+    \ prepared grills and available if you get there early, no reservations are possible.</p>\n\
+    \n<p>Restrooms and cold water showers are open sunrise to sunset.</p>"
+  rules_and_collecting: No fires or glass containers are allowed.
   slug: china-beach
+  tagline: Descend the stairs and take a low tide walk from the tiny cove of China
+    beach through to Bakers beach.
+  time_zone: America/Los_Angeles
+  visitor_center: 'No'
+  website_url: https://www.parksconservancy.org/parks/china-beach
 - address: 'Highway 1, Pescadero '
   airtable_createdTime: '2017-11-26T02:38:06.000Z'
   airtable_id: recPeqGeNXsAgzaOk
