@@ -52,6 +52,7 @@
   website_url: http://bml.ucdavis.edu/bmr/location.html
 - airtable_createdTime: '2017-11-26T01:47:35.000Z'
   airtable_id: recA4FMNsoo8HwtYI
+  area: San Diego
   body: There are so many different areas for tidepooling in La Jolla that we created
     a map to show them all.
   name: 'La Jolla tidepools '
@@ -59,6 +60,7 @@
   website_url: http://www.californiabeaches.com/map/la-jolla-tide-pools/
 - airtable_createdTime: '2017-11-26T01:44:24.000Z'
   airtable_id: recBaMt0FYFfJwYhx
+  area: LA
   body: "South of Little Corona Beach there is a rock arch standing tall in the surf.\
     \ Walk toward that arch at low tide and you\u2019ll be rewarded with some top\
     \ notch tide pools."
@@ -101,25 +103,18 @@
   airtable_id: recCsWfQfsPqjpShK
   area: Half moon bay
   bathrooms: 'Yes'
-  body: "Great selection of tide-pools with an excellent visitors center. Fitzgerald\
+  body: "<p>Great selection of tide-pools with an excellent visitors center. Fitzgerald\
     \ Marine Reserve is a 3-mile stretch of protected beach, tide pools, marshes and\
-    \ bluffs.\n\nThe volunteer docents \n\n\n\nAdjacent to and possibly within the\
-    \ reserve is an endangered species of butterfly, the San Bruno elfin butterfly.\n\
-    \nThis is the place to marvel at the diversity of California tide pool geology\
-    \ and aquatic life. At low tide the exposed Bay Area tide pools and concentric\
-    \ rings of offshore rocks beckon you to explore. In quiet pools, look for hermit\
-    \ crabs, purple shore crabs and starfish. One of the more common algae is the\
-    \ brown, thirty-foot long feather boa kelp. If you look up quickly, you may catch\
-    \ a harbor seal watching you. From the sheltered sandy cove at the south end of\
-    \ the Reserve, take the trail to the bluff tops to return to the parking lot.\
-    \ Walk through the tangled garden of an old estate and through a century-old forest\
-    \ of wind-sculpted Monterey cypress trees. In the spring, California gray whales\
-    \ migrate north offshore. In the summer and fall, brown pelicans skim wave tops.\n\
-    \non weekends and holidays you can find volunteer naturalists roaming the tide\
-    \ pools who are willing to point out sea urchins, barnacles, seastars and more.\
-    \ Very close to the tide pools is an area that is reserved for the harbor seals,\
-    \ a fun sight in their own right. No dogs allowed and remember to wear some good\
-    \ shoes for gripping the slippery rocks."
+    \ bluffs.</p>\n\n<p>The volunteer docents are super knowledgeable and on weekends\
+    \ and holidays you\u2019ll find them on hand about the reef to answer any questions\
+    \ and point out the really cool critters that live in the tidepools!</p>\n\n\n\
+    \nAdjacent to and possibly within the reserve is an endangered species of butterfly,\
+    \ the San Bruno elfin butterfly.\n\n<p>From the Fitzgerald website: at the sheltered\
+    \ sandy cove at the south end of the Reserve, take the trail to the bluff tops\
+    \ to return to the parking lot. Walk through the tangled garden of an old estate\
+    \ and through a century-old forest of wind-sculpted Monterey cypress trees. In\
+    \ the spring, California gray whales migrate north offshore. In the summer and\
+    \ fall, brown pelicans skim wave tops.<p>"
   cost: Free
   docents: 'Yes'
   dogs: 'No'
@@ -583,6 +578,7 @@
   website_url: http://www.ebparks.org/parks/vc/crab_cove#gsc.tab=0
 - airtable_createdTime: '2017-11-26T01:48:16.000Z'
   airtable_id: reclipqONzOgyU3sQ
+  area: LA
   body: The best tide pools in this park are on the southern end of the main beach
     below the tall point. There are other tidepooling areas on Palos Verdes Peninsula
     between LA and Long Beach, but these are the best.
