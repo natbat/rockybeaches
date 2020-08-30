@@ -85,7 +85,7 @@
   docents: checked
   hours: The visitor center is open on weekends from April through October
   managment:
-  - State
+  - State Park
   name: 'Gerstle Cove Marine Reserve '
   phone: (707) 847-3221
   slug: gerstle-cove-marine-reserve
@@ -291,29 +291,41 @@
   name: 'Shell beach '
   phone: (707) 875-3483
   slug: shell-beach
-- accessibility_and_safety: There are no lifeguards are on duty And there are really
-    unpredictable surf conditions so swimming is not recommended.
+- accessibility_and_safety: |-
+    <p>There are no lifeguards are on duty And there are really unpredictable surf conditions so swimming is not recommended.</p>
+
+    <p>There is a paved path to the beach from the car park but the tidepools themselves may not be wheelchair accessible.</p>
   address: Sea Cliff Ave., San Francisco, Ca
   airtable_createdTime: '2017-11-26T03:05:15.000Z'
   airtable_id: recN7luusZmaXjtOj
   area: Bay area
-  bathrooms: 'Yes'
-  body: "beach is via a paved drive or stairway down from the parking lot to water\
-    \ level.\n\nTucked between Lands End and Baker Beach, Down a paved drive or stairway\
+  bathrooms: Unknown
+  body: "<p>Tucked between Lands End and Baker Beach, down a paved drive or stairway\
     \ from the parking lot, China Beach in San Francisco is a national park site.\
-    \ Well loved for its beach access, tide pools, picnic area, and spectacular views\
-    \ of the Marin Headlands and Golden Gate Bridge.\n\nChina Beach is in a tiny cove\
-    \ tucked between Lands End and Baker Beach in the Sea Cliff neighborhood of San\
-    \ Francisco. A great spot for a photo of the kids with the Golden Gate Bridge\
-    \ in the background, this beach has a grill and picnic tables (plus bathrooms,\
-    \ yay!) available for public use. At low tide, head down the long flight of stairs\
-    \ to the sand and take a walk along the shore towards Baker Beach to check out\
-    \ the sea anemones, mussels and seastars clinging to the rocky crevices. "
+    \ Well loved for its beach access, tide pools and picnic area it has spectacular\
+    \ views of the Marin Headlands and Golden Gate Bridge. At low tide take a walk\
+    \ north to Baker beach to see anemones and sea stars clinging to the rocks.<p>\n\
+    \n<p>The area used to be a campsite for the Chinese fishermen, during and after\
+    \ the 1849 gold rush. You can see a monument to these early residents at the trailhead\
+    \ near the parking area at the end of Sea Cliff Avenue. The monument reads \u201C\
+    Their efforts to supply the needs of a young city helped establish one of the\
+    \ area's most important industries and traditions\u201D </p>"
   cost: Free
-  directions_to_tidepools: Access to the beach is via a paved drive or stairway down
-    from the parking lot to water level.
+  directions_latitude: 37.7874473
+  directions_to_tidepools: <p>Access to the beach is via a paved drive or stairway
+    down from the parking lot to water level. There are some tidepools to the south
+    or you can take a low tide walk north (right) to Baker beach.</p>
   docents: 'No'
   dogs: 'No'
+  food_options: <p>This site is nestled between lands end and the Presidio so there
+    are some excellent cheap lunch spots on Clement or Geary street just a few blocks
+    south<p>
+  groups: <p>There are no restrictions on visiting with groups, but be aware access
+    to picnic areas and grills are first-come first-served and no reservations are
+    allowed. If you want to host a wedding, meeting, commercial photography or organised
+    group activities you will likely need a permit.</p>
+  latitude: 37.7893246
+  longitude: 122.4901192
   managment:
   - National park
   name: China beach
@@ -322,19 +334,26 @@
   parking: Parking can be tricky so arrive early in the day for the best chance of
     grabbing a spot in the small parking lot.
   pet_policy: No pets allowed.
-  picnic_options: "<p>Picnic tables are on a first come first served above beach level,\
+  picnic_options: "<p>Picnic tables are on a first-come first-served above beach level,\
     \ there\u2019s a sheltered sandy cove for picnics too. </p>\n\n<p>To sunbathe\
     \ out of the wind, there is a small deck on top of the lifeguard equipment pick-up\
     \ station.</p>\n\n<p>There\u2019s no fires allowed on the beach but there are\
     \ prepared grills and available if you get there early, no reservations are possible.</p>\n\
-    \n<p>Restrooms and cold water showers are open sunrise to sunset.</p>"
-  rules_and_collecting: No fires or glass containers are allowed.
+    \n<p>Restrooms and cold water showers may be open sunrise to sunset but the official\
+    \ website has listed that the bathhouse is not open to the public. Work is undergoing\
+    \ from by the National Park Service to improve facilities.</p>"
+  radius_km: 0.5
+  rules_and_collecting: |-
+    <p>No fires or glass containers are allowed.</p>
+
+    <p>As this is a National Park, there is no collecting of any sort allowed here and you are also not allowed to fly a drone or unmanned vehicle without a special use permit<p>
   slug: china-beach
   tagline: Descend the stairs and take a low tide walk from the tiny cove of China
     beach through to Bakers beach.
   time_zone: America/Los_Angeles
   visitor_center: 'No'
   website_url: https://www.parksconservancy.org/parks/china-beach
+  wikipedia: https://en.m.wikipedia.org/wiki/China_Beach,_San_Francisco
 - address: 'Highway 1, Pescadero '
   airtable_createdTime: '2017-11-26T02:38:06.000Z'
   airtable_id: recPeqGeNXsAgzaOk
@@ -411,7 +430,7 @@
     The rocky ledges and tidepools are easily accessible but are exposed and visible
     only during low tides.
   managment:
-  - State
+  - State Park
   name: Pigeon Point Light Station State Historic park
   phone: (650) 879-2120
   slug: pigeon-point
@@ -527,7 +546,7 @@
   groups: "If you visit in the late-fall or winter, don\u2019t forget to check out\
     \ the Monarch Preserve for the yearly migration of up to 100,000 monarch butterflies! "
   managment:
-  - State
+  - State Park
   name: Natural Bridges State Beach
   open_to_public: 'Yes'
   parking: "State beach parking is $10, or park just before the beach entrance on\
@@ -561,7 +580,7 @@
     and down to the beach. '
   groups: Gray whales migrate by Point Montara between November and April.
   managment:
-  - State
+  - State Park
   name: Point Montara light station
   parking: No fee for day-use parking
   pet_policy: Dogs allowed on leash on the property but not allowed in the hostel
@@ -594,7 +613,7 @@
   hours: "Visitors Center hours: Wed \u2013 Sat 10 a.m. \u2013 4 p.m. (Oct \u2013\
     \ Feb) and until 5 p.m. the rest of the year"
   managment:
-  - State
+  - State Park
   name: 'Crab Cove '
   phone: (510) 544-3187
   slug: crab-cove
@@ -641,7 +660,7 @@
     \ $9 for the whole day\nOnline: "
   food_options: 'Taco Bell on the beach, Peruvian eatery across the road '
   managment:
-  - State
+  - State Park
   name: Linda Mar beach
   parking: Parking is $5 for 4 hours or $9 for the whole day
   slug: linda-mar-beach
@@ -696,7 +715,7 @@
     1 and the rocky shoreline for about a mile to Arroyo de los Frijoles Beach, the
     southern beach in Bean Hollow State Beach.
   managment:
-  - State
+  - State Park
   name: Pebble beach
   open_to_public: 'Yes'
   parking: No fee for parking
