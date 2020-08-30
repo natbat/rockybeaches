@@ -291,9 +291,7 @@
   name: 'Shell beach '
   phone: (707) 875-3483
   slug: shell-beach
-- address: |-
-    Sea Cliff Ave.
-    San Francisco, Ca
+- address: Sea Cliff Ave., San Francisco, Ca
   airtable_createdTime: '2017-11-26T03:05:15.000Z'
   airtable_id: recN7luusZmaXjtOj
   area: Bay area
@@ -307,6 +305,7 @@
     rocky crevices. '
   cost: Free
   name: China beach
+  open_to_public: 'Yes'
   parking: Parking can be tricky so arrive early in the day for the best chance of
     grabbing a spot in the small parking lot.
   picnic_options: checked
