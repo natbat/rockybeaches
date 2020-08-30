@@ -379,7 +379,7 @@
   website_url: http://www.californiabeaches.com/attraction/half-moon-bay-tide-pools/
 - airtable_createdTime: '2017-11-26T04:40:25.000Z'
   airtable_id: recSP3TQE6YpK3UnF
-  area: Half moon bay
+  area: Pescadero
   directions_to_tidepools: Pigeon Point Lighthouse is located on Highway 1, 20 miles
     south of Half Moon Bay. From the north, take Highway 280 south from San Francisco,
     then go west on Highway 92 to Highway 1, and take Highway 1 south to the Pigeon
@@ -585,6 +585,10 @@
   name: Abalone Cove Shoreline Park
   slug: abalone-cove
   website_url: http://www.californiabeaches.com/map/abalone-cove-shoreline-park/
+- airtable_createdTime: '2020-08-30T04:35:54.000Z'
+  airtable_id: recoMUCXklspb27oG
+  area: Bolinas
+  name: Agate beach
 - accessibility_and_safety: There is a wheelchair accessible boardwalk at the point.
   airtable_createdTime: '2017-11-26T04:25:04.000Z'
   airtable_id: recodhH8otfeREzP1
@@ -675,6 +679,10 @@
   pet_policy: Dogs allowed on leash
   picnic_options: checked
   slug: pebble-beach
+- airtable_createdTime: '2020-08-30T04:31:25.000Z'
+  airtable_id: recsVm9vHXPQjzjQ5
+  area: LA
+  name: Sugarloaf point
 - address: Highway 1 and Riley Ranch Rd. Carmel,
   airtable_createdTime: '2017-11-26T01:49:43.000Z'
   airtable_id: recwag7Xz5KcUt6FD
