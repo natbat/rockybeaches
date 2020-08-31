@@ -167,9 +167,45 @@
   region: us_pacific_coast
   slug: la-jolla
   website_url: http://www.californiabeaches.com/map/la-jolla-tide-pools/
-- airtable_createdTime: '2020-08-31T04:30:59.000Z'
+- address: Carpinteria, CA
+  airtable_createdTime: '2020-08-31T04:30:59.000Z'
   airtable_id: recAVPHG8YFCNXy2o
+  area: LA
+  bathroom_info: There are a few public restrooms inside the park.
+  bathrooms: 'Yes'
+  body: "The site is straight offshore, about 40 meters from the staircase and centered\
+    \ on the outermost and largest mussel-covered rock outcrop. The outcrop is surrounded\
+    \ by sand. It consists of a oceanward portion and a shoreward portion, separated\
+    \ by a narrow connection (\u201Cneck\u201D) that bridges over two small tunnels\n\
+    \nContact Carpinteria State Park well in advance of your scheduled rocky intertidal\
+    \ trip. The Park has a policy about the number of people who can go on the reef\
+    \ in a day \n\nContact is Marie Lindsey at (805) 684-7487 or mlindsey@parks.ca.gov.\
+    \ You might also consider scheduling a tidepool walk with a ranger, guided walks\
+    \ last approximately one hour."
+  country_slug: us
+  directions_latitude: 34.388201
+  directions_longitude: -119.5147189
+  directions_to_tidepools: ' A staircase, just southeast from the parking lot, leads
+    to the beach.'
+  docents: 'Yes'
+  groups: ' The Park waives parking fees for school groups, but you must first submit
+    a school group reservation form that the park will send you when you call to schedule
+    a field trip. Contact is Marie Lindsey at (805) 684-7487 or mlindsey@parks.ca.gov.'
+  latitude: 34.3872536
+  longitude: -119.516589
+  managment:
+  - California State Park
   name: Carpinteria State Beach
+  parking: 'This site is located at the east end of Carpinteria State Park in Carpinteria,
+    Santa Barbara County. Take Highway 101 to Carpinteria (east of Santa Barbara).
+    Get off at the Casitas Pass Rd exit and turn toward the ocean. Take a right on
+    Carpinteria Drive, then take the first left on Palm Avenue. Go all the way to
+    the end of Palm Avenue and enter Carpinteria State Park. After going through the
+    kiosk, take a sharp left and proceed down the coast to the very end where there
+    is a little cul-de-sac where you can park. '
+  region: us_pacific_coast
+  slug: carpinteria-state-beach
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:34:44.000Z'
   airtable_id: recB48WHS55mMiBqZ
   name: Rockview Drive
@@ -609,9 +645,14 @@
   region: us_pacific_coast
   slug: pigeon-point
   website_url: http://www.parks.ca.gov/?page_id=533%20
-- airtable_createdTime: '2020-08-31T04:31:11.000Z'
+- address: Santa Barbra, CA
+  airtable_createdTime: '2020-08-31T04:31:11.000Z'
   airtable_id: recSrjNs2YhZElex8
+  managment:
+  - University of California
+  - UC Santa Barbra
   name: Campus Point
+  slug: campus-point
 - address: Malibu, CA
   airtable_createdTime: '2020-08-31T04:24:49.000Z'
   airtable_id: recT5rGl8gXUPEDap
