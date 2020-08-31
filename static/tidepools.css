@@ -317,15 +317,15 @@ footer li {
   background-color: black;
   background-color: rgba(0,0,0,0.6);
   padding-top: 0.7em;
-	padding-bottom: 0.5em;
+  padding-bottom: 0.5em;
 }
 .page-title {
   background-image: url('img/content/pillar-point.jpg');
-  background-position: 50% 10%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
-	background-color: #176AB8;
+  background-color: #176AB8;
   padding: 1em 0 0 0;
-	background-size: cover;
+  background-size: cover;
 }
 /* .home .page-title {
   background-image: url('img/ripples-in-a-tidepool.jpg'); */
