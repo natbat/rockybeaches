@@ -5,6 +5,7 @@ from plugins.template_vars import (
     get_minimas_maximas,
     calculate_depth_view,
 )
+import httpx
 import datetime
 import pytest
 import pathlib
@@ -27,6 +28,18 @@ def db_path(tmpdir):
         TIDE_DATA, pk=("station_id", "datetime")
     )
     return db_path
+
+
+@pytest.mark.asyncio
+async def test_live_pages(db_path):
+    # Live pages should all 200, not 500
+    app = Datasette([db_path]).app()
+    async with httpx.AsyncClient(app=app) as client:
+        response = await client.get("http://localhost/data/places.json?live_on_site=1&_shape=array")
+        slugs = [p["slug"] for p in response.json()]
+        for slug in slugs:
+            response = await client.get("http://localhost/us/{}".format(slug))
+            assert response.status_code == 200, slug
 
 
 @pytest.mark.asyncio

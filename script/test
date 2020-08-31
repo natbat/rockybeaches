@@ -1,7 +1,3 @@
 #!/bin/bash
 pytest
-for path in $(sqlite-utils data.db "select '/us/' || slug as path from places where live_on_site = 1" --csv --no-headers)
-do
-    echo "Testing $path"
-    datasette data.db --get $path | grep 'Rocky Beaches'
-done;
+datasette data.db --get / | grep 'Rocky Beaches'
