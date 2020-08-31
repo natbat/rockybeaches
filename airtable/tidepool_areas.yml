@@ -156,7 +156,21 @@
   visitor_center: 'No'
 - airtable_createdTime: '2020-08-31T04:40:00.000Z'
   airtable_id: rec9t3b14aL7dB9np
+  area: Santa Cruz
+  bathroom_info: A public restroom is next to the access trail along the road.
+  bathrooms: 'Yes'
+  body: |-
+    This flat site is a sloping, nicely zoned mussel bed. Beyond the mussel beds, there are several small sea caves that are worth exploring
+
+    Davenport Landing is located off Highway 1 on the northwestern edge of Santa Cruz County. It is north of the town of Davenport and before Scott Creek. From Highway 1, turn onto Davenport Landing Road, which is a continuation of Swanton Road, and park near the public access trail to the beach. The monitoring site is on the rock platform at the southeast end of the sand beach. Turn left when you reach the beach and walk over the cement structure that drains seawater from the US Abalone mariculture facility. The vertical transect and mussel permanent plot are on the western edge of the rock platform. The anemone permanent plot is near the middle of the rock platform.
+  directions_latitude: 37.024852
+  directions_longitude: -122.215366
+  latitude: 37.02385
+  longitude: -122.216193
   name: Davenport Landing
+  parking: Park near the public access trail to the beach on Davenport Landing Road.
+  rules_and_collecting: collecting of any type is illegal without a scientific collecting
+    permit.
 - airtable_createdTime: '2017-11-26T01:47:35.000Z'
   airtable_id: recA4FMNsoo8HwtYI
   area: San Diego
@@ -1132,7 +1146,23 @@
   slug: pebble-beach
 - airtable_createdTime: '2020-08-31T04:32:35.000Z'
   airtable_id: recsMdvJYtGcDhzg1
+  bathroom_info: There are no public restrooms at or near this site.
+  bathrooms: 'No'
+  body: |
+    This is a gently undulating rocky area with some high and low areas. The amount of relief to the rocks is fairly minimal to low. As with any site with deep channels, watch the water level as the tide comes in so no one gets stranded!
+  country_slug: us
+  directions_to_tidepools: There is a public access trail from the intersection of
+    Vista del Mar and Balboa, walk across a vacant lot to the beach. Once on the sandy
+    beach, walk south until you reach a sloping rock platform that rises above the
+    sand.
+  managment:
+  - California State Marine Conservation Area
   name: San Simeon
+  region: us_pacific_coast
+  rules_and_collecting: This San Simeon intertidal site is located within the Cambria
+    State Marine Conservation Area. It ispart of a network of marine protected areas
+    recently established by the state of Calfornia. Recreational take of living resources
+    is allowed with a valid fishing license; however, all commercial fishing is prohibited
 - airtable_createdTime: '2020-08-30T04:31:25.000Z'
   airtable_id: recsVm9vHXPQjzjQ5
   area: LA
