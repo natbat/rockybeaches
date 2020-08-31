@@ -5,3 +5,14 @@ yaml-to-sqlite data.db places airtable/tidepool_areas.yml --pk=slug
 python fetch_noaa_tide_times.py data.db
 python calculate_sunrise_sunset.py data.db
 python fetch_inaturalist.py data.db
+
+# Fetch California NOAA stations
+curl 'https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/geogroups/1393/children.json' \
+  --compressed  | jq '[.stationList[] | select(.stationId)]' | \
+  sqlite-utils insert data.db noaa_stations - --pk=stationId
+
+sqlite-utils create-view data.db noaa_stations_map '
+    select rowid, stationId, lat as latitude, lon as longitude,
+        refStationId, stationType, parentGeoGroupId, seq,
+        geoGroupId, geoGroupName, level, geoGroupType, abbrev
+    from noaa_stations'
