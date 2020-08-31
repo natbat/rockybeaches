@@ -3,7 +3,9 @@
   area: Morro bay
   body: North Point Natural Area has some great tide pools at low tide. They are located
     north of Morro Strand State Beach between the towns of Morro Bay and Cayucos.
+  country_slug: us
   name: North Point Beach
+  region: us_pacific_coast
   slug: north-point-beach
   website_url: http://www.californiabeaches.com/beach/north-point-beach/
 - airtable_createdTime: '2017-11-26T01:57:33.000Z'
@@ -13,7 +15,9 @@
     \ Head to just about any of the beaches here at low tide and you\u2019ll find\
     \ excellent tide pools. Our favorite access point for tide pools is the one at\
     \ Spyglass Park."
+  country_slug: us
   name: Spyglass beach
+  region: us_pacific_coast
   slug: spyglass-beach
   website_url: http://www.californiabeaches.com/beach/spyglass-park/
 - airtable_createdTime: '2017-11-26T01:52:02.000Z'
@@ -21,7 +25,9 @@
   area: Morro bay
   body: "This hidden reef is a hidden gem of the central coast. It\u2019s just a short\
     \ hike down Hazard Canyon to this point south of Morro Bay."
+  country_slug: us
   name: Hazard reef
+  region: us_pacific_coast
   slug: hazard-reef
   website_url: http://www.californiabeaches.com/beach/montana-de-oro-state-park-hazard-canyon-reef/
 - airtable_createdTime: '2017-11-26T03:12:56.000Z'
@@ -68,7 +74,9 @@
   area: San Diego
   body: There are so many different areas for tidepooling in La Jolla that we created
     a map to show them all.
+  country_slug: us
   name: 'La Jolla tidepools '
+  region: us_pacific_coast
   slug: la-jolla
   website_url: http://www.californiabeaches.com/map/la-jolla-tide-pools/
 - airtable_createdTime: '2017-11-26T01:44:24.000Z'
@@ -77,7 +85,9 @@
   body: "South of Little Corona Beach there is a rock arch standing tall in the surf.\
     \ Walk toward that arch at low tide and you\u2019ll be rewarded with some top\
     \ notch tide pools."
+  country_slug: us
   name: Little Corona Del Mar
+  region: us_pacific_coast
   slug: little-corona-del-mar
   website_url: http://www.californiabeaches.com/beach/little-corona-del-mar-beach/
 - airtable_createdTime: '2017-11-26T02:41:00.000Z'
@@ -129,6 +139,7 @@
     \ the spring, California gray whales migrate north offshore. In the summer and\
     \ fall, brown pelicans skim wave tops.<p>"
   cost: Free
+  country_slug: us
   docents: 'Yes'
   dogs: 'No'
   food_options: <p>There are lots of restaurants in the nearby town of Granada or
@@ -176,6 +187,7 @@
   pet_policy: No dogs at all, do not bring dogs with you.
   phone: (650) 728-3584
   radius_km: 0.5
+  region: us_pacific_coast
   rules_and_collecting: "<p>Fitzgerald Marine Reserve is in a no-take Marine Protected\
     \ Area. You are not allowed to collect any sort of organisms, shells, rocks, driftwood,\
     \ etc. Please do not bring buckets to the reef.</p>\n\n<p>Don\u2019t turn over\
@@ -215,11 +227,14 @@
     the bluff between the highway and the ocean all the way to Pebble Beach which
     is the northern beach of Bean Hollow State Beach. This trail is about one-mile
     each way making it an easy round-trip from either beach
+  country_slug: us
   food_options: |-
     Duarte's Tavern
     Mercado & Taqueria de Amigos
   name: Arroyo de los Frijoles Beach
+  other_names: Bean Hollow
   picnic_options: checked
+  region: us_pacific_coast
   slug: arroyo-de-los-frijoles
 - airtable_createdTime: '2017-11-26T02:34:30.000Z'
   airtable_id: recDv69p0T933plS5
@@ -227,7 +242,9 @@
   body: These tide pools are part of Fitzgerald Marine Reserve and can be accessed
     from the Reserve parking lot or from the south entrance off of Cypress Ave near
     the Moss Beach Distillery.
+  country_slug: us
   name: Seal Cove Beach
+  region: us_pacific_coast
   slug: seal-cove
 - accessibility_and_safety: "It\u2019s possible to explore in this direction for a\
     \ long way, but don\u2019t let your route back get cut off by the rising tide.\
@@ -280,7 +297,9 @@
   body: This secluded beach is just a mile south of Half Moon Bay. Look for the parking
     lot access and then walk along the path to the bluffs and down the steps to the
     beach.
+  country_slug: us
   name: Cowell Ranch beach
+  region: us_pacific_coast
   slug: cowell-ranch-beach
 - airtable_createdTime: '2017-11-26T04:47:43.000Z'
   airtable_id: recIVQ8vjkIJrcIQD
@@ -289,10 +308,12 @@
     Point Pinos and Asilomar State Beach
 
     These two tidepool areas are located in Pacific Grove off Sunset Drive/Highway 68 and Asilomar Avenue. Point Pinos, also known as the Great Tide Pool, is one of the richest tidepool habitats in the world. At higher tides, some of the tidepools in this area remain exposed.
+  country_slug: us
   directions_to_tidepools: 'These two tidepool areas are located in Pacific Grove
     off Sunset Drive/Highway 68 and Asilomar Avenue. '
   name: Point Pinos
   phone: (831) 372-4076
+  region: us_pacific_coast
   slug: point-pinos
   tagline: 'Point Pinos, also known as the Great Tide Pool, is one of the richest
     tidepool habitats in the world. '
@@ -405,12 +426,14 @@
   body: "Traveling south from Half Moon Bay, you arrive at Pescadero Rd going towards\
     \ Pescadero. There is a parking area there off Highway 1.\nwhere you can spot\
     \ sea stars and sea anemones a-plenty. "
+  country_slug: us
   groups: free guided tours of the marshland on the first Sunday of the month at 10
     a.m.
   name: Pescadero State beach
   parking: Between Half Moon Bay and Santa Cruz is Pescadero State Beach that includes
     three separate parking lots. The middle lot gives you access to the rocky shore
     and tide pools.
+  region: us_pacific_coast
   slug: pescadero-state-beach
   website_url: http://www.parks.ca.gov/?page_id=522
 - airtable_createdTime: '2017-11-26T01:40:33.000Z'
@@ -419,7 +442,9 @@
   body: |+
     These tide pools can be found below the sandstone cliffs of Point Loma on the ocean side of the park. Ask for directions when you stop at the entrance booth. Look for fossils in the rocks while you are exploring the shoreline.
 
+  country_slug: us
   name: Point Loma
+  region: us_pacific_coast
   slug: point-loma
   website_url: http://www.californiabeaches.com/attraction/point-loma-tide-pools/
 - accessibility_and_safety: Accessible parking and tidepools
@@ -444,6 +469,7 @@
     \ Watch where you step so that you don\u2019t crush the small creatures that reside\
     \ there. The Point Pinos Lighthouse is a short walk along the coast but the bathrooms\
     \ are not close by so plan accordingly."
+  country_slug: us
   directions_to_tidepools: 'These two tidepool areas are located in Pacific Grove
     off Sunset Drive/Highway 68 and Asilomar Avenue. '
   name: Asilomar State Beach
@@ -451,6 +477,7 @@
   parking: There is ample parking and the beach is even handicap accessible for beach
     wheelchairs.
   phone: (831) 646-6440
+  region: us_pacific_coast
   slug: asilomar-state-beach
   website_url: http://www.californiabeaches.com/beach/asilomar-state-beach/
 - airtable_createdTime: '2017-11-26T01:43:55.000Z'
@@ -460,12 +487,15 @@
     Half Moon Bay State Beach. However, a little-known tidepooling area can be found
     below the Ritz-Carlton Resort. Access is from either of the two beaches next to
     the resort.
+  country_slug: us
   name: Half moon bay tide pools
+  region: us_pacific_coast
   slug: half-moon-bay-tidepools
   website_url: http://www.californiabeaches.com/attraction/half-moon-bay-tide-pools/
 - airtable_createdTime: '2017-11-26T04:40:25.000Z'
   airtable_id: recSP3TQE6YpK3UnF
   area: Pescadero
+  country_slug: us
   directions_to_tidepools: Pigeon Point Lighthouse is located on Highway 1, 20 miles
     south of Half Moon Bay. From the north, take Highway 280 south from San Francisco,
     then go west on Highway 92 to Highway 1, and take Highway 1 south to the Pigeon
@@ -476,6 +506,7 @@
   - State Park
   name: Pigeon Point Light Station State Historic park
   phone: (650) 879-2120
+  region: us_pacific_coast
   slug: pigeon-point
   website_url: http://www.parks.ca.gov/?page_id=533%20
 - accessibility_and_safety: |-
@@ -498,6 +529,7 @@
 
     <p>This area is a popular surfing spot, also known as Mavericks when the tide is high and the waves can come in fast and strong so you'll need to watch your back and don't underestimate the tide. The smaller cut parallel to the beach fills in first so do wear water shoes!</p>
   cost: Free
+  country_slug: us
   directions_latitude: 37.501768
   directions_longitude: -122.496765
   directions_to_tidepools: |-
@@ -523,6 +555,7 @@
   picnic_options: <p>Lots of space on the beach for picnics, no fires allowed though.
     Be careful not to sit too close to the cliffs because rock fall is common.</p>
   radius_km: 0.5
+  region: us_pacific_coast
   rules_and_collecting: |
     <p>Please be respectful of the reef and leave anything that is alive or could have alive things in it where they are. Don't move animals between pools, put them back where you found them, it's their home. If you want to fish or collect you need a fishing license.</p>
   rules_and_collecting_url: https://wildlife.ca.gov/Fishing/Ocean
@@ -547,6 +580,7 @@
     \ of Poplar Street.  You then walk south about a mile along the beach to the tide\
     \ pools.\n\nJust south of downtown Half Moon Bay, this beach offers beautiful\
     \ views without the crowds. "
+  country_slug: us
   directions_to_tidepools: 'The easiest access point to the tide pools is to park
     at the end of Poplar Street at Poplar Beach and then head south along the water
     about a mile to the tide pools. The walk along the shore takes you right past
@@ -554,6 +588,7 @@
     above the beach but most of the paths down to the water are pretty steep. '
   name: Redondo beach
   parking: Park at the Poplar State beach parking on Poplar st.
+  region: us_pacific_coast
   slug: redondo-beach
   website_url: https://www.californiabeaches.com/beach/redondo-beach-half-moon-bay/
 - accessibility_and_safety: The route down can be tricky, so ask at the Visitor Center
@@ -578,6 +613,7 @@
     \ bridge out in the water. you head north along the beach you can climb the rocks\
     \ to access the tide pools.  Also nearby is the Seymour Marine Discovery Center,\
     \ another great place to learn about Bay Area marine life."
+  country_slug: us
   directions_to_tidepools: "Natural Bridges is located at the north end of the town\
     \ of Santa Cruz. Take Swift Street west from Highway 1, then West Cliff Drive\
     \ north until it ends at the state beach. The tide pools are located on the side\
@@ -595,6 +631,7 @@
   parking: "State beach parking is $10, or park just before the beach entrance on\
     \ Swanton Blvd. for free if there\u2019s a spot"
   phone: (831) 423-4609
+  region: us_pacific_coast
   slug: natural-bridges
   tagline: This spot has a picturesque rock arch and in addition to tidepools, has
     a sandy beach. In the park there is a Monarch butterfly Preserve which is a great
@@ -608,7 +645,9 @@
     \ between North Beach and South Beach. In addition to abundant marine life, this\
     \ area of the shoreline has caves and rock arches to duck into. It\u2019s a fun\
     \ place for kids."
+  country_slug: us
   name: Lee Carrillo State Park
+  region: us_pacific_coast
   slug: lee-carrillo-state-park
   website_url: http://www.californiabeaches.com/map/leo-carrillo-state-park/
 - address: |-
@@ -617,6 +656,7 @@
   airtable_createdTime: '2017-11-26T05:13:20.000Z'
   airtable_id: reciYr6NHZBuIkMgJ
   area: Bay area
+  country_slug: us
   directions_to_tidepools: 'A footpath leads north from the lighthouse through a picket
     fence to the edge of the bluff. It quickly splits and the left trail goes out
     to a point and down to the rocks. The right trail leads back to a creek drainage
@@ -628,6 +668,7 @@
   parking: No fee for day-use parking
   pet_policy: Dogs allowed on leash on the property but not allowed in the hostel
   picnic_options: checked
+  region: us_pacific_coast
   slug: point-montara
   tagline: Gray whales migrate by Point Montara between November and April. You can
     also stay in the hostel here. Really close to the Fitzgerald marine reserve.
@@ -668,7 +709,9 @@
   body: The best tide pools in this park are on the southern end of the main beach
     below the tall point. There are other tidepooling areas on Palos Verdes Peninsula
     between LA and Long Beach, but these are the best.
+  country_slug: us
   name: Abalone Cove Shoreline Park
+  region: us_pacific_coast
   slug: abalone-cove
   website_url: http://www.californiabeaches.com/map/abalone-cove-shoreline-park/
 - airtable_createdTime: '2020-08-30T04:35:54.000Z'
@@ -759,6 +802,7 @@
     Beach access road. This hiking trail continues along the bluff between Highway
     1 and the rocky shoreline for about a mile to Arroyo de los Frijoles Beach, the
     southern beach in Bean Hollow State Beach.
+  country_slug: us
   managment:
   - State Park
   name: Pebble beach
@@ -766,11 +810,14 @@
   parking: No fee for parking
   pet_policy: Dogs allowed on leash
   picnic_options: checked
+  region: us_pacific_coast
   slug: pebble-beach
 - airtable_createdTime: '2020-08-30T04:31:25.000Z'
   airtable_id: recsVm9vHXPQjzjQ5
   area: LA
+  country_slug: us
   name: Sugarloaf point
+  region: us_pacific_coast
 - address: Highway 1 and Riley Ranch Rd. Carmel,
   airtable_createdTime: '2017-11-26T01:49:43.000Z'
   airtable_id: recwag7Xz5KcUt6FD
@@ -792,6 +839,7 @@
     \ you may even spot a sea lion or otter frolicking in the waves. Volunteer docents\
     \ are available to answer questions at the Sea Lion Point parking lot most days\
     \ from 9 a.m. to 5 p.m."
+  country_slug: us
   directions_to_tidepools: The best spot to check out the tide pools is on Weston
     Beach, just south and west of the main entrance
   docents: checked
@@ -800,6 +848,7 @@
   name: Weston beach
   parking: 'Parking: $10'
   phone: (831) 624-4909
+  region: us_pacific_coast
   slug: weston-beach
   website_url: http://www.californiabeaches.com/map/point-lobos-state-natural-reserve-beaches/
 - address: |-
