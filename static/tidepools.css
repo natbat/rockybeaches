@@ -521,15 +521,14 @@ footer li {
 }
 
 #map {
-    width: 100%;
-    height: 30vw;
-    border: 1px solid #ccc;
+	width: 100%;
+	height: 30vw;
+	border: 1px solid #ccc;
 }
 .tide-prediction {
 	background-color: rgba(23,106,184,0.05);
 	margin: 1rem 0 1rem 0;
 	padding: 0 0 1rem 0;
-
 	display: grid;
 	grid-template-columns: 0.8rem 1fr 2rem 3fr 1rem;
 	column-gap: 0;
