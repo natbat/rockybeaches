@@ -11,8 +11,22 @@ curl 'https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/geogroups/1393/chi
   --compressed  | jq '[.stationList[] | select(.stationId)]' | \
   sqlite-utils insert data.db noaa_stations - --pk=stationId
 
+# Add a column for known 'good' stations
+sqlite-utils add-column data.db noaa_stations good integer
+
+# Populate that with known good station IDs
+sqlite-utils data.db 'update noaa_stations set good = 0'
+sqlite-utils data.db 'update noaa_stations set good = 1 where stationId in (
+    9410170,9410135,9410196,9410230,9410580,9410680,9410660,9410840,9411340,
+    9411399,9411406,9410032,9410079,9412110,9412802,9413450,9413631,9413643,
+    9413651,9413663,9414131,9414290,9414317,9414764,9414750,9414746,9414358,
+    9414688,9414458,9414523,9414509,9414575,9414816,9414863,9415218,9415143,
+    9415102,9415265,9415144,9414811,9415112,9415064,9415316,9415056,9415338,
+    9414958,9415020,9416409,9416841,9417426,9418024,9418637,9418767,9418723,
+    9418817,9419750,9419945
+)'
 sqlite-utils create-view data.db noaa_stations_map '
     select rowid, stationId, lat as latitude, lon as longitude,
         refStationId, stationType, parentGeoGroupId, seq,
-        geoGroupId, geoGroupName, level, geoGroupType, abbrev
+        geoGroupId, geoGroupName, level, geoGroupType, abbrev, good
     from noaa_stations'

@@ -96,7 +96,12 @@ order by
 def extra_template_vars(datasette):
     async def best_times_for_place(place_slug):
         db = datasette.get_database()
-        best_times = await db.execute(BEST_TIMES_SQL, {"place_slug": place_slug,})
+        best_times = await db.execute(
+            BEST_TIMES_SQL,
+            {
+                "place_slug": place_slug,
+            },
+        )
         rows = [dict(r) for r in best_times]
         for row in rows:
             row["date"] = datetime.datetime.strptime(row["date"], "%Y-%m-%d").date()
@@ -124,7 +129,11 @@ def extra_template_vars(datasette):
         ).first()
         station_id = station["id"]
         results = await db.execute(
-            TIDE_TIMES_SQL, {"station_id": station_id, "day": day.isoformat(),},
+            TIDE_TIMES_SQL,
+            {
+                "station_id": station_id,
+                "day": day.isoformat(),
+            },
         )
         tide_times = list(dict(r) for r in results)
         heights = [

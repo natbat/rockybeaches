@@ -18,9 +18,6 @@ root = pathlib.Path(__file__).parent.resolve()
 def db_path(tmpdir):
     db_path = str(tmpdir / "data.db")
     yaml_to_sqlite_cli.callback(
-        db_path, "stations", open(root / "data" / "stations.yml"), "id"
-    )
-    yaml_to_sqlite_cli.callback(
         db_path, "places", open(root / "airtable" / "tidepool_areas.yml"), "slug"
     )
     # Fake tide data
@@ -35,7 +32,9 @@ async def test_live_pages(db_path):
     # Live pages should all 200, not 500
     app = Datasette([db_path]).app()
     async with httpx.AsyncClient(app=app) as client:
-        response = await client.get("http://localhost/data/places.json?live_on_site=1&_shape=array")
+        response = await client.get(
+            "http://localhost/data/places.json?live_on_site=1&_shape=array"
+        )
         slugs = [p["slug"] for p in response.json()]
         for slug in slugs:
             response = await client.get("http://localhost/us/{}".format(slug))
