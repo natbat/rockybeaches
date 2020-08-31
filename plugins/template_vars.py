@@ -52,17 +52,25 @@ order by
   datetime
 """
 
-BEST_TIMES_SQL = """
-with lowest_tide_per_day as (
+# Best days are the four days out of the next 30 with the lowest
+# tides during daylight hours
+# https://github.com/natbat/rockybeaches/issues/55
+BEST_DAYS_SQL = """
+with daylight_tides as (
   select
-    station_id,
-    date(datetime) as date,
-    time(datetime) as lowest_tide_time,
-    min(mllw_feet) as lowest_tide
+    tide_predictions.datetime,
+    time(tide_predictions.datetime),
+    tide_predictions.mllw_feet,
+    sunrise_sunset.sunrise,
+    sunrise_sunset.sunset
   from
     tide_predictions
+    join sunrise_sunset on sunrise_sunset.place = :place_slug
+    and sunrise_sunset.day = date(tide_predictions.datetime)
   where
-    station_id = (
+    time(tide_predictions.datetime) >= sunrise
+    and time(tide_predictions.datetime) <= sunset
+    and tide_predictions.station_id = (
       select
         station_id
       from
@@ -70,23 +78,35 @@ with lowest_tide_per_day as (
       where
         slug = :place_slug
     )
+),
+lowest_daylight_tide_per_day as (
+  select
+    date(datetime) as date,
+    min(mllw_feet) as lowest_daylight_tide,
+    time(datetime) as time,
+    sunrise,
+    sunset
+  from
+    daylight_tides
   group by
     date(datetime)
+  having
+    mllw_feet = min(mllw_feet)
+),
+best_four_days as (
+  select
+    *
+  from
+    lowest_daylight_tide_per_day
+  order by
+    lowest_daylight_tide
+  limit
+    4
 )
 select
-  lowest_tide_per_day.date,
-  lowest_tide_per_day.lowest_tide_time,
-  lowest_tide_per_day.lowest_tide,
-  sunrise_sunset.sunrise,
-  sunrise_sunset.sunset
+  *
 from
-  lowest_tide_per_day
-  join sunrise_sunset on sunrise_sunset.place = :place_slug
-  and sunrise_sunset.day = lowest_tide_per_day.date
-where
-  lowest_tide_per_day.lowest_tide_time >= sunrise_sunset.sunrise
-  and lowest_tide_per_day.lowest_tide_time <= sunrise_sunset.sunset
-  and date >= date('now')
+  best_four_days
 order by
   date
 """
@@ -97,7 +117,7 @@ def extra_template_vars(datasette):
     async def best_times_for_place(place_slug):
         db = datasette.get_database()
         best_times = await db.execute(
-            BEST_TIMES_SQL,
+            BEST_DAYS_SQL,
             {
                 "place_slug": place_slug,
             },
