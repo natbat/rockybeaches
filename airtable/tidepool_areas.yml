@@ -43,6 +43,9 @@
     tide.<p>
   name: Sculptured Beach
   slug: sculptured-beach
+- airtable_createdTime: '2020-08-31T04:22:20.000Z'
+  airtable_id: rec6M7M58d1Op5755
+  name: Point Fermin
 - airtable_createdTime: '2020-08-30T23:50:42.000Z'
   airtable_id: rec7J0oRPUedxUMT9
   area: Marin
@@ -69,6 +72,18 @@
   slug: horseshoe-cove
   visitor_center: checked
   website_url: http://bml.ucdavis.edu/bmr/location.html
+- airtable_createdTime: '2020-08-31T04:22:34.000Z'
+  airtable_id: rec8FUt0g1SRPw8Rl
+  name: White Point
+- airtable_createdTime: '2020-08-31T04:40:40.000Z'
+  airtable_id: rec94Rflws2wTel78
+  name: Shell Beach Sonoma
+- airtable_createdTime: '2020-08-31T04:23:35.000Z'
+  airtable_id: rec9KANo9J4mnl6in
+  name: "Frenchy\u2019s Cove"
+- airtable_createdTime: '2020-08-31T04:40:00.000Z'
+  airtable_id: rec9t3b14aL7dB9np
+  name: Davenport Landing
 - airtable_createdTime: '2017-11-26T01:47:35.000Z'
   airtable_id: recA4FMNsoo8HwtYI
   area: San Diego
@@ -79,6 +94,12 @@
   region: us_pacific_coast
   slug: la-jolla
   website_url: http://www.californiabeaches.com/map/la-jolla-tide-pools/
+- airtable_createdTime: '2020-08-31T04:30:59.000Z'
+  airtable_id: recAVPHG8YFCNXy2o
+  name: Carpinteria State Beach
+- airtable_createdTime: '2020-08-31T04:34:44.000Z'
+  airtable_id: recB48WHS55mMiBqZ
+  name: Rockview Drive
 - airtable_createdTime: '2017-11-26T01:44:24.000Z'
   airtable_id: recBaMt0FYFfJwYhx
   area: LA
@@ -291,6 +312,9 @@
   tagline: This is the largest shale reef in North America. It stretches 1000ft from
     shore to a depth of 13ft.
   website_url: http://www.californiabeaches.com/attraction/duxbury-reef-tide-pools/
+- airtable_createdTime: '2020-08-31T04:33:27.000Z'
+  airtable_id: recFtXfVa2am7bvLi
+  name: Asilomar State Beach
 - airtable_createdTime: '2017-11-26T02:37:08.000Z'
   airtable_id: recGn6pMwvkSzuz1M
   area: Half moon bay
@@ -492,6 +516,9 @@
   region: us_pacific_coast
   slug: half-moon-bay-tidepools
   website_url: http://www.californiabeaches.com/attraction/half-moon-bay-tide-pools/
+- airtable_createdTime: '2020-08-31T04:34:10.000Z'
+  airtable_id: recRiwdIFJbTEAw4k
+  name: Almar Avenue
 - airtable_createdTime: '2017-11-26T04:40:25.000Z'
   airtable_id: recSP3TQE6YpK3UnF
   area: Pescadero
@@ -509,6 +536,12 @@
   region: us_pacific_coast
   slug: pigeon-point
   website_url: http://www.parks.ca.gov/?page_id=533%20
+- airtable_createdTime: '2020-08-31T04:31:11.000Z'
+  airtable_id: recSrjNs2YhZElex8
+  name: Campus Point
+- airtable_createdTime: '2020-08-31T04:24:49.000Z'
+  airtable_id: recT5rGl8gXUPEDap
+  name: County line boulder field
 - accessibility_and_safety: |-
     <p>As tide pools go, this is pretty accessible. It's a bit of a walk on the flat path and there is a bit of beach to navigate to get to the pools, but the pools also have a reasonably flat section. That said, there are some fast flowing cut-throughs to get over if you want to go further out and seasonally some quite slippery seaweed, so a walking stick makes a good companion.</p>
 
@@ -591,6 +624,12 @@
   region: us_pacific_coast
   slug: redondo-beach
   website_url: https://www.californiabeaches.com/beach/redondo-beach-half-moon-bay/
+- airtable_createdTime: '2020-08-31T04:34:29.000Z'
+  airtable_id: recWZGrZVAnl1r9ss
+  name: Wilder Ranch
+- airtable_createdTime: '2020-08-31T04:31:39.000Z'
+  airtable_id: recX4H63f8kUQqBbF
+  name: Coal Oil Point
 - accessibility_and_safety: The route down can be tricky, so ask at the Visitor Center
     for directions to get to the pools through the neighboring mobile home park.
   address: "2531 West Cliff Dr.\nSanta Cruz, "
@@ -638,6 +677,18 @@
     place to see these beautiful creatures in an overwintering spot.
   visitor_center: checked
   website_url: http://www.californiabeaches.com/beach/natural-bridges-state-beach/
+- airtable_createdTime: '2020-08-31T04:39:03.000Z'
+  airtable_id: recZ0FVUrLcmIf25e
+  name: Soquel Avenue
+- airtable_createdTime: '2020-08-31T04:40:10.000Z'
+  airtable_id: recafS4y83k3N9lwZ
+  name: Carmet Beach
+- airtable_createdTime: '2020-08-31T04:22:19.000Z'
+  airtable_id: recefZRfMakgL2HnE
+  name: Dyke Rock
+- airtable_createdTime: '2020-08-31T04:30:17.000Z'
+  airtable_id: receyIlJkaz1ScELI
+  name: Deer Creek
 - airtable_createdTime: '2017-11-26T01:51:05.000Z'
   airtable_id: recgQuH2RAJVEXjyb
   area: LA
@@ -674,6 +725,9 @@
     also stay in the hostel here. Really close to the Fitzgerald marine reserve.
   visitor_center: checked
   website_url: http://www.californiabeaches.com/hotel/point-montara-lighthouse-hostel/
+- airtable_createdTime: '2020-08-31T04:33:12.000Z'
+  airtable_id: recj6qWTG3XMoGZRZ
+  name: Carmel Point
 - address: |-
     1252 McKay Ave.
     Alameda, Ca
@@ -754,6 +808,9 @@
   parking: Parking is $5 for 4 hours or $9 for the whole day
   slug: linda-mar-beach
   website_url: cityofpacifica.org
+- airtable_createdTime: '2020-08-31T04:33:52.000Z'
+  airtable_id: recqXj4zCXdNUZoGp
+  name: Point Pinos
 - address: End of Mesa Road, Bolinas, CA 94924
   airtable_createdTime: '2017-11-26T03:12:03.000Z'
   airtable_id: recr9mbfVvnmuhhHj
@@ -812,12 +869,18 @@
   picnic_options: checked
   region: us_pacific_coast
   slug: pebble-beach
+- airtable_createdTime: '2020-08-31T04:32:35.000Z'
+  airtable_id: recsMdvJYtGcDhzg1
+  name: San Simeon
 - airtable_createdTime: '2020-08-30T04:31:25.000Z'
   airtable_id: recsVm9vHXPQjzjQ5
   area: LA
   country_slug: us
   name: Sugarloaf point
   region: us_pacific_coast
+- airtable_createdTime: '2020-08-31T04:32:56.000Z'
+  airtable_id: recub5cV3cC2I57p7
+  name: Point Lobos - Weston beach
 - address: Highway 1 and Riley Ranch Rd. Carmel,
   airtable_createdTime: '2017-11-26T01:49:43.000Z'
   airtable_id: recwag7Xz5KcUt6FD
@@ -884,3 +947,6 @@
   tagline: 'Privately owned but publicly accessible beach at a resort which has a
     quaint little cafe, a general store and surf shop, and cabins to rent. '
   website_url: https://www.californiabeaches.com/beach/dillon-beach/
+- airtable_createdTime: '2020-08-31T04:39:20.000Z'
+  airtable_id: recyyclyRwDDg0OGp
+  name: Opal Cliffs
