@@ -121,13 +121,7 @@ def extra_template_vars(datasette):
         # Use the timezone to figure out today
         if day is None:
             day = datetime.datetime.now(pytz.timezone(place["time_zone"])).date()
-        station = (
-            await db.execute(
-                "select * from stations where id = :station_id",
-                {"station_id": place["station_id"]},
-            )
-        ).first()
-        station_id = station["id"]
+        station_id = place["station_id"]
         results = await db.execute(
             TIDE_TIMES_SQL,
             {
