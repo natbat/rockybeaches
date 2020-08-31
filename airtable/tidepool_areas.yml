@@ -639,7 +639,6 @@
   longitude: -118.9641465
   name: County line boulder field
   parking: "Park in the dirt lot along Highway 1, across from Neptune\u2019s Net."
-  pet_policy: (,)
   slug: county-line-boulder-field
   time_zone: America/Los_Angeles
 - accessibility_and_safety: |-
@@ -809,12 +808,40 @@
   slug: dyke-rock
   time_zone: America/Los_Angeles
   website_url: http://scripps.ucnrs.org/
-- address: Malibu, CA
+- accessibility_and_safety: 'In order to get to the larger bench, low tide needs to
+    be below minus 0.8. Above minus 0.8, it''s not uncommon for the occasional large
+    wave to wash over the outer end of the rock, creating a safety hazard, or at the
+    very least a drenching hazard. '
+  address: Malibu, CA
   airtable_createdTime: '2020-08-31T04:30:17.000Z'
   airtable_id: receyIlJkaz1ScELI
   area: LA
+  bathroom_info: "The closest restrooms are next to the Neptune\u2019s Net Restaurant,"
+  bathrooms: 'No'
+  body: 'Deer Creek consists of two rocky benches; the larger of the two to the east,
+    the smaller bench to the west. You can reach the site by climbing down the path
+    on the bluffs. In order to get to the larger bench, low tide needs to be below
+    minus 0.8. Above minus 0.8, it''s not uncommon for the occasional large wave to
+    wash over the outer end of the rock, creating a safety hazard, or at the very
+    least a drenching hazard. '
+  country_slug: us
+  directions_latitude: 34.0610117
+  directions_longitude: -118.9817794
+  directions_to_tidepools: Look for two small bluffs on the ocean side of the Pacific
+    Coast Highway about 1/4 mile south of Deer Creek Road. If you scramble down the
+    west side of the west bluff, you will be at the correct location. Be sure to use
+    caution near the road and going down the steep, rocky path to the beach.
+  latitude: 34.0607009
+  longitude: -118.9820831
   name: Deer Creek
+  parking: "The Deer Creek site is located along the Pacific Coast Highway, .25 mile\
+    \ east of Deer Creek Road and 1.2 miles west of the Neptune\u2019s Net Seafood\
+    \ Restaurant. \n\nThere are pullouts for parking on the mountain side of the freeway.\
+    \ Be very careful parking on the side of highway."
+  region: us_pacific_coast
   slug: deer-creek
+  tidepool_height: -0.8
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T01:51:05.000Z'
   airtable_id: recgQuH2RAJVEXjyb
   area: LA
