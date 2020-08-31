@@ -327,7 +327,7 @@
     Their efforts to supply the needs of a young city helped establish one of the\
     \ area's most important industries and traditions\u201D </p>"
   cost: Free
-  directions_latitude: 37.7874473
+  directions_latitude: 37.7873692
   directions_to_tidepools: <p>Access to the beach is via a paved drive or stairway
     down from the parking lot to water level. There are some tidepools to the south
     or you can take a low tide walk north (right) to Baker beach.</p>
@@ -363,7 +363,6 @@
     url: https://dl.airtable.com/.attachments/83e47097014e2f92008ec687fc50faac/103cc88f/2020-08-3017.16.27.jpg
   latitude: 37.7893246
   live_on_site: true
-  longitude: 122.4901192
   managment:
   - National park
   name: China beach
