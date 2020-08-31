@@ -32,8 +32,21 @@
     \ Make sure to arrive with plenty of time to explore as both beaches require a\
     \ decent walk from the parking area. You will be rewarded by seeing limpets, sand\
     \ crabs, black turban snails, purple sea urchins and more."
+  directions_to_tidepools: <p>It is an hours hike down to the tidepools from the Bear
+    Valley Visitor Center so Male sure you arrive plenty of time before the lowest
+    tide.<p>
   name: Sculptured Beach
   slug: sculptured-beach
+- airtable_createdTime: '2020-08-30T23:50:42.000Z'
+  airtable_id: rec7J0oRPUedxUMT9
+  area: Marin
+  body: One of the more accessible areas to explore tide pools, Muir Beach is just
+    a 30-minute drive from the city. Take the Muir Beach trail for a quarter-mile
+    before taking a sharp right on the Coastal Trail, where you'll find the sandy,
+    pitted beach. Whale watchers, too, will be pleased with this location; both gray
+    and humpback whales migrate through the cold waters during the summer months.
+    // 100 Pacific Way (Muir Beach), parkconservancy.org
+  name: Muir Beach
 - address: 2099 WESTSHORE RD, bodega bat
   airtable_createdTime: '2017-11-26T03:21:15.000Z'
   airtable_id: rec89KiWlMvJxQLhE
@@ -243,7 +256,10 @@
     \ Beach is part of the Duxbury Reef State Marine Sanctuary\u2014the largest soft\
     \ shale reef in California\u2014which creates an incredibly biodiverse coastal\
     \ area. A lucky kid exploring the rocky tide pools may come across a giant green\
-    \ anemone which is rumored to measure up to six inches across! \n\n"
+    \ anemone which is rumored to measure up to six inches across! \n\n<p>Keep a lookout\
+    \ for spiny red starfish that are often seen around these intertidal zones, also\
+    \ the occasional two-spotted octopus which you may be lucky enough to see lurking\
+    \ in a coral burrow.</p>\n\n"
   directions_to_tidepools: 'Agate Beach is located in Bolinas. On Highway 1, proceed
     4.5 miles north of Stinson Beach, then take Olema-Bolinas Road west to Bolinas.
     Turn left on Elm Road and follow until it to the end. Walk south along the shore
@@ -324,13 +340,36 @@
     to picnic areas and grills are first-come first-served and no reservations are
     allowed. If you want to host a wedding, meeting, commercial photography or organised
     group activities you will likely need a permit.</p>
+  header_credit: Ed Schipul
+  header_credit_url: https://www.flickr.com/photos/eschipul/5987162386/
+  header_image:
+  - filename: 2020-08-30 17.16.27.jpg
+    id: att2KorehRBfzeESL
+    size: 304819
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/446235ac81c879db7dff2ca77ac797b6/3a408bf6
+        width: 3000
+      large:
+        height: 481
+        url: https://dl.airtable.com/.attachmentThumbnails/6ad8cd6ccd951b90a0d6441b463b973f/c43a2b5e
+        width: 855
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/dca29a0923df969e5ef5ce5c2fba01a7/5a6fac6d
+        width: 64
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/83e47097014e2f92008ec687fc50faac/103cc88f/2020-08-3017.16.27.jpg
   latitude: 37.7893246
+  live_on_site: true
   longitude: 122.4901192
   managment:
   - National park
   name: China beach
   official_open: true
   open_to_public: 'Yes'
+  other_names: James D. Phelan State Beach Park
   parking: Parking can be tricky so arrive early in the day for the best chance of
     grabbing a spot in the small parking lot.
   pet_policy: No pets allowed.
@@ -631,6 +670,9 @@
 - airtable_createdTime: '2020-08-30T04:35:54.000Z'
   airtable_id: recoMUCXklspb27oG
   area: Bolinas
+  body: <p>Keep a lookout for spiny red starfish that are often seen around these
+    intertidal zones, also the occasional two-spotted octopus which you may be lucky
+    enough to see lurking in a coral burrow.</p>
   name: Agate beach
 - accessibility_and_safety: There is a wheelchair accessible boardwalk at the point.
   airtable_createdTime: '2017-11-26T04:25:04.000Z'
@@ -665,9 +707,7 @@
   parking: Parking is $5 for 4 hours or $9 for the whole day
   slug: linda-mar-beach
   website_url: cityofpacifica.org
-- address: |-
-    End of Mesa Road
-    Bolinas, CA 94924
+- address: End of Mesa Road, Bolinas, CA 94924
   airtable_createdTime: '2017-11-26T03:12:03.000Z'
   airtable_id: recr9mbfVvnmuhhHj
   area: Point Reyes
@@ -677,16 +717,17 @@
     \ Make sure to arrive with plenty of time to explore as both beaches require a\
     \ decent walk from the parking area. You will be rewarded by seeing limpets, sand\
     \ crabs, black turban snails, purple sea urchins and more.\n\n"
-  directions_to_tidepools: 'Palomarin Beach is at the south end of Point Reyes. On
-    Highway 1, proceed 4.5 miles north of Stinson Beach, then take Olema-Bolinas Road
-    west for 1.8 miles to Mesa Road. Turn right onto Mesa Road and follow it 4.5 miles
-    to the parking lot. To reach the tidepools, hike the 1.5-mile Palomarin Beach
-    Trail from the Mesa Road trailhead. The walk down the cliff is steep and strenuous.
-    To get to Palomarin Beach walk a short distance on the Coast Trail and look for
-    a signed trail on the left. This trail descends then crosses through meadows before
-    dropping down steeply to the beach. The hike is nearly a mile each way, but the
-    trail is in good shape. Watch for poison ivy along the trails and check yourself
-    for ticks if you brush up against the plants on the hike. '
+  directions_to_tidepools: "15 mins hike from the Bear Valley Visitor Center\n\nPalomarin\
+    \ Beach is at the south end of Point Reyes. On Highway 1, proceed 4.5 miles north\
+    \ of Stinson Beach, then take Olema-Bolinas Road west for 1.8 miles to Mesa Road.\
+    \ Turn right onto Mesa Road and follow it 4.5 miles to the parking lot. To reach\
+    \ the tidepools, hike the 1.5-mile Palomarin Beach Trail from the Mesa Road trailhead.\
+    \ The walk down the cliff is steep and strenuous. To get to Palomarin Beach walk\
+    \ a short distance on the Coast Trail and look for a signed trail on the left.\
+    \ This trail descends then crosses through meadows before dropping down steeply\
+    \ to the beach. The hike is nearly a mile each way, but the trail is in good shape.\
+    \ Watch for poison ivy along the trails and check yourself for ticks if you brush\
+    \ up against the plants on the hike. "
   groups: If you have time, consider stopping at the Palomarin Bird Observatory Field
     Station which is on Mesa Road just before it ends at the trailhead parking area.
     It has an unstaffed visitor center open year-round and often has staff at work
