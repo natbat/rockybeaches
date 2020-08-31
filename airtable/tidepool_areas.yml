@@ -802,17 +802,26 @@
   area: Santa Barbara
   bathroom_info: |
     There is a portable restroom available on the bluff top, near the entrance to the western beach trail. Other facilities are available in the Isla Vista business district.
+  bathrooms: 'Yes'
   body: Coal Oil Point is a low-lying flat rocky reef with scattered boulders and
     surge channels. The reef is often partially buried in sand in spring and summer
     months. Mussel beds can only be found on larger boulders and raised areas. Be
     careful of old pier piling remains as this area was once an active oil field.
     This is also a pop
   country_slug: us
+  directions_latitude: 34.4100387
+  directions_longitude: -119.8696294
+  directions_to_tidepools: <p>Follow the trail west along the coast from the line
+    of trees car parking. There is a slope down to beach level and close to there
+    is the reef</p>
   groups: "<p>Groups must make a <a href=\u201Chttp://coaloilpoint.ucnrs.org/\u201C\
     >reservation prior to visiting</p>"
+  latitude: 34.406672
+  longitude: -119.8779161
   managment:
   - University of California
   - UC Santa Barbra
+  - California State Marine Conservation Area
   name: Coal Oil Point
   parking: "If you do not have a UC Santa Barbara West Campus parking pass, you will\
     \ need to park in the western end of the community of Isla Vista and walk aproximately\
@@ -822,6 +831,8 @@
     \ Turn right and drive for two blocks, and park along the row of trees. A trail\
     \ leads out to the point and COPR."
   region: us_pacific_coast
+  rules_and_collecting: Recreational or commercial take of marine life is prohibited.
+  rules_and_collecting_url: http://www.dfg.ca.gov/marine/mpa/scmpas_list.asp
   slug: coal-oil-point
   time_zone: America/Los_Angeles
 - accessibility_and_safety: The route down can be tricky, so ask at the Visitor Center
