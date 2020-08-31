@@ -117,6 +117,7 @@
 - airtable_createdTime: '2020-08-31T04:23:35.000Z'
   airtable_id: rec9KANo9J4mnl6in
   name: "Frenchy\u2019s Cove"
+  slug: frenchys-cove
 - airtable_createdTime: '2020-08-31T04:40:00.000Z'
   airtable_id: rec9t3b14aL7dB9np
   name: Davenport Landing
