@@ -648,11 +648,40 @@
 - address: Santa Barbra, CA
   airtable_createdTime: '2020-08-31T04:31:11.000Z'
   airtable_id: recSrjNs2YhZElex8
+  area: Santa Barbara
+  bathroom_info: There are public restrooms located at the edge of Campus Point Beach.
+  bathrooms: 'Yes'
+  body: The study site is a rocky point, approximately 500 meters past the marine
+    lab buildings and the public restroom. The site is the first large rocky outcrop
+    you come to as you walk west along Campus Point Beach. The three rocks are surrounded
+    by sand, which varies in height seasonally.
+  cost: Prices range from $2 to $8 per space, depending on the length of time you
+    plan to stay.
+  country_slug: us
+  directions_latitude: 34.4085776
+  directions_longitude: -119.8427913
+  directions_to_tidepools: "The study site is a rocky point, approximately 500 meters\
+    \ past the marine lab buildings and the public restroom. The site is the first\
+    \ large rocky outcrop you come to as you walk west along Campus Point Beach. \n\
+    \nThe three rocks are surrounded by sand, which varies in height more or less\
+    \ seasonally. It consists of three parts, a shoreward portion, a middle rock and\
+    \ an oceanward portion, separated by sand and then a narrow channel."
+  docent_info: You can schedule a REEF Tour by contacting outreach@msi.ucsb.edu
+  docents: 'Yes'
+  latitude: 34.4045437
+  longitude: -119.8441133
   managment:
   - University of California
   - UC Santa Barbra
   name: Campus Point
+  parking: |-
+    Campus Point is located on the University of California, Santa Barbara (map of the University of California Santa Barbara campus). Take Highway 217 to the East Campus entrance of UCSB. Go left through the roundabout onto Lagoon Road. Follow Lagoon Road until you can take a left into parking lot #6
+
+    Lot #6 has twenty metered spots that can be purchased at the Pay Station. Pay Stations take $1 and $5 bills and do not give change. Prices range from $2 to $8 per space, depending on the length of time you plan to stay
+  region: us_pacific_coast
   slug: campus-point
+  time_zone: America/Los_Angeles
+  visitor_center: 'No'
 - address: Malibu, CA
   airtable_createdTime: '2020-08-31T04:24:49.000Z'
   airtable_id: recT5rGl8gXUPEDap
@@ -767,9 +796,34 @@
 - airtable_createdTime: '2020-08-31T04:34:29.000Z'
   airtable_id: recWZGrZVAnl1r9ss
   name: Wilder Ranch
-- airtable_createdTime: '2020-08-31T04:31:39.000Z'
+- address: Santa Barbara, CA
+  airtable_createdTime: '2020-08-31T04:31:39.000Z'
   airtable_id: recX4H63f8kUQqBbF
+  area: Santa Barbara
+  bathroom_info: |
+    There is a portable restroom available on the bluff top, near the entrance to the western beach trail. Other facilities are available in the Isla Vista business district.
+  body: Coal Oil Point is a low-lying flat rocky reef with scattered boulders and
+    surge channels. The reef is often partially buried in sand in spring and summer
+    months. Mussel beds can only be found on larger boulders and raised areas. Be
+    careful of old pier piling remains as this area was once an active oil field.
+    This is also a pop
+  country_slug: us
+  groups: "<p>Groups must make a <a href=\u201Chttp://coaloilpoint.ucnrs.org/\u201C\
+    >reservation prior to visiting</p>"
+  managment:
+  - University of California
+  - UC Santa Barbra
   name: Coal Oil Point
+  parking: "If you do not have a UC Santa Barbara West Campus parking pass, you will\
+    \ need to park in the western end of the community of Isla Vista and walk aproximately\
+    \ 0.5 miles to the point either on the blufftop trail or along the beach \n\n\
+    To reach the parking area, turn left at the junction with El Colegio from Storke\
+    \ and then take your next right, at Camino Corto. Drive 5 blocks to Del Playa.\
+    \ Turn right and drive for two blocks, and park along the row of trees. A trail\
+    \ leads out to the point and COPR."
+  region: us_pacific_coast
+  slug: coal-oil-point
+  time_zone: America/Los_Angeles
 - accessibility_and_safety: The route down can be tricky, so ask at the Visitor Center
     for directions to get to the pools through the neighboring mobile home park.
   address: "2531 West Cliff Dr.\nSanta Cruz, "
