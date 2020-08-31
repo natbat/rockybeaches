@@ -43,7 +43,8 @@
     tide.<p>
   name: Sculptured Beach
   slug: sculptured-beach
-- airtable_createdTime: '2020-08-31T04:22:20.000Z'
+- address: San Pedro, CA
+  airtable_createdTime: '2020-08-31T04:22:20.000Z'
   airtable_id: rec6M7M58d1Op5755
   area: LA
   bathroom_info: There are public restrooms at Cabrillo Beach Park
@@ -88,7 +89,8 @@
   slug: horseshoe-cove
   visitor_center: checked
   website_url: http://bml.ucdavis.edu/bmr/location.html
-- airtable_createdTime: '2020-08-31T04:22:34.000Z'
+- address: San Pedro, CA
+  airtable_createdTime: '2020-08-31T04:22:34.000Z'
   airtable_id: rec8FUt0g1SRPw8Rl
   area: LA
   bathroom_info: Portable toilets and restrooms are located near the base of the cliff.
@@ -114,10 +116,44 @@
 - airtable_createdTime: '2020-08-31T04:40:40.000Z'
   airtable_id: rec94Rflws2wTel78
   name: Shell Beach Sonoma
-- airtable_createdTime: '2020-08-31T04:23:35.000Z'
+- address: West Anacapa Island, CA
+  airtable_createdTime: '2020-08-31T04:23:35.000Z'
   airtable_id: rec9KANo9J4mnl6in
+  area: Anacapa Island
+  bathroom_info: "There are no restrooms at Frenchy\u2019s Cove. Use restrooms on\
+    \ the boat before going ashore."
+  bathrooms: 'No'
+  body: |-
+    This site is a solid rocky bench located on the south side of West Anacapa Island, within the Channel Islands National Park. Human disturbances include trampling from light visitor use.
+    Travel to and from Anacapa Island offers the opportunity for marine mammal sightings aboard the Island Packers boats.
+  country_slug: us
+  directions_latitude: 34.2441623
+  directions_longitude: -119.2651822
+  directions_to_tidepools: "Frenchy\u2019s Cove is located on West Anacapa Island.\
+    \ Boat transportation to this site from Ventura Harbor is provided through Island\
+    \ Packers. To make reservations call (805) 642-1393. The site is accessed by a\
+    \ five-minute hike from one side of the island to the other, past a site monitored\
+    \ by the Channel Islands National Park.\n\nBoat transportation to Frenchy\u2019\
+    s Cove, Anacapa Island, is provided through Island Packers. From the beach, take\
+    \ the five-minute hike from the north side of the island through the gap to the\
+    \ south side. There is a trail located at Frenchy\u2019s Cove. Head west across\
+    \ the sandy beach to the second rocky bench. "
+  docents: 'No'
+  dogs: 'No'
+  food_options: "There is no food available on the island, you\u2019ll need to bring\
+    \ food with you."
+  latitude: 34.0064594
+  longitude: -119.4113714
+  managment:
+  - National park
   name: "Frenchy\u2019s Cove"
+  region: us_pacific_coast
+  rules_and_collecting: Collecting is not permitted in the National Park.No permit
+    is required for monitoring, but it is important that groups do not disturb the
+    National Park monitoring site.
   slug: frenchys-cove
+  time_zone: America/Los_Angeles
+  visitor_center: 'No'
 - airtable_createdTime: '2020-08-31T04:40:00.000Z'
   airtable_id: rec9t3b14aL7dB9np
   name: Davenport Landing
@@ -166,7 +202,7 @@
   docents: checked
   hours: The visitor center is open on weekends from April through October
   managment:
-  - State Park
+  - California State Park
   name: 'Gerstle Cove Marine Reserve '
   phone: (707) 847-3221
   slug: gerstle-cove-marine-reserve
@@ -567,7 +603,7 @@
     The rocky ledges and tidepools are easily accessible but are exposed and visible
     only during low tides.
   managment:
-  - State Park
+  - California State Park
   name: Pigeon Point Light Station State Historic park
   phone: (650) 879-2120
   region: us_pacific_coast
@@ -576,9 +612,36 @@
 - airtable_createdTime: '2020-08-31T04:31:11.000Z'
   airtable_id: recSrjNs2YhZElex8
   name: Campus Point
-- airtable_createdTime: '2020-08-31T04:24:49.000Z'
+- address: Malibu, CA
+  airtable_createdTime: '2020-08-31T04:24:49.000Z'
   airtable_id: recT5rGl8gXUPEDap
+  area: LA
+  bathroom_info: Portable toilets are located at the west end of the dirt parking
+    lot.
+  bathrooms: 'Yes'
+  body: "The County Line Boulder Field is located a mile west of the Ventura/Los Angeles\
+    \ County line, just above Malibu along the Pacific Coast Highway. From the North,\
+    \ take Highway 101 to Oxnard. Exit Rice Ave and turn towards the ocean. Rice Ave\
+    \ becomes Highway 1 South, the Pacific Coast Highway (PCH). Continue on PCH until\
+    \ you come to the Neptune\u2019s Net Seafood Restaurant (42505 PCH), three miles\
+    \ past the Sycamore Canyon State Park. Neptune\u2019s Net will be on your left.\
+    \ Park in the dirt lot on your right. From the South, take the PCH Northbound.\
+    \ Continue along PCH past Pepperdine and Leo Carrillo State Park until you come\
+    \ to the Neptune\u2019s Net Seafood Restaurant. Neptune\u2019s Net will be on\
+    \ your right. Park in the dirt lot on your left."
+  directions_latitude: 34.0527066
+  directions_longitude: -118.9625872
+  directions_to_tidepools: <p>To get to the boulder field, walk west (to the right
+    of you are facing the sea from the carpark) along the bluff to a wooden staircase
+    closest to the creek - not the staircase directly off the car park. The boulder
+    field will be directly in front of you.</p>
+  latitude: 34.0524691
+  longitude: -118.9641465
   name: County line boulder field
+  parking: "Park in the dirt lot along Highway 1, across from Neptune\u2019s Net."
+  pet_policy: (,)
+  slug: county-line-boulder-field
+  time_zone: America/Los_Angeles
 - accessibility_and_safety: |-
     <p>As tide pools go, this is pretty accessible. It's a bit of a walk on the flat path and there is a bit of beach to navigate to get to the pools, but the pools also have a reasonably flat section. That said, there are some fast flowing cut-throughs to get over if you want to go further out and seasonally some quite slippery seaweed, so a walking stick makes a good companion.</p>
 
@@ -701,7 +764,7 @@
   groups: "If you visit in the late-fall or winter, don\u2019t forget to check out\
     \ the Monarch Preserve for the yearly migration of up to 100,000 monarch butterflies! "
   managment:
-  - State Park
+  - California State Park
   name: Natural Bridges State Beach
   open_to_public: 'Yes'
   parking: "State beach parking is $10, or park just before the beach entrance on\
@@ -720,7 +783,8 @@
 - airtable_createdTime: '2020-08-31T04:40:10.000Z'
   airtable_id: recafS4y83k3N9lwZ
   name: Carmet Beach
-- airtable_createdTime: '2020-08-31T04:22:19.000Z'
+- address: La Jolla, CA
+  airtable_createdTime: '2020-08-31T04:22:19.000Z'
   airtable_id: recefZRfMakgL2HnE
   area: San Diego
   bathroom_info: Restrooms are not available near Dike Rock. The nearest restroom
@@ -745,9 +809,12 @@
   slug: dyke-rock
   time_zone: America/Los_Angeles
   website_url: http://scripps.ucnrs.org/
-- airtable_createdTime: '2020-08-31T04:30:17.000Z'
+- address: Malibu, CA
+  airtable_createdTime: '2020-08-31T04:30:17.000Z'
   airtable_id: receyIlJkaz1ScELI
+  area: LA
   name: Deer Creek
+  slug: deer-creek
 - airtable_createdTime: '2017-11-26T01:51:05.000Z'
   airtable_id: recgQuH2RAJVEXjyb
   area: LA
@@ -756,6 +823,8 @@
     \ area of the shoreline has caves and rock arches to duck into. It\u2019s a fun\
     \ place for kids."
   country_slug: us
+  managment:
+  - California State Park
   name: Lee Carrillo State Park
   region: us_pacific_coast
   slug: lee-carrillo-state-park
@@ -773,7 +842,7 @@
     and down to the beach. '
   groups: Gray whales migrate by Point Montara between November and April.
   managment:
-  - State Park
+  - California State Park
   name: Point Montara light station
   parking: No fee for day-use parking
   pet_policy: Dogs allowed on leash on the property but not allowed in the hostel
@@ -810,7 +879,7 @@
   hours: "Visitors Center hours: Wed \u2013 Sat 10 a.m. \u2013 4 p.m. (Oct \u2013\
     \ Feb) and until 5 p.m. the rest of the year"
   managment:
-  - State Park
+  - California State Park
   name: 'Crab Cove '
   phone: (510) 544-3187
   slug: crab-cove
@@ -862,7 +931,7 @@
     \ $9 for the whole day\nOnline: "
   food_options: 'Taco Bell on the beach, Peruvian eatery across the road '
   managment:
-  - State Park
+  - California State Park
   name: Linda Mar beach
   parking: Parking is $5 for 4 hours or $9 for the whole day
   slug: linda-mar-beach
@@ -920,7 +989,7 @@
     southern beach in Bean Hollow State Beach.
   country_slug: us
   managment:
-  - State Park
+  - California State Park
   name: Pebble beach
   open_to_public: 'Yes'
   parking: No fee for parking
