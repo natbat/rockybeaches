@@ -1,6 +1,6 @@
-<!DOCTYPE htmllang="en">
+<!DOCTYPE html>
 {% set place = rows[0] %}
-<html>
+<html lang="en">
 <head>
 <title>Rocky Beaches. {{ place.name }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
 </header> <!-- end header -->
 
 <div class="page">
-  <section class="page-title">
+  <section class="page-title"{% if place.header_image %} style="background-image: url('{{ json.loads(place.header_image)[0]['url'] }}');"{% endif %}>
     <div class="title-wrapper stretch">
       <h1 class="text"><span>{{ place.name }}</span></h1>
     </div>

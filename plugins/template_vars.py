@@ -208,6 +208,7 @@ def extra_template_vars(datasette):
         "ordinal": ordinal,
         "calculate_depth_view": calculate_depth_view,
         "nice_time": nice_time,
+        "json": json,
     }
 
 
