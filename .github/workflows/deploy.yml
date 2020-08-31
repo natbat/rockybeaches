@@ -43,11 +43,9 @@ jobs:
         git commit -m "Latest data: ${timestamp}" || exit 0
         git push
     - name: Build database
-      run: scripts/build.sh
+      run: script/build
     - name: Run tests
-      run: |
-        pytest
-        datasette . --get /us/pillar-point | grep 'Rocky Beaches'
+      run: script/test
     - name: Deploy to Vercel
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

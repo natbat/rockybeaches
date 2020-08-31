@@ -22,7 +22,11 @@ Install dependencies (ideally into a Python virtual environment, e.g. one create
 
 Build the SQLite database from the YAML in `data/` plus data fetched from NOAA and iNaturalist:
 
-    scripts/build.sh
+    script/build
+
+Run tests like this:
+
+    script/test
 
 Run the development server:
 
