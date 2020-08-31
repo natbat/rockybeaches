@@ -45,7 +45,23 @@
   slug: sculptured-beach
 - airtable_createdTime: '2020-08-31T04:22:20.000Z'
   airtable_id: rec6M7M58d1Op5755
+  area: LA
+  bathroom_info: There are public restrooms at Cabrillo Beach Park
+  bathrooms: Nearby
+  body: |-
+    Point Fermin is an expansive intertidal area with sloping reefs and uplifted benches.
+
+    This site is located on the eastern portion of Cabrillo Beach Park in San Pedro, Los Angeles County. The site is accessed from the Beach Park and Cabrillo Marine Aquarium parking lot. You will have to either pay for parking or park outside the gates on the street. The study site is ahead and to the right about 300 m below the cliffs as you are standing in the parking lot facing south toward the ocean. Walk along the path across the grass until you access the boardwalk at the base of the cliffs. When the board walk ends, proceed along the intertidal to the concrete bunker foundations.
+  country_slug: us
+  latitude: 33.7067878
+  longitude: -118.2858259
   name: Point Fermin
+  parking: |-
+    This site is located on the eastern portion of Cabrillo Beach Park in San Pedro, Los Angeles County. The site is accessed from the Beach Park and Cabrillo Marine Aquarium parking lot. You will have to either pay for parking or park outside the gates on the street. The study site is ahead and to the right about 300 m below the cliffs as you are standing in the parking lot facing south toward the ocean. Walk along the path across the grass until you access the boardwalk at the base of the cliffs. When the board walk ends, proceed along the intertidal to the concrete bunker foundations.
+    Be sure to check the photos and GPS coordinates to be sure you are on the correct bench. Other researchers have permanent study sites here, too, and you may find their markers.
+  region: us_pacific_coast
+  slug: point-fermin
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-30T23:50:42.000Z'
   airtable_id: rec7J0oRPUedxUMT9
   area: Marin
@@ -74,7 +90,27 @@
   website_url: http://bml.ucdavis.edu/bmr/location.html
 - airtable_createdTime: '2020-08-31T04:22:34.000Z'
   airtable_id: rec8FUt0g1SRPw8Rl
+  area: LA
+  bathroom_info: Portable toilets and restrooms are located near the base of the cliff.
+  body: The site is next to the remains of a hot-spring resort that prospered during
+    the first part of the 20th century.
+  cost: The park day use fee is $6 per vehicle
+  country_slug: us
+  hours: The park gate closes at 4:30 pm; the park closes at 5 pm.
+  latitude: 33.7109034
+  longitude: -118.3039992
   name: White Point
+  open_to_public: 'Yes'
+  parking: This site is located on the eastern portion of Royal Palms State Park/White
+    Point County Beach in San Pedro, Los Angeles County. To reach the site, take Highway
+    110 (the Harbor Freeway) south until it ends at the Gaffey Street exit. Continue
+    south on Gaffey Street to 25th Street. Turn right on 25th Street, then left on
+    Western. At the end of Western, turn left on Paseo del Mar, then right into the
+    Park. The road goes down to the beach where you should turn left and go to the
+    end of the pavement to park.
+  region: us_pacific_coast
+  slug: white-point
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:40:40.000Z'
   airtable_id: rec94Rflws2wTel78
   name: Shell Beach Sonoma
@@ -685,7 +721,29 @@
   name: Carmet Beach
 - airtable_createdTime: '2020-08-31T04:22:19.000Z'
   airtable_id: recefZRfMakgL2HnE
+  area: San Diego
+  bathroom_info: Restrooms are not available near Dike Rock. The nearest restroom
+    is located at La Jolla Shores.
+  body: Dike Rock is located in La Jolla, California, within the Scripps Coastal Reserve
+    just north of the Scripps Pier. Dike Rock is a small rocky intertidal area bordered
+    on either side by sandy beach. This site is characterized by many large boulders
+    in the high intertidal, broad mud and sandstone benches covered with coralline
+    algal turf in the mid-intertidal, and a mixture of larger boulders and algae-covered
+    flats in the lower intertidal area
+  country_slug: us
+  directions_to_tidepools: Dike Rock is located North of the Scripps Pier. If you
+    park near Scripps Institute of Oceanography there are two staircases just south
+    of the pier leading down to the beach.
+  latitude: 32.8715947
+  longitude: -117.2531818
   name: Dyke Rock
+  parking: 'From Interstate 5, exit La Jolla Village Drive. Turn left onto La Jolla
+    Shores Drive. Continue down the hill and park anywhere along the street near the
+    beach, or in the La Jolla Shores beach parking lot. '
+  region: us_pacific_coast
+  slug: dyke-rock
+  time_zone: America/Los_Angeles
+  website_url: http://scripps.ucnrs.org/
 - airtable_createdTime: '2020-08-31T04:30:17.000Z'
   airtable_id: receyIlJkaz1ScELI
   name: Deer Creek
