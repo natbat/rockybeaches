@@ -435,6 +435,7 @@
     is the northern beach of Bean Hollow State Beach. This trail is about one-mile
     each way making it an easy round-trip from either beach
   country_slug: us
+  dogs: 'Yes'
   food_options: |-
     Duarte's Tavern
     Mercado & Taqueria de Amigos
@@ -443,6 +444,7 @@
   name: Arroyo de los Frijoles Beach
   natalie_visited: true
   other_names: Bean Hollow
+  pet_policy: Dogs allowed on leish
   picnic_options: checked
   region: us_pacific_coast
   slug: arroyo-de-los-frijoles
