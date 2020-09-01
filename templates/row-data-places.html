@@ -197,12 +197,12 @@
           zoom: 14,
           layers: [tiles]
       });
-      L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km }} * 1000).addTo(map);
+      L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km|default("0.5", true) }} * 1000).addTo(map);
       map.on('moveend', function() {
         console.log(map.getCenter());
       });
       // Fetch things you might see
-      var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km }}&per_page=9";
+      var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km|default("0.5", true) }}&per_page=9";
       fetch(url).then(
         response => response.json()
       ).then(data => {
