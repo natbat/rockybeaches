@@ -437,7 +437,37 @@
   website_url: http://www.californiabeaches.com/attraction/duxbury-reef-tide-pools/
 - airtable_createdTime: '2020-08-31T04:33:27.000Z'
   airtable_id: recFtXfVa2am7bvLi
+  area: Carmel/Monterey
+  bathroom_info: Restrooms are located at the Asilomar Conference Grounds across the
+    street
+  bathrooms: Nearby
+  body: Asilomar State Beach is within the boundary of Asilomar Marine Reserve. It
+    was established as a state beach in 1956 and as a Marine Reserve in 2006. This
+    site is a granite outcrop with a good amount of relief. Be prepared to climb over
+    steep rocks. Make certain that anyone coming out to the site has suitable shoes.
+  country_slug: us
+  directions_latitude: 36.6215044
+  directions_longitude: -121.9412265
+  directions_to_tidepools: 'To reach the tidepools, look for the State Parks marker
+    #10 and continue down that trail straight to the tidepools.'
+  latitude: 36.6217613
+  longitude: -121.9423269
+  managment:
+  - California State Marine Conservation Area
+  - California State Park
   name: Asilomar State Beach
+  parking: "This site is located at the end of the Monterey Peninsula in Pacific Grove.\
+    \ From Highway 1, take the Highway 68 west exit. Continue on Highway 68 until\
+    \ you reach the light at Sunset Ave and make a left. Continue on Sunset until\
+    \ you see Asilomar beach on your left-hand side. The site will be about a quarter\
+    \ mile past the main beach entrance. If you have reached Pico Ave you have gone\
+    \ too far. \n\nPark on the left hand side of sunset ave"
+  region: us_pacific_coast
+  rules_and_collecting: 'Asilomar State Beach is in a no-take marine protected area,;
+    no collecting of organisms, shells, rocks, driftwood, etc. is permitted. '
+  rules_and_collecting_url: http://www.californiampas.org/
+  slug: asilomar-state-beach
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T02:37:08.000Z'
   airtable_id: recGn6pMwvkSzuz1M
   area: Half moon bay
@@ -451,19 +481,30 @@
 - airtable_createdTime: '2017-11-26T04:47:43.000Z'
   airtable_id: recIVQ8vjkIJrcIQD
   area: Carmel/Monterey
+  bathroom_info: Restrooms are located in a building between the parking area and
+    Asilomar Avenue. The building is next to the small freshwater pond (Crespi Pond)
+    adjacent to the golf course.
+  bathrooms: Nearby
   body: |-
     Point Pinos and Asilomar State Beach
 
     These two tidepool areas are located in Pacific Grove off Sunset Drive/Highway 68 and Asilomar Avenue. Point Pinos, also known as the Great Tide Pool, is one of the richest tidepool habitats in the world. At higher tides, some of the tidepools in this area remain exposed.
   country_slug: us
-  directions_to_tidepools: 'These two tidepool areas are located in Pacific Grove
-    off Sunset Drive/Highway 68 and Asilomar Avenue. '
+  directions_latitude: 36.636827
+  directions_longitude: -121.9300417
+  latitude: 36.6381813
+  longitude: -121.9299401
   name: Point Pinos
+  parking: |
+    Park in the ocean-side parking space across the road from the dilapidated, windowless, cement foghorn building, where there is also a bench looking out towards the point.
   phone: (831) 372-4076
   region: us_pacific_coast
+  rules_and_collecting: collecting of any sort is illegal with out a scientific collecting
+    permit.
   slug: point-pinos
   tagline: 'Point Pinos, also known as the Great Tide Pool, is one of the richest
     tidepool habitats in the world. '
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T04:32:16.000Z'
   airtable_id: recLZdp2L50siXrtP
   area: Jenner
@@ -1021,6 +1062,29 @@
     House. This is a small quiet residential area so be careful to keep noise to a
     minimum.
   groups: Busses may find the small windy roads difficult.
+  header_credit: Google Street View
+  header_credit_url: https://goo.gl/maps/L9jcMig6eQDKVnMs5
+  header_image:
+  - filename: 2020-08-31 17.33.09.jpg
+    id: attLYYmQzMMHLkkX6
+    size: 973529
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/23cf25a4df300ffd48f832db1faa15d7/2c3ff36b
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/47a863b3d0d61d3657393c45cb2e5896/73870c39
+        width: 1532
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/bc57c774dd718fbaf3e849c1eaf92452/6bc63c01
+        width: 108
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/b64b70331a4cece99a7238597ea6f0c1/3374ca32/2020-08-3117.33.09.jpg
+  latitude: 36.5438817
+  longitude: -121.9339618
   managment:
   - California State Marine Conservation Area
   name: Carmel Point
@@ -1114,9 +1178,6 @@
   parking: Parking is $5 for 4 hours or $9 for the whole day
   slug: linda-mar-beach
   website_url: cityofpacifica.org
-- airtable_createdTime: '2020-08-31T04:33:52.000Z'
-  airtable_id: recqXj4zCXdNUZoGp
-  name: Point Pinos
 - address: End of Mesa Road, Bolinas, CA 94924
   airtable_createdTime: '2017-11-26T03:12:03.000Z'
   airtable_id: recr9mbfVvnmuhhHj
