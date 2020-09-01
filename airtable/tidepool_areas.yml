@@ -700,9 +700,31 @@
   country_slug: us
   groups: free guided tours of the marshland on the first Sunday of the month at 10
     a.m.
+  header_credit: Natalie Downe
+  header_credit_url: http://blog.natbat.net/
+  header_image:
+  - filename: 2020-09-01 10.21.09.jpg
+    id: attk5XKj6t0Xj9j02
+    size: 6451666
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/10e6127f52b50fe69be19bcc1ad53eac/1ef2dffe
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/eb3c380a3c9cda301462c88b85edcfb6/28e6e7f8
+        width: 795
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/86973104c7371a20e9fb9641318a87dc/67e774bd
+        width: 56
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/7117b52bc1f8e92435ffe1fa5780ebad/391de478/2020-09-0110.21.09.jpg
   latitude: 37.2646157
   longitude: -122.4138891
   name: Pescadero State beach
+  natalie_visited: true
   parking: Between Half Moon Bay and Santa Cruz is Pescadero State Beach that includes
     three separate parking lots. The middle lot gives you access to the rocky shore
     and tide pools.
@@ -1204,6 +1226,79 @@
     or destruction of these resources is strictly forbidden. '
   slug: carmet-beach
   time_zone: America/Los_Angeles
+- accessibility_and_safety: |-
+    <p>The path to the beach is quite steep, if you have difficulty walking you will appreciate the use of a stick to get down. Be careful of the prolific poison oak that lines this trail. Once you are on the beach the rocky outcrops are flat but slippery.</p>
+
+    <p>If you go exploring in the caves be careful of the tide because the sea stacks create dangerous currents and you could be swept away.</p>
+  airtable_createdTime: '2020-09-01T17:34:17.000Z'
+  airtable_id: recbzrTCPYnWVhpAd
+  area: Santa Cruz
+  bathrooms: 'No'
+  body: |-
+    <p>This is a really pretty beach with shallow pools on algae covered rock benches.</p>
+
+    <p>The large Shark fin shaped rock used to be part of the mudstone cliff and got its shape from erosion by the wind and waves</p>
+
+    <p>There are also a small cave on the south east of the beach to explore.</p>
+  cost: Free
+  country_slug: us
+  directions_latitude: 37.005745
+  directions_longitude: -122.1856066
+  directions_to_tidepools: "<p>From the parking lot walk south (left if you face the\
+    \ ocean) down a wide path over railroad tracks to a rather scrambley steep poison-oak\
+    \ lined path that takes you to the beach. You\u2019ll be able to see the shark\
+    \ fin rock from the path. There are three rocky outcrops on the left hand side\
+    \ that have some small tidepools and kelp. </p>"
+  docents: 'No'
+  dogs: 'No'
+  food_options: <p>There are some restaurants north in Davenport </p>
+  groups: Groups are allowed
+  header_credit: Natalie Downe
+  header_credit_url: http://blog.natbat.net/
+  header_image:
+  - filename: 2020-09-01 11.23.24.jpg
+    id: attZW4523qQbUtDKy
+    size: 7264655
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/247e44db951fe4c70999a32ff19e8f3b/19561c93
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/7aee48d9da1f29e565c933114f5c4606/a4b821d6
+        width: 747
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/c37040d9e5300eb638877c4b32a70655/5165c968
+        width: 53
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/86339e21c28c3b9f67cebb8cecf2ac6f/47936cae/2020-09-0111.23.24.jpg
+  hours: Sunrise to sunset
+  latitude: 37.003824
+  live_on_site: true
+  longitude: -122.1855372
+  managment:
+  - California State Park
+  name: Shark Fin Cove
+  natalie_visited: true
+  official_open: true
+  open_to_public: 'Yes'
+  other_names: Shark Tooth Beach, Davenport Cove, Jah beach
+  parking: <p>Parking is available in a small dirt lot on the ocean side of highway
+    1</p>
+  pet_policy: <p<As a state park unfortunately there are no dogs allowed.</p>
+  picnic_options: <p>There is a lovely sandy beach here, great for a picnic! No fires
+    allowed.</p>
+  region: us_pacific_coast
+  rules_and_collecting: This beach forms part of Coast Dairies State Park. No collecting
+    unless you have permission from the state park
+  slug: shark-fin-cove
+  tagline: "Flat rock outcrops with small tide \u2018puddles\u2019 and lots of algae"
+  tidepool_height: 1.5
+  time_zone: America/Los_Angeles
+  visitor_center: 'No'
+  wikipedia: https://en.m.wikipedia.org/wiki/Coast_Dairies_State_Park
 - address: La Jolla, CA
   airtable_createdTime: '2020-08-31T04:22:19.000Z'
   airtable_id: recefZRfMakgL2HnE
@@ -1509,7 +1604,7 @@
   time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T05:33:32.000Z'
   airtable_id: recrVKdoD7nkSOr5i
-  area: Carmel/Monterey
+  area: Pescadero
   bathrooms: 'Yes'
   body: Pebble Beach is the northern beach in Bean Hollow State Beach in San Mateo
     County. This is a small cove with a pebbly coarse brown sand. A stair leads down
@@ -1523,11 +1618,33 @@
     1 and the rocky shoreline for about a mile to Arroyo de los Frijoles Beach, the
     southern beach in Bean Hollow State Beach.
   country_slug: us
+  header_credit: Natalie Downe
+  header_credit_url: http://blog.natbat.net/
+  header_image:
+  - filename: 2020-09-01 10.26.02.jpg
+    id: attqrwclUbGsvXBfH
+    size: 6988001
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/772817bfa56966874b1ab7dc43f1c192/22250adf
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/231a0519a9e4c39d1bc92b79aa29df63/3eee93b6
+        width: 785
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/d436bba4c96d315c451e4ad31b3363c0/37f0520d
+        width: 55
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/1bc0899b67765392d08417b56b0c40a7/836955a0/2020-09-0110.26.02.jpg
   latitude: 36.561669
   longitude: -121.936278
   managment:
   - California State Park
   name: Pebble beach
+  natalie_visited: true
   open_to_public: 'Yes'
   parking: No fee for parking
   pet_policy: Dogs allowed on leash
