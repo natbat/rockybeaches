@@ -10,7 +10,7 @@ def fetch_species_counts(place):
             "quality_grade": "research",
             "lat": place["latitude"],
             "lng": place["longitude"],
-            "radius": place["radius_km"],
+            "radius": (place["radius_km"] or "0.5"),
         }
     )
     return httpx.get(url).json()["results"]
@@ -23,7 +23,7 @@ def fetch_observations(place):
             "photos": "true",
             "lat": place["latitude"],
             "lng": place["longitude"],
-            "radius": place["radius_km"],
+            "radius": (place["radius_km"] or "0.5"),
             "quality_grade": "research",
         }
     )
