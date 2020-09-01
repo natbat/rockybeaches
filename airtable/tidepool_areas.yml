@@ -1000,9 +1000,40 @@
     also stay in the hostel here. Really close to the Fitzgerald marine reserve.
   visitor_center: checked
   website_url: http://www.californiabeaches.com/hotel/point-montara-lighthouse-hostel/
-- airtable_createdTime: '2020-08-31T04:33:12.000Z'
+- address: 26198 Scenic Road, Carmel, CA
+  airtable_createdTime: '2020-08-31T04:33:12.000Z'
   airtable_id: recj6qWTG3XMoGZRZ
+  area: Carmel/Monterey
+  bathroom_info: A public restroom is maintained at the mouth of the Carmel River
+    and can be reached by driving south on Scenic Road around Carmel Point to the
+    Carmel River Beach State Beach
+  bathrooms: Nearby
+  body: This whole area is a granite outcrop with a good amount of relief. Be prepared
+    to climb over the rocks and around pools. The rocks and alga-covered boulders
+    are difficult to traverse. Be careful! Make certain that anyone visiting the site
+    has suitable shoes and an extra change of clothes.
+  country_slug: us
+  directions_latitude: 36.5438451
+  directions_longitude: -121.9333204
+  directions_to_tidepools: The site is in a small cove between the north point of
+    Carmel Point and a large white house on the seaward side of the road called the
+    Seaburst House, 26198 Scenic Road. Park on Ocean View across from the Seaburst
+    House. This is a small quiet residential area so be careful to keep noise to a
+    minimum.
+  groups: Busses may find the small windy roads difficult.
+  managment:
+  - California State Marine Conservation Area
   name: Carmel Point
+  parking: 'The Carmel Point tidepools is in the center of Carmel Bay on Scenic Road
+    at Ocean View Road. Park on ocean view opposite sea burst house. Scenic Road runs
+    parallel to the shore along Carmel Beach then, at the south end of Carmel Beach,
+    turns westward and goes around Carmel Point to Carmel River Beach State Park. '
+  region: us_pacific_coast
+  rules_and_collecting: Carmel Point is located within the Carmel Bay State Marine
+    Conservation Area. Recreational take of invertebrates and marine aquatic plants
+    is illegal.
+  slug: carmel-point
+  time_zone: America/Los_Angeles
 - address: |-
     1252 McKay Ave.
     Alameda, Ca
@@ -1146,37 +1177,52 @@
   slug: pebble-beach
 - airtable_createdTime: '2020-08-31T04:32:35.000Z'
   airtable_id: recsMdvJYtGcDhzg1
+  area: San Simeon
   bathroom_info: There are no public restrooms at or near this site.
   bathrooms: 'No'
   body: |
     This is a gently undulating rocky area with some high and low areas. The amount of relief to the rocks is fairly minimal to low. As with any site with deep channels, watch the water level as the tide comes in so no one gets stranded!
   country_slug: us
+  directions_latitude: 35.6096026
+  directions_longitude: -121.1435476
   directions_to_tidepools: There is a public access trail from the intersection of
     Vista del Mar and Balboa, walk across a vacant lot to the beach. Once on the sandy
     beach, walk south until you reach a sloping rock platform that rises above the
     sand.
+  latitude: 35.6041315
+  longitude: -121.1420191
   managment:
   - California State Marine Conservation Area
   name: San Simeon
+  parking: 'This site is about a quarter of a mile south of the town of San Simeon.
+    From Highway 1 at the Sea Breeze Inn, turn onto on Vista del Mar, the southernmost
+    road in town. Drive to the end of Vista del Mar and park where it meets Balboa. '
   region: us_pacific_coast
   rules_and_collecting: This San Simeon intertidal site is located within the Cambria
-    State Marine Conservation Area. It ispart of a network of marine protected areas
+    State Marine Conservation Area. It is part of a network of marine protected areas
     recently established by the state of Calfornia. Recreational take of living resources
     is allowed with a valid fishing license; however, all commercial fishing is prohibited
+  slug: san-simeon
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-30T04:31:25.000Z'
   airtable_id: recsVm9vHXPQjzjQ5
   area: LA
   country_slug: us
   name: Sugarloaf point
   region: us_pacific_coast
-- airtable_createdTime: '2020-08-31T04:32:56.000Z'
-  airtable_id: recub5cV3cC2I57p7
-  name: Point Lobos - Weston beach
-- address: Highway 1 and Riley Ranch Rd. Carmel,
+- accessibility_and_safety: The alga covered rocks can be very slippery. Sturdy boots,
+    trekking poles and knee pads are highly recommended!
+  address: Highway 1 and Riley Ranch Rd. Carmel,
   airtable_createdTime: '2017-11-26T01:49:43.000Z'
   airtable_id: recwag7Xz5KcUt6FD
   area: Carmel/Monterey
-  body: "This state park is loaded with nooks and crannies full of marine life. Weston\
+  bathroom_info: Restrooms are located just past the kiosk at the entrance to Point
+    Lobos State Nature Reserve.
+  bathrooms: 'Yes'
+  body: "This site features a gently sloping platform with high algal diversity. The\
+    \ site is reached by crossing a small boulder field, and the alga covered rocks\
+    \ can be very slippery. Sturdy boots and trekking poles are highly recommended.\n\
+    \nThis state park is loaded with nooks and crannies full of marine life. Weston\
     \ Beach is the largest and best known of the beaches at Point Lobos.\n\nAn area\
     \ called Weston Beach is the best place to visit tide pools at Point Lobos State\
     \ Reserve. The tide pools at Point Lobos are only visible at certain times, depending\
@@ -1193,17 +1239,31 @@
     \ you may even spot a sea lion or otter frolicking in the waves. Volunteer docents\
     \ are available to answer questions at the Sea Lion Point parking lot most days\
     \ from 9 a.m. to 5 p.m."
+  cost: $10 day use fee per car
   country_slug: us
+  directions_latitude: 36.5128984
+  directions_longitude: -121.9430045
   directions_to_tidepools: The best spot to check out the tide pools is on Weston
     Beach, just south and west of the main entrance
-  docents: checked
-  hours: Volunteer docents are available to answer questions at the Sea Lion Point
-    parking lot most days from 9 a.m. to 5 p.m.
+  docent_info: Volunteer docents are available to answer questions at the Sea Lion
+    Point parking lot most days from 9 a.m. to 5 p.m.
+  docents: 'Yes'
+  groups: Buses must obtain a permit in advance.
+  latitude: 36.5129335
+  longitude: -121.9445659
+  managment:
+  - California State Park
+  - California State Nature Preservr
   name: Weston beach
-  parking: 'Parking: $10'
+  parking: 'Parking: $10. Park at Weston Beach. The parking lot is on the right (ocean
+    side) of the road.'
   phone: (831) 624-4909
   region: us_pacific_coast
+  rules_and_collecting: collecting of any sort is illegal without a CA DFW scientific
+    collecting permit.
+  rules_and_collecting_url: https://www.wildlife.ca.gov/Licensing/Scientific-Collecting
   slug: weston-beach
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/map/point-lobos-state-natural-reserve-beaches/
 - address: |-
     1 Beach Avenue
