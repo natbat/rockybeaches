@@ -6,6 +6,8 @@ The site was designed by Natalie Downe ([@natbat](https://twitter.com/natbat)) a
 
 It uses data pulled from [iNaturalist](https://www.inaturalist.org/) and the [NOAA Tides & Currents API](https://tidesandcurrents.noaa.gov/web_services_info.html).
 
+[Working tide stations](https://www.rockybeaches.com/data/noaa_stations_map?good__exact=1)
+
 ## Technology used
 
 - [Datasette](https://datasette.io/) and [datasette-graphql](https://github.com/simonw/datasette-graphql)
