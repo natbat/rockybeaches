@@ -4,9 +4,12 @@
   body: North Point Natural Area has some great tide pools at low tide. They are located
     north of Morro Strand State Beach between the towns of Morro Bay and Cayucos.
   country_slug: us
+  latitude: 35.4197918
+  longitude: -120.8820232
   name: North Point Beach
   region: us_pacific_coast
   slug: north-point-beach
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/beach/north-point-beach/
 - airtable_createdTime: '2017-11-26T01:57:33.000Z'
   airtable_id: rec0sW0dbM6X1bVRr
@@ -16,9 +19,12 @@
     \ excellent tide pools. Our favorite access point for tide pools is the one at\
     \ Spyglass Park."
   country_slug: us
+  latitude: 37.4324536
+  longitude: -122.4420778
   name: Spyglass beach
   region: us_pacific_coast
   slug: spyglass-beach
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/beach/spyglass-park/
 - airtable_createdTime: '2017-11-26T01:52:02.000Z'
   airtable_id: rec2RkBTtBAslU0PK
@@ -26,9 +32,12 @@
   body: "This hidden reef is a hidden gem of the central coast. It\u2019s just a short\
     \ hike down Hazard Canyon to this point south of Morro Bay."
   country_slug: us
+  latitude: 35.289479
+  longitude: -120.883857
   name: Hazard reef
   region: us_pacific_coast
   slug: hazard-reef
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/beach/montana-de-oro-state-park-hazard-canyon-reef/
 - airtable_createdTime: '2017-11-26T03:12:56.000Z'
   airtable_id: rec68lPHHX950heUG
@@ -38,11 +47,16 @@
     \ Make sure to arrive with plenty of time to explore as both beaches require a\
     \ decent walk from the parking area. You will be rewarded by seeing limpets, sand\
     \ crabs, black turban snails, purple sea urchins and more."
+  country_slug: us
   directions_to_tidepools: <p>It is an hours hike down to the tidepools from the Bear
     Valley Visitor Center so Male sure you arrive plenty of time before the lowest
     tide.<p>
+  latitude: 38.0101518
+  longitude: -122.8457861
   name: Sculptured Beach
+  region: us_pacific_coast
   slug: sculptured-beach
+  time_zone: America/Los_Angeles
 - address: San Pedro, CA
   airtable_createdTime: '2020-08-31T04:22:20.000Z'
   airtable_id: rec6M7M58d1Op5755
@@ -72,8 +86,14 @@
     pitted beach. Whale watchers, too, will be pleased with this location; both gray
     and humpback whales migrate through the cold waters during the summer months.
     // 100 Pacific Way (Muir Beach), parkconservancy.org
+  country_slug: us
+  latitude: 37.85741
+  longitude: -122.574565
   name: Muir Beach
-- address: 2099 WESTSHORE RD, bodega bat
+  region: us_pacific_coast
+  slug: muir-beach
+  time_zone: America/Los_Angeles
+- address: 2099 WESTSHORE RD, bodega bay
   airtable_createdTime: '2017-11-26T03:21:15.000Z'
   airtable_id: rec89KiWlMvJxQLhE
   area: Bodega bay
@@ -81,12 +101,17 @@
     . The laboratory facilities are located adjacent to Horseshoe Cove and the outer coast. An almost continuous shoreline bench of dioritic granite, most of it exposed to the pounding waves characteristic of the Sonoma coast, supports a diverse community of marine algae and invertebrates. Numerous tidepools and adjacent waters harbor a rich array of fish species, and shorebirds forage on the rocks and in extensive mussel beds during low tides.
 
     Bodega marine lab visitor Center is open to public
+  country_slug: us
+  latitude: 38.3155287
+  longitude: -123.0717508
   managment:
   - UC Davis
   name: Horseshoe Cove
   open_to_public: 'No'
   phone: (707) 875-2211
+  region: us_pacific_coast
   slug: horseshoe-cove
+  time_zone: America/Los_Angeles
   visitor_center: checked
   website_url: http://bml.ucdavis.edu/bmr/location.html
 - address: San Pedro, CA
@@ -113,9 +138,6 @@
   region: us_pacific_coast
   slug: white-point
   time_zone: America/Los_Angeles
-- airtable_createdTime: '2020-08-31T04:40:40.000Z'
-  airtable_id: rec94Rflws2wTel78
-  name: Shell Beach Sonoma
 - address: West Anacapa Island, CA
   airtable_createdTime: '2020-08-31T04:23:35.000Z'
   airtable_id: rec9KANo9J4mnl6in
@@ -163,23 +185,30 @@
     This flat site is a sloping, nicely zoned mussel bed. Beyond the mussel beds, there are several small sea caves that are worth exploring
 
     Davenport Landing is located off Highway 1 on the northwestern edge of Santa Cruz County. It is north of the town of Davenport and before Scott Creek. From Highway 1, turn onto Davenport Landing Road, which is a continuation of Swanton Road, and park near the public access trail to the beach. The monitoring site is on the rock platform at the southeast end of the sand beach. Turn left when you reach the beach and walk over the cement structure that drains seawater from the US Abalone mariculture facility. The vertical transect and mussel permanent plot are on the western edge of the rock platform. The anemone permanent plot is near the middle of the rock platform.
+  country_slug: us
   directions_latitude: 37.024852
   directions_longitude: -122.215366
   latitude: 37.02385
   longitude: -122.216193
   name: Davenport Landing
   parking: Park near the public access trail to the beach on Davenport Landing Road.
+  region: us_pacific_coast
   rules_and_collecting: collecting of any type is illegal without a scientific collecting
     permit.
+  slug: davenport-landing
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T01:47:35.000Z'
   airtable_id: recA4FMNsoo8HwtYI
   area: San Diego
   body: There are so many different areas for tidepooling in La Jolla that we created
     a map to show them all.
   country_slug: us
+  latitude: 32.8409038
+  longitude: -117.2821229
   name: 'La Jolla tidepools '
   region: us_pacific_coast
   slug: la-jolla
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/map/la-jolla-tide-pools/
 - address: Carpinteria, CA
   airtable_createdTime: '2020-08-31T04:30:59.000Z'
@@ -222,7 +251,31 @@
   time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:34:44.000Z'
   airtable_id: recB48WHS55mMiBqZ
+  area: Santa Cruz
+  bathroom_info: There is a portable toilet at the intersection of 32nd Avenue and
+    East Cliff Drive.
+  bathrooms: Nearby
+  body: This is a large rip rap site of big boulders that leads to a flat surfgrass-covered
+    area at the bottom of the vertical transect. Surfers use the area around this
+    site frequently
+  country_slug: us
+  directions_to_tidepools: |-
+    There are three ways to get to the site: The first access route is at the ocean end of Rockview Drive; simply clamber over the rocks to the beach or go down the stairs between the houses on the eastern side of the road. This will place you on the site where our transect runs across the boulder riprap.
+
+    The second access route is down the stairs on the ocean side of Pleasure Point Drive, halfway between Rockview Drive and East Cliff Drive. The stairs lead to some boulder riprap next to a sandy beach. Walk west across the sandy beach to the site.
+
+    The third access route is down the surfer trail just east of the 32nd Avenue-East Cliff Drive intersection. That places you on the sand-covered platform from where you can walk west on the sand and rocks, past the second access route and on to the Rockview Drive site.
+  latitude: 36.9542312
+  longitude: -121.9746314
   name: Rockview Drive
+  parking: This site is located between the cities of Santa Cruz and Capitola. The
+    Rockview Drive site is off the western tip of Soquel Point, below the end of Rockview
+    Drive. You can park on Rockview Drive or Pleasure Point Drive
+  region: us_pacific_coast
+  rules_and_collecting: collecting of any sort is illegal without a CA DFW scientific
+    collecting permit.
+  slug: rockview-drive
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T01:44:24.000Z'
   airtable_id: recBaMt0FYFfJwYhx
   area: LA
@@ -230,9 +283,12 @@
     \ Walk toward that arch at low tide and you\u2019ll be rewarded with some top\
     \ notch tide pools."
   country_slug: us
+  latitude: 33.5902452
+  longitude: -117.8705083
   name: Little Corona Del Mar
   region: us_pacific_coast
   slug: little-corona-del-mar
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/beach/little-corona-del-mar-beach/
 - airtable_createdTime: '2017-11-26T02:41:00.000Z'
   airtable_id: recCjuA1Lj1TmJV5z
@@ -246,16 +302,21 @@
     \ This is one of the first protected underwater locations in California. No matter\
     \ what time of day you arrive at Salt Point, you\u2019re sure to spot some of\
     \ your favorite creatures."
+  country_slug: us
   directions_to_tidepools: "Salt Point State Park is 18 miles north of Jenner on Highway\
     \ 1. There are many tidepools along the park\u2019s coastline, including Gerstle\
     \ Cove Marine Reserve. "
   docents: checked
   hours: The visitor center is open on weekends from April through October
+  latitude: 38.5666615
+  longitude: -123.3298816
   managment:
   - California State Park
   name: 'Gerstle Cove Marine Reserve '
   phone: (707) 847-3221
+  region: us_pacific_coast
   slug: gerstle-cove-marine-reserve
+  time_zone: America/Los_Angeles
   visitor_center: checked
   website_url: http://www.parks.ca.gov/?page_id=453
 - accessibility_and_safety: "<p>The beach and reef are not accessible to walkers and\
@@ -269,6 +330,7 @@
   airtable_createdTime: '2017-11-26T01:40:01.000Z'
   airtable_id: recCsWfQfsPqjpShK
   area: Half moon bay
+  bathroom_info: <p>Bathrooms are at the ranger station near the parking lot</p>
   bathrooms: 'Yes'
   body: "<p>Great selection of tide-pools with an excellent visitors center. Fitzgerald\
     \ Marine Reserve is a 3-mile stretch of protected beach, tide pools, marshes and\
@@ -320,6 +382,7 @@
   managment:
   - San Mateo County Parks
   name: 'James Fitzgerald Marine Reserve '
+  natalie_visited: true
   open_to_public: 'Yes'
   parking: "<p>From Highway 1 at Moss Beach, turn west on California Avenue and proceed\
     \ to the parking lot at the end of the street. The reserve\u2019s main entrance\
@@ -375,11 +438,15 @@
   food_options: |-
     Duarte's Tavern
     Mercado & Taqueria de Amigos
+  latitude: 37.2271268
+  longitude: -122.4111093
   name: Arroyo de los Frijoles Beach
+  natalie_visited: true
   other_names: Bean Hollow
   picnic_options: checked
   region: us_pacific_coast
   slug: arroyo-de-los-frijoles
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T02:34:30.000Z'
   airtable_id: recDv69p0T933plS5
   area: Half moon bay
@@ -387,87 +454,69 @@
     from the Reserve parking lot or from the south entrance off of Cypress Ave near
     the Moss Beach Distillery.
   country_slug: us
+  latitude: 37.520576
+  longitude: -122.516105
   name: Seal Cove Beach
   region: us_pacific_coast
   slug: seal-cove
+  time_zone: America/Los_Angeles
 - accessibility_and_safety: "It\u2019s possible to explore in this direction for a\
     \ long way, but don\u2019t let your route back get cut off by the rising tide.\
     \ Stay far away from the cliff edges as erosion has undercut them in many places. "
-  address: |-
-    Ocean Pkwy and Elm Rd
-    Bolinas, CA 94924
+  address: Ocean Pkwy and Elm Rd, Bolinas, CA 94924
   airtable_createdTime: '2017-11-26T01:38:54.000Z'
   airtable_id: recFNm7Z8NsVjH3jk
   area: Bolinas
+  bathroom_info: Portable toilets are located at the north end of the Agate Beach
+    parking lot.
   bathrooms: 'Yes'
-  body: "Try to hit a low low tide when you plan your trip out to Duxbury Reef. More\
-    \ of the reef will be exposed and it\u2019s quite a sight to see from the trails\
-    \ on the bluff. After you get down to the water level, you\u2019ll see why this\
-    \ is considered one of the top tide pools in the state.\n\nAgate Beach is another\
-    \ one of the more secluded tide pool spots located near Bolinas, CA. The beach\
-    \ is the access point to Duxbury Reef, which is the largest reef of its kind in\
-    \ North America. At low tide, you can walk way out on the reef, but be careful\
-    \ not to crunch any barnacles under your toes. What looks like just a plain stretch\
-    \ of rocky shale from far away is actually full of life! You can see mussels,\
-    \ abalones, limpets, sea cucumbers, and an impressive variety of kelp and sea\
-    \ plants. The vivid colors and the amazing diversity of species will keep you\
-    \ curiously hopping from pool to pool until the next high tide kicks you out.\n\
-    \nThis 2-mile ocean shoreline boasts a fantastic tide pool in addition to frequent\
-    \ visitors such as whales, sea lions and many different types of shorebirds. Agate\
-    \ Beach is part of the Duxbury Reef State Marine Sanctuary\u2014the largest soft\
-    \ shale reef in California\u2014which creates an incredibly biodiverse coastal\
-    \ area. A lucky kid exploring the rocky tide pools may come across a giant green\
-    \ anemone which is rumored to measure up to six inches across! \n\n<p>Keep a lookout\
-    \ for spiny red starfish that are often seen around these intertidal zones, also\
-    \ the occasional two-spotted octopus which you may be lucky enough to see lurking\
-    \ in a coral burrow.</p>\n\n"
+  body: "Duxbury Reef is a large rock bench platform composed of Monterey Shale, a\
+    \ substrate that is fragile and prone to erosion.\n\nTry to hit a low low tide\
+    \ when you plan your trip out to Duxbury Reef. More of the reef will be exposed\
+    \ and it\u2019s quite a sight to see from the trails on the bluff. After you get\
+    \ down to the water level, you\u2019ll see why this is considered one of the top\
+    \ tide pools in the state.\n\nAgate Beach is another one of the more secluded\
+    \ tide pool spots located near Bolinas, CA. The beach is the access point to Duxbury\
+    \ Reef, which is the largest reef of its kind in North America. At low tide, you\
+    \ can walk way out on the reef, but be careful not to crunch any barnacles under\
+    \ your toes. What looks like just a plain stretch of rocky shale from far away\
+    \ is actually full of life! You can see mussels, abalones, limpets, sea cucumbers,\
+    \ and an impressive variety of kelp and sea plants. The vivid colors and the amazing\
+    \ diversity of species will keep you curiously hopping from pool to pool until\
+    \ the next high tide kicks you out.\n\nThis 2-mile ocean shoreline boasts a fantastic\
+    \ tide pool in addition to frequent visitors such as whales, sea lions and many\
+    \ different types of shorebirds. Agate Beach is part of the Duxbury Reef State\
+    \ Marine Sanctuary\u2014the largest soft shale reef in California\u2014which creates\
+    \ an incredibly biodiverse coastal area. A lucky kid exploring the rocky tide\
+    \ pools may come across a giant green anemone which is rumored to measure up to\
+    \ six inches across! \n\n<p>Keep a lookout for spiny red starfish that are often\
+    \ seen around these intertidal zones, also the occasional two-spotted octopus\
+    \ which you may be lucky enough to see lurking in a coral burrow.</p>\n\n"
+  country_slug: us
   directions_to_tidepools: 'Agate Beach is located in Bolinas. On Highway 1, proceed
     4.5 miles north of Stinson Beach, then take Olema-Bolinas Road west to Bolinas.
     Turn left on Elm Road and follow until it to the end. Walk south along the shore
     at low tide to the adjacent Duxbury Reef. '
   hours: Sunrise to sunset
+  latitude: 37.9008566
+  longitude: -122.7194038
+  managment:
+  - California State Marine Conservation Area
   name: Duxbury Reef
   open_to_public: 'Yes'
   parking: Parking is $2 or free?
   pet_policy: Dogs on-leash are permitted.
   phone: (415) 868-1224
+  region: us_pacific_coast
+  rules_and_collecting: 'Duxbury Reef is a State Marine Conservation Area that is
+    part of a new network of marine protected areas established by the state of California.
+    It is illegal to collect anything at Duxbury, with few exceptions for select species
+    such as red abalone and fish (from shore only). '
   slug: duxbury-reef
   tagline: This is the largest shale reef in North America. It stretches 1000ft from
     shore to a depth of 13ft.
-  website_url: http://www.californiabeaches.com/attraction/duxbury-reef-tide-pools/
-- airtable_createdTime: '2020-08-31T04:33:27.000Z'
-  airtable_id: recFtXfVa2am7bvLi
-  area: Carmel/Monterey
-  bathroom_info: Restrooms are located at the Asilomar Conference Grounds across the
-    street
-  bathrooms: Nearby
-  body: Asilomar State Beach is within the boundary of Asilomar Marine Reserve. It
-    was established as a state beach in 1956 and as a Marine Reserve in 2006. This
-    site is a granite outcrop with a good amount of relief. Be prepared to climb over
-    steep rocks. Make certain that anyone coming out to the site has suitable shoes.
-  country_slug: us
-  directions_latitude: 36.6215044
-  directions_longitude: -121.9412265
-  directions_to_tidepools: 'To reach the tidepools, look for the State Parks marker
-    #10 and continue down that trail straight to the tidepools.'
-  latitude: 36.6217613
-  longitude: -121.9423269
-  managment:
-  - California State Marine Conservation Area
-  - California State Park
-  name: Asilomar State Beach
-  parking: "This site is located at the end of the Monterey Peninsula in Pacific Grove.\
-    \ From Highway 1, take the Highway 68 west exit. Continue on Highway 68 until\
-    \ you reach the light at Sunset Ave and make a left. Continue on Sunset until\
-    \ you see Asilomar beach on your left-hand side. The site will be about a quarter\
-    \ mile past the main beach entrance. If you have reached Pico Ave you have gone\
-    \ too far. \n\nPark on the left hand side of sunset ave"
-  region: us_pacific_coast
-  rules_and_collecting: 'Asilomar State Beach is in a no-take marine protected area,;
-    no collecting of organisms, shells, rocks, driftwood, etc. is permitted. '
-  rules_and_collecting_url: http://www.californiampas.org/
-  slug: asilomar-state-beach
   time_zone: America/Los_Angeles
+  website_url: http://www.californiabeaches.com/attraction/duxbury-reef-tide-pools/
 - airtable_createdTime: '2017-11-26T02:37:08.000Z'
   airtable_id: recGn6pMwvkSzuz1M
   area: Half moon bay
@@ -475,9 +524,12 @@
     lot access and then walk along the path to the bluffs and down the steps to the
     beach.
   country_slug: us
+  latitude: 37.4194665
+  longitude: -122.4349273
   name: Cowell Ranch beach
   region: us_pacific_coast
   slug: cowell-ranch-beach
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T04:47:43.000Z'
   airtable_id: recIVQ8vjkIJrcIQD
   area: Carmel/Monterey
@@ -490,11 +542,20 @@
 
     These two tidepool areas are located in Pacific Grove off Sunset Drive/Highway 68 and Asilomar Avenue. Point Pinos, also known as the Great Tide Pool, is one of the richest tidepool habitats in the world. At higher tides, some of the tidepools in this area remain exposed.
   country_slug: us
-  directions_latitude: 36.636827
-  directions_longitude: -121.9300417
-  latitude: 36.6381813
-  longitude: -121.9299401
-  name: Point Pinos
+  directions_latitude: 36.6371872
+  directions_longitude: -121.933949
+  directions_to_tidepools: "The sampling site is out of sight from the parking lot\
+    \ among the rocks that jut out to sea to the northwest. A corroded steel pipe\
+    \ emerges from the sand near the low tide level and extends out into the intertidal;\
+    \ this was Pacific Grove's sewer disposal line that was abandoned in the mid-1980s.\
+    \ \n\nFollow the pipe out into the rocks until you can climb up onto the isolated,\
+    \ flat, knoll that is covered with grasses and ice plants. Cross the knoll and\
+    \ descend on the other side, look to the left for a permanent tidepool. On the\
+    \ southwest (left) side of the tidepool is a rockyoutcrop with a mussel bed on\
+    \ the south side."
+  latitude: 36.6374544
+  longitude: -121.9323833
+  name: Point Pinos (maybe split this into two with Ed rickets)
   parking: |
     Park in the ocean-side parking space across the road from the dilapidated, windowless, cement foghorn building, where there is also a bench looking out towards the point.
   phone: (831) 372-4076
@@ -508,14 +569,32 @@
 - airtable_createdTime: '2017-11-26T04:32:16.000Z'
   airtable_id: recLZdp2L50siXrtP
   area: Jenner
-  directions_to_tidepools: Shell Beach is located on Highway 1 three miles south of
-    Jenner. The tidepools are rich and easily accessible
+  bathroom_info: There is an outhouse located at the west end of the parking lot
+  bathrooms: 'Yes'
+  country_slug: us
+  directions_to_tidepools: |-
+    Shell Beach is located on Highway 1 three miles south of Jenner. The tidepools are rich and easily accessible
+
+    A steep trail from the parking lot leads down to the beach and tide pools. The site is located at the northern tip of the cove at Shell Beach. Locate the tallest and largest boulder at the north end of the cove. At low tide, you can carefully walk around the seaward edge of this boulder to reach the dense mussel bed
   docents: checked
   hours: During spring and summer low tides, volunteer naturalists are available to
     help interpret the tidepools for visitors.
+  latitude: 38.4177676
+  longitude: -123.1081004
+  managment:
+  - California State Park
   name: 'Shell beach '
+  parking: |-
+    The signed parking lot is 3 miles south of Jenner and 7.7 miles north of Bodega Bay along Highway One.
+
+    Parking is free. Note: The parking lot can be full on weekends.
   phone: (707) 875-3483
+  region: us_pacific_coast
+  rules_and_collecting: |-
+    Shell Beach is part of the Sonoma Coast State Park. All natural resources here are protected by Federal, State and Park laws. Disturbance or destruction of these resources is strictly forbidden. LiMPETS maintains a permit with State Parks for monitoring activities conducted at this site; therefore all groups must contact your local LiMPETS coordinator to plan your trip.
+    Learn more about the geology of Shell Beach: http://terrywrightgeology.com/shellbeach.html
   slug: shell-beach
+  time_zone: America/Los_Angeles
 - accessibility_and_safety: |-
     <p>There are no lifeguards are on duty And there are really unpredictable surf conditions so swimming is not recommended.</p>
 
@@ -536,6 +615,7 @@
     Their efforts to supply the needs of a young city helped establish one of the\
     \ area's most important industries and traditions\u201D </p>"
   cost: Free
+  country_slug: us
   directions_latitude: 37.7873692
   directions_longitude: -122.4905996
   directions_to_tidepools: <p>Access to the beach is via a paved drive or stairway
@@ -592,6 +672,7 @@
     \ website has listed that the bathhouse is not open to the public. Work is undergoing\
     \ from by the National Park Service to improve facilities.</p>"
   radius_km: 0.5
+  region: us_pacific_coast
   rules_and_collecting: |-
     <p>No fires or glass containers are allowed.</p>
 
@@ -617,12 +698,15 @@
   country_slug: us
   groups: free guided tours of the marshland on the first Sunday of the month at 10
     a.m.
+  latitude: 37.2646157
+  longitude: -122.4138891
   name: Pescadero State beach
   parking: Between Half Moon Bay and Santa Cruz is Pescadero State Beach that includes
     three separate parking lots. The middle lot gives you access to the rocky shore
     and tide pools.
   region: us_pacific_coast
   slug: pescadero-state-beach
+  time_zone: America/Los_Angeles
   website_url: http://www.parks.ca.gov/?page_id=522
 - airtable_createdTime: '2017-11-26T01:40:33.000Z'
   airtable_id: recPhjqUswwfmzE6W
@@ -631,42 +715,64 @@
     These tide pools can be found below the sandstone cliffs of Point Loma on the ocean side of the park. Ask for directions when you stop at the entrance booth. Look for fossils in the rocks while you are exploring the shoreline.
 
   country_slug: us
+  latitude: 32.668331
+  longitude: -117.2445294
   name: Point Loma
   region: us_pacific_coast
   slug: point-loma
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/attraction/point-loma-tide-pools/
 - accessibility_and_safety: Accessible parking and tidepools
-  address: |-
-    1950 Sunset Dr.
-    Pacific Grove,
+  address: 1950 Sunset Dr. Pacific Grove,
   airtable_createdTime: '2017-11-26T01:58:20.000Z'
   airtable_id: recQU4NFdOztao9sg
   area: Carmel/Monterey
-  bathrooms: 'No'
-  body: "The entire Monterey Peninsula has fabulous tide pools at low tides. The many\
-    \ small coves of Asilomar State Beach are a good place to focus. A trail meanders\
-    \ along the bluff with easy access to most of the coves.\n\nAlthough the beach\
-    \ is only about a mile long, the amount of life packed into that small space makes\
-    \ Asilomar State Beach one of the richest marine areas in the world. An easily\
-    \ accessible hiking trail wanders along the cliffs and leads down to the coves\
-    \ where the tide pools are found. Couple the trail accessibility and lush seascape\
-    \ with delicious local restaurants like Passionfish and you can easily make a\
-    \ whole day out of your Asilomar tide-pooling adventure.\n\nRocky terrain, crystal\
-    \ clear blue water and tons of sea life inhabit this beach in Monterey Bay. There\
-    \ is ample parking and the beach is even handicap accessible for beach wheelchairs.\
-    \ Watch where you step so that you don\u2019t crush the small creatures that reside\
-    \ there. The Point Pinos Lighthouse is a short walk along the coast but the bathrooms\
-    \ are not close by so plan accordingly."
+  bathroom_info: Restrooms are located at the Asilomar Conference Grounds across the
+    street
+  bathrooms: Nearby
+  body: "Asilomar State Beach is within the boundary of Asilomar Marine Reserve. It\
+    \ was established as a state beach in 1956 and as a Marine Reserve in 2006. This\
+    \ site is a granite outcrop with a good amount of relief. Be prepared to climb\
+    \ over steep rocks. Make certain that anyone coming out to the site has suitable\
+    \ shoes.\n\n\nThe entire Monterey Peninsula has fabulous tide pools at low tides.\
+    \ The many small coves of Asilomar State Beach are a good place to focus. A trail\
+    \ meanders along the bluff with easy access to most of the coves.\n\nAlthough\
+    \ the beach is only about a mile long, the amount of life packed into that small\
+    \ space makes Asilomar State Beach one of the richest marine areas in the world.\
+    \ An easily accessible hiking trail wanders along the cliffs and leads down to\
+    \ the coves where the tide pools are found. Couple the trail accessibility and\
+    \ lush seascape with delicious local restaurants like Passionfish and you can\
+    \ easily make a whole day out of your Asilomar tide-pooling adventure.\n\nRocky\
+    \ terrain, crystal clear blue water and tons of sea life inhabit this beach in\
+    \ Monterey Bay. There is ample parking and the beach is even handicap accessible\
+    \ for beach wheelchairs. Watch where you step so that you don\u2019t crush the\
+    \ small creatures that reside there. The Point Pinos Lighthouse is a short walk\
+    \ along the coast but the bathrooms are not close by so plan accordingly."
   country_slug: us
-  directions_to_tidepools: 'These two tidepool areas are located in Pacific Grove
-    off Sunset Drive/Highway 68 and Asilomar Avenue. '
+  directions_latitude: 36.6215044
+  directions_longitude: -121.9412265
+  directions_to_tidepools: 'To reach the tidepools, look for the State Parks marker
+    #10 and continue down that trail straight to the tidepools.'
+  latitude: 36.6217613
+  longitude: -121.9423269
+  managment:
+  - California State Park
+  - California State Marine Conservation Area
   name: Asilomar State Beach
   open_to_public: 'Yes'
-  parking: There is ample parking and the beach is even handicap accessible for beach
-    wheelchairs.
+  parking: "There is ample parking and the beach is even handicap accessible for beach\
+    \ wheelchairs.\n\nThis site is located at the end of the Monterey Peninsula in\
+    \ Pacific Grove. From Highway 1, take the Highway 68 west exit. Continue on Highway\
+    \ 68 until you reach the light at Sunset Ave and make a left. Continue on Sunset\
+    \ until you see Asilomar beach on your left-hand side. The site will be about\
+    \ a quarter mile past the main beach entrance. If you have reached Pico Ave you\
+    \ have gone too far. \n\nPark on the left hand side of sunset ave"
   phone: (831) 646-6440
   region: us_pacific_coast
+  rules_and_collecting: 'Asilomar State Beach is in a no-take marine protected area,;
+    no collecting of organisms, shells, rocks, driftwood, etc. is permitted. '
   slug: asilomar-state-beach
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/beach/asilomar-state-beach/
 - airtable_createdTime: '2017-11-26T01:43:55.000Z'
   airtable_id: recQhBsloiB6H3AMi
@@ -679,26 +785,62 @@
   name: Half moon bay tide pools
   region: us_pacific_coast
   slug: half-moon-bay-tidepools
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/attraction/half-moon-bay-tide-pools/
 - airtable_createdTime: '2020-08-31T04:34:10.000Z'
   airtable_id: recRiwdIFJbTEAw4k
+  area: Santa Cruz
+  bathroom_info: There are no public rest rooms near the site. Find restrooms nearby
+    at Natural Bridges State Park or at Lighthouse Field.
+  bathrooms: Nearby
+  body: This intertidal platform slopes from a high zone through a mussel bed on to
+    a surfgrass bed. This is a site that can have some human traffic, mostly surfers
+    and beachcombers, within and through the intertidal.
+  country_slug: us
+  directions_latitude: 36.9509718
+  directions_longitude: -122.0438971
+  directions_to_tidepools: Across from 1212 West Cliff Drive, look for a set of stairs
+    next to a large cypress tree that leads from the bike path to the site.
+  latitude: 36.9512125
+  longitude: -122.042495
   name: Almar Avenue
+  parking: Park on West Cliff Drive.
+  region: us_pacific_coast
+  rules_and_collecting: collecting of any sort is illegal without a CA DFW scientific
+    collecting permit.
+  rules_and_collecting_url: http://www.dfg.ca.gov/wildlife/nongame/research_permit/scp/scp_aplic_procs.html
+  slug: almar-avenue
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T04:40:25.000Z'
   airtable_id: recSP3TQE6YpK3UnF
   area: Pescadero
+  bathroom_info: "Portable toilets are located at the Pigeon Point Lighthouse, approximately\
+    \ \xBC mile south"
+  bathrooms: Nearby
+  body: "Pigeon Point\u2019s original name, Whale Point, was inspired by the gray\
+    \ whales that migrate past the point\n\nThis site is located along the San Mateo\
+    \ County coastline between Half Moon Bay and Santa Cruz. From Highway 1, turn\
+    \ west onto Pigeon Point Road towards the lighthouse. From the lighthouse, drive\
+    \ north on the service road and park at the 5th telephone pole. The site is accessed\
+    \ by traversing down a sea bluff to a boulder field."
   country_slug: us
-  directions_to_tidepools: Pigeon Point Lighthouse is located on Highway 1, 20 miles
-    south of Half Moon Bay. From the north, take Highway 280 south from San Francisco,
-    then go west on Highway 92 to Highway 1, and take Highway 1 south to the Pigeon
-    Point Lighthouse. The tidepools are located 100 yards north of the hostel building.
-    The rocky ledges and tidepools are easily accessible but are exposed and visible
-    only during low tides.
+  directions_to_tidepools: |-
+    The site is accessed by traversing down a sea bluff to a boulder field.
+
+    Pigeon Point Lighthouse is located on Highway 1, 20 miles south of Half Moon Bay. From the north, take Highway 280 south from San Francisco, then go west on Highway 92 to Highway 1, and take Highway 1 south to the Pigeon Point Lighthouse. The tidepools are located 100 yards north of the hostel building. The rocky ledges and tidepools are easily accessible but are exposed and visible only during low tides.
+  latitude: 37.1838276
+  longitude: -122.3959914
   managment:
   - California State Park
   name: Pigeon Point Light Station State Historic park
+  other_names: Whale point, pigeon point lighthouse
+  parking: Park at the 5th telephone pole on the service road.
   phone: (650) 879-2120
   region: us_pacific_coast
+  rules_and_collecting: r collecting is illegal without a scientific collecting permit
+    or, for select species, a fishing license.
   slug: pigeon-point
+  time_zone: America/Los_Angeles
   website_url: http://www.parks.ca.gov/?page_id=533%20
 - address: Santa Barbra, CA
   airtable_createdTime: '2020-08-31T04:31:11.000Z'
@@ -754,6 +896,7 @@
     \ Continue along PCH past Pepperdine and Leo Carrillo State Park until you come\
     \ to the Neptune\u2019s Net Seafood Restaurant. Neptune\u2019s Net will be on\
     \ your right. Park in the dirt lot on your left."
+  country_slug: us
   directions_latitude: 34.0527066
   directions_longitude: -118.9625872
   directions_to_tidepools: <p>To get to the boulder field, walk west (to the right
@@ -764,6 +907,7 @@
   longitude: -118.9641465
   name: County line boulder field
   parking: "Park in the dirt lot along Highway 1, across from Neptune\u2019s Net."
+  region: us_pacific_coast
   slug: county-line-boulder-field
   time_zone: America/Los_Angeles
 - accessibility_and_safety: |-
@@ -778,6 +922,8 @@
   airtable_createdTime: '2017-11-26T01:40:59.000Z'
   airtable_id: recTsm3KeweNFb8eW
   area: Half moon bay
+  bathroom_info: Two porta potties are available in the carpark which is about half
+    a mile from the site.
   bathrooms: 'Yes'
   body: |-
     <p>Pillar Point is awesome! there is a lot of variety in the types of pool left by the tide. The left hand side (looking out to sea) has some small pocket pools and a wide flat seagrass bed. there are lots of accessible little pools near the beach and there's a small cut parallel to the beach which is a good place to spot fish.</p>
@@ -797,11 +943,13 @@
   dogs: 'Yes'
   food_options: <p>There are lots of restaurants in the nearby town of Granada or
     in Half Moon Bay.</p>
-  groups: <p>Groups are allowed</p>
+  groups: <p>Groups are allowed, buses must park at the corner of Harvard and West
+    Point.</p>
   latitude: 37.49542392
   live_on_site: true
   longitude: -122.49865193
   name: Pillar Point
+  natalie_visited: true
   official_open: true
   open_to_public: 'Yes'
   parking: ' <p>Parking available at the radar station and in the overflow carpark.
@@ -814,12 +962,12 @@
   radius_km: 0.5
   region: us_pacific_coast
   rules_and_collecting: |
-    <p>Please be respectful of the reef and leave anything that is alive or could have alive things in it where they are. Don't move animals between pools, put them back where you found them, it's their home. If you want to fish or collect you need a fishing license.</p>
+    <p>Please be respectful of the reef and leave anything that is alive or could have alive things in it where they are. Don't move animals between pools, put them back where you found them, it's their home. If you want to fish or collect seaweed or shellfish you need a fishing license.</p>
   rules_and_collecting_url: https://wildlife.ca.gov/Fishing/Ocean
   slug: pillar-point
   station_id: 9414131
   tagline: Really varied tidepools with great Nudibranch potential!
-  tidepool_height: 1
+  tidepool_height: 0.5
   time_zone: America/Los_Angeles
   variance_ft: 2
   visitor_center: 'No'
@@ -843,14 +991,49 @@
     about a mile to the tide pools. The walk along the shore takes you right past
     the Ritz-Carlton. You can also take the super scenic coastal trail along the bluffs
     above the beach but most of the paths down to the water are pretty steep. '
+  latitude: 37.4365721
+  longitude: -122.4447811
   name: Redondo beach
   parking: Park at the Poplar State beach parking on Poplar st.
   region: us_pacific_coast
   slug: redondo-beach
+  time_zone: America/Los_Angeles
   website_url: https://www.californiabeaches.com/beach/redondo-beach-half-moon-bay/
 - airtable_createdTime: '2020-08-31T04:34:29.000Z'
   airtable_id: recWZGrZVAnl1r9ss
+  area: Santa Cruz
+  bathroom_info: "There are no public restrooms near the site; the closest are at\
+    \ the Wilder Ranch State Park\u2019s entrance gate."
+  bathrooms: Nearby
+  body: 'This is a flat area that can be difficult to get to, however it is an incredible
+    site to monitor. Little to no foot traffic occurs here, other than the occasional
+    surfer or beachcomber. '
+  country_slug: us
+  directions_to_tidepools: "It\u2019s a 20-30 min walk to the tidepools. Walk toward\
+    \ the ocean on the dirt road, crossing the railroad tracts and the fields until\
+    \ you reach the edge of the cliff. DO NOT drive on the dirt road; it is used by\
+    \ the farmers and is often muddy and easy to get mired down in. Once the edge\
+    \ of the cliff is reached, go to the right (west) along the dirt road until you\
+    \ come to the top of Strawberry Cove. Walk down a well-worn trail to Strawberry\
+    \ Cove Beach. Turn right, cross a large sand-scoured rock and a small sandy cove,\
+    \ and climb up on the narrow, sloping platform that is bare at the top. The platform\
+    \ has a large mussel bed in the middle and a small surfgrass bed near the bottom."
+  latitude: 36.9539906
+  longitude: -122.089546
+  managment:
+  - California State Park
   name: Wilder Ranch
+  parking: "This site, north of Santa Cruz, is just north of Wilder Ranch State Park\u2019\
+    s main entrance. Park along Highway 1 at 2101 Coast Road, which is between the\
+    \ entrance to the Wilder Ranch State Park and Dimeo Lane. There is a small frontage\
+    \ road where you can park off the highway on the coast side. Be certain to park\
+    \ with enough room for any farm vehicles to still get by."
+  region: us_pacific_coast
+  rules_and_collecting: The Wilder Ranch site is on the eastern side of Strawberry
+    Cove in Wilder Ranch State Park. Before going to the site, be sure to contact
+    the park rangers at (831) 423-9703.
+  slug: wilder-ranch
+  time_zone: America/Los_Angeles
 - address: Santa Barbara, CA
   airtable_createdTime: '2020-08-31T04:31:39.000Z'
   airtable_id: recX4H63f8kUQqBbF
@@ -892,57 +1075,133 @@
   time_zone: America/Los_Angeles
 - accessibility_and_safety: The route down can be tricky, so ask at the Visitor Center
     for directions to get to the pools through the neighboring mobile home park.
-  address: "2531 West Cliff Dr.\nSanta Cruz, "
+  address: '2531 West Cliff Dr. Santa Cruz, '
   airtable_createdTime: '2017-11-26T01:56:21.000Z'
   airtable_id: recYrDpVivWe2GDoJ
   area: Santa Cruz
-  body: "This is a busy place. It has a picturesque rock arch in the surf and an excellent\
-    \ sandy beach. Come here at low tide and you\u2019ll get an added bonus with tide\
-    \ pools that are exposed on the western shoreline.\n\nDocents are available throughout\
-    \ the year to give you guided tours of Natural Bridges tide pools. These pools\
-    \ are only visible at low tide so check out the tide forecast before you go. While\
-    \ you\u2019re there, snap some iconic photos of the famous \u201Cnatural bridge\u201D\
-    \ that gives the park its name. These photos can be especially beautiful at sunset,\
-    \ and the \u201Cbridge\u201D can make an excellent background for portraits too.\
-    \ To ensure the best tide pool viewing, check the tide charts before you go. If\
-    \ you\u2019re timing is off, the Visitor Center also has an aquarium that displays\
-    \ tidepool critters. Either way, you\u2019ll return home with a renewed appreciation\
-    \ for life forms both squishy and spiny.\n\nThis Santa Cruz beach is great for\
-    \ viewing all sorts of sea life as well as the amazing, naturally formed rock\
-    \ bridge out in the water. you head north along the beach you can climb the rocks\
-    \ to access the tide pools.  Also nearby is the Seymour Marine Discovery Center,\
-    \ another great place to learn about Bay Area marine life."
+  bathroom_info: There is a porta potty at the end of Delaware Avenue and several
+    buildings have public restrooms at the main entrance to the State Beach.
+  bathrooms: 'Yes'
+  body: "This flat site is a sloping, nicely zoned mussel bed with lots of species\
+    \ hidden in the nooks and crannies. This site can get lots of foot traffic so\
+    \ be prepared if monitoring on a weekend.\n\nIf you visit in the late-fall or\
+    \ winter, don\u2019t forget to check out the Monarch Preserve for the yearly migration\
+    \ of up to 100,000 monarch butterflies! \n\nThis is a busy place. It has a picturesque\
+    \ rock arch in the surf and an excellent sandy beach. Come here at low tide and\
+    \ you\u2019ll get an added bonus with tide pools that are exposed on the western\
+    \ shoreline.\n\nDocents are available throughout the year to give you guided tours\
+    \ of Natural Bridges tide pools. These pools are only visible at low tide so check\
+    \ out the tide forecast before you go. While you\u2019re there, snap some iconic\
+    \ photos of the famous \u201Cnatural bridge\u201D that gives the park its name.\
+    \ These photos can be especially beautiful at sunset, and the \u201Cbridge\u201D\
+    \ can make an excellent background for portraits too. To ensure the best tide\
+    \ pool viewing, check the tide charts before you go. If you\u2019re timing is\
+    \ off, the Visitor Center also has an aquarium that displays tidepool critters.\
+    \ Either way, you\u2019ll return home with a renewed appreciation for life forms\
+    \ both squishy and spiny.\n\nThis Santa Cruz beach is great for viewing all sorts\
+    \ of sea life as well as the amazing, naturally formed rock bridge out in the\
+    \ water. you head north along the beach you can climb the rocks to access the\
+    \ tide pools.  Also nearby is the Seymour Marine Discovery Center, another great\
+    \ place to learn about Bay Area marine life."
   country_slug: us
+  directions_latitude: 36.9517807
+  directions_longitude: -122.0574584
   directions_to_tidepools: "Natural Bridges is located at the north end of the town\
     \ of Santa Cruz. Take Swift Street west from Highway 1, then West Cliff Drive\
     \ north until it ends at the state beach. The tide pools are located on the side\
     \ of the beach opposite the \u201Cnatural bridges.\u201D Head north from the state\
     \ beach parking lot and scramble over a rocky shelf and you will find yourself\
     \ surrounded by pools of many shapes and sizes. There is also a more accessible\
-    \ route through the mobile home park."
+    \ route through the mobile home park.\n\n\nNatural Bridges tide pools are on the\
+    \ western edge of Santa Cruz. The best way to reach the site is through the De\
+    \ Anza mobile home community. From the Deleware Avenue entrance, walk down Cascade\
+    \ Drive and follow the path past the pond to the small beach. Once at the beach,\
+    \ head to the right and cross the first two rocky platforms to the site on the\
+    \ third platform. The site is past the area directly under the gazebo. The walk\
+    \ takes about 10 minutes. Please respect the privacy of the De Anza residents\
+    \ and keep noise to a minimum."
   docents: checked
-  groups: "If you visit in the late-fall or winter, don\u2019t forget to check out\
-    \ the Monarch Preserve for the yearly migration of up to 100,000 monarch butterflies! "
+  groups: Contact the State Beach before taking a group to the intertidal platforms
+    so that the rangers are kept informed and your group does not conflict with any
+    docent-led tours. If there is room, you can arrange to park in the State Beach
+    parking lot without charge. For more information, call 831-423-4609.
+  latitude: 36.9491477
+  longitude: -122.0610663
   managment:
   - California State Park
+  - California State Marine Conservation Area
   name: Natural Bridges State Beach
   open_to_public: 'Yes'
   parking: "State beach parking is $10, or park just before the beach entrance on\
-    \ Swanton Blvd. for free if there\u2019s a spot"
+    \ Swanton Blvd. for free if there\u2019s a spot\n\nPark at the end of Delaware\
+    \ Avenue, by the entrance to the De Anza mobile home community."
   phone: (831) 423-4609
   region: us_pacific_coast
+  rules_and_collecting: Removal of any living thing is illegal.
   slug: natural-bridges
   tagline: This spot has a picturesque rock arch and in addition to tidepools, has
     a sandy beach. In the park there is a Monarch butterfly Preserve which is a great
     place to see these beautiful creatures in an overwintering spot.
-  visitor_center: checked
+  time_zone: America/Los_Angeles
+  visitor_center: 'Yes'
   website_url: http://www.californiabeaches.com/beach/natural-bridges-state-beach/
 - airtable_createdTime: '2020-08-31T04:39:03.000Z'
   airtable_id: recZ0FVUrLcmIf25e
+  area: Santa Cruz
+  bathroom_info: There is a portable toilet at the intersection of 32nd Avenue and
+    East Cliff Drive.
+  bathrooms: Nearby
+  body: This is a very flat intertidal bench area. Because the platforms are so flat,
+    only a small rise in the water level floods them. Moreover, as the tide comes
+    in it fills the channels first. You should watch the rising tide or you will need
+    to wade back through quite deep water in the channels!
+  country_slug: us
+  directions_to_tidepools: "This site is located between the cities of Santa Cruz\
+    \ and Capitola, directly off the end of 33rd Avenue, looking southeast. The site\
+    \ is off the eastern tip of Soquel Point on an extensive low-zone platform covered\
+    \ with surfgrasses. The site can only be reached by walking when the tide is at\
+    \ or below \u20131.0 feet; such low tides occur in the afternoons of late fall\
+    \ and winter and the mornings of late spring and summer. To reach the outer-most\
+    \ platform and the sampling site, clamber down the surfer trail at the 33rd Avenue\
+    \ / East Cliff Drive intersection. That places you on the sand-covered platform\
+    \ from where you can walk out on the platforms. You can circumvent the deeper\
+    \ portions of the channels by going around to the east, and then out to the sampling\
+    \ site by walking west on the outer-most platform.\n"
+  latitude: 36.9549897
+  longitude: -121.9709407
   name: Soquel Avenue
+  other_names: 33rd Ave
+  parking: Park near the 33rd Avenue / East Cliff Drive intersection of 33rd Avenue
+    and East Cliff Drive.
+  region: us_pacific_coast
+  rules_and_collecting: collecting of any sort is illegal without a CA DFW scientific
+    collecting permit.
+  rules_and_collecting_url: http://www.dfg.ca.gov/wildlife/nongame/research_permit/scp/scp_aplic_procs.html
+  slug: soquel-avenue
+  tidepool_height: -1
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:40:10.000Z'
   airtable_id: recafS4y83k3N9lwZ
+  area: Bodega bay
+  bathrooms: 'No'
+  country_slug: us
+  directions_to_tidepools: 'A steep trail from the parking lot leads down to the beach
+    and tide pools. Walk down the steep path (at the south end of the parking lot)
+    towards the water. '
+  latitude: 38.3714635
+  longitude: -123.0760829
+  managment:
+  - California State Park
   name: Carmet Beach
+  parking: Carmet Beach is located between Jenner and Bodega Bay on Highway One. The
+    site is just north of Carmet Drive and the parking lot across the street from
+    4790 Highway 1, Bodega Bay, CA 94923.
+  region: us_pacific_coast
+  rules_and_collecting: 'Carmet Beach is part of the Sonoma Coast State Park. All
+    natural resources here are protected by Federal, State and Park laws. Disturbance
+    or destruction of these resources is strictly forbidden. '
+  slug: carmet-beach
+  time_zone: America/Los_Angeles
 - address: La Jolla, CA
   airtable_createdTime: '2020-08-31T04:22:19.000Z'
   airtable_id: recefZRfMakgL2HnE
@@ -1011,11 +1270,14 @@
     \ area of the shoreline has caves and rock arches to duck into. It\u2019s a fun\
     \ place for kids."
   country_slug: us
+  latitude: 34.0436707
+  longitude: -118.9392402
   managment:
   - California State Park
   name: Lee Carrillo State Park
   region: us_pacific_coast
   slug: lee-carrillo-state-park
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/map/leo-carrillo-state-park/
 - address: |-
     16th St and Cabrillo Hwy
@@ -1029,6 +1291,8 @@
     to a point and down to the rocks. The right trail leads back to a creek drainage
     and down to the beach. '
   groups: Gray whales migrate by Point Montara between November and April.
+  latitude: 37.537422
+  longitude: -122.519616
   managment:
   - California State Park
   name: Point Montara light station
@@ -1039,6 +1303,7 @@
   slug: point-montara
   tagline: Gray whales migrate by Point Montara between November and April. You can
     also stay in the hostel here. Really close to the Fitzgerald marine reserve.
+  time_zone: America/Los_Angeles
   visitor_center: checked
   website_url: http://www.californiabeaches.com/hotel/point-montara-lighthouse-hostel/
 - address: 26198 Scenic Road, Carmel, CA
@@ -1113,6 +1378,7 @@
     \ pools in a whole new way. When you\u2019re done, head outside to the tide pools,\
     \ which are located just behind the visitor center."
   cost: $5 parking fee
+  country_slug: us
   directions_to_tidepools: "Turn off Central Ave. at McKay Ave and you\u2019ll find\
     \ the visitors center. Head down to the shore for the tide pools"
   docents: checked
@@ -1120,11 +1386,15 @@
     on the second Friday of the month.
   hours: "Visitors Center hours: Wed \u2013 Sat 10 a.m. \u2013 4 p.m. (Oct \u2013\
     \ Feb) and until 5 p.m. the rest of the year"
+  latitude: 37.768163
+  longitude: -122.278199
   managment:
   - California State Park
   name: 'Crab Cove '
   phone: (510) 544-3187
+  region: us_pacific_coast
   slug: crab-cove
+  time_zone: America/Los_Angeles
   visitor_center: checked
   website_url: http://www.ebparks.org/parks/vc/crab_cove#gsc.tab=0
 - airtable_createdTime: '2017-11-26T01:48:16.000Z'
@@ -1134,9 +1404,12 @@
     below the tall point. There are other tidepooling areas on Palos Verdes Peninsula
     between LA and Long Beach, but these are the best.
   country_slug: us
+  latitude: 33.7381129
+  longitude: -118.3759341
   name: Abalone Cove Shoreline Park
   region: us_pacific_coast
   slug: abalone-cove
+  time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/map/abalone-cove-shoreline-park/
 - airtable_createdTime: '2020-08-30T04:35:54.000Z'
   airtable_id: recoMUCXklspb27oG
@@ -1144,17 +1417,28 @@
   body: <p>Keep a lookout for spiny red starfish that are often seen around these
     intertidal zones, also the occasional two-spotted octopus which you may be lucky
     enough to see lurking in a coral burrow.</p>
+  country_slug: us
+  latitude: 37.8955166
+  longitude: -122.7091799
   name: Agate beach
+  region: us_pacific_coast
+  slug: agate-beach
+  time_zone: America/Los_Angeles
 - accessibility_and_safety: There is a wheelchair accessible boardwalk at the point.
   airtable_createdTime: '2017-11-26T04:25:04.000Z'
   airtable_id: recodhH8otfeREzP1
   area: Mendocino
+  country_slug: us
   directions_to_tidepools: 'MacKerricher State Park is three miles north of Fort Bragg
     on Highway 1, near the town of Cleone. Enter the park and drive west to the Seal
     Watching Station and tidepools at Laguna Point. '
+  latitude: 39.4903913
+  longitude: -123.8026179
   name: Leguna point
   phone: (707) 964-9112
+  region: us_pacific_coast
   slug: leguna-point
+  time_zone: America/Los_Angeles
   website_url: http://www.parks.ca.gov/?page_id=436
 - address: |-
     Highway 1 and Linda Mar Blvd.
@@ -1171,12 +1455,17 @@
     \ Parking is $5 for 4 hours of fun, and if you get hungry there\u2019s even a\
     \ Taco Bell right on the beach.\n\n\nCost: $5 for up to 4 hours of parking, or\
     \ $9 for the whole day\nOnline: "
+  country_slug: us
   food_options: 'Taco Bell on the beach, Peruvian eatery across the road '
+  latitude: 37.60809
+  longitude: -122.50023
   managment:
   - California State Park
   name: Linda Mar beach
   parking: Parking is $5 for 4 hours or $9 for the whole day
+  region: us_pacific_coast
   slug: linda-mar-beach
+  time_zone: America/Los_Angeles
   website_url: cityofpacifica.org
 - address: End of Mesa Road, Bolinas, CA 94924
   airtable_createdTime: '2017-11-26T03:12:03.000Z'
@@ -1188,6 +1477,7 @@
     \ Make sure to arrive with plenty of time to explore as both beaches require a\
     \ decent walk from the parking area. You will be rewarded by seeing limpets, sand\
     \ crabs, black turban snails, purple sea urchins and more.\n\n"
+  country_slug: us
   directions_to_tidepools: "15 mins hike from the Bear Valley Visitor Center\n\nPalomarin\
     \ Beach is at the south end of Point Reyes. On Highway 1, proceed 4.5 miles north\
     \ of Stinson Beach, then take Olema-Bolinas Road west for 1.8 miles to Mesa Road.\
@@ -1203,6 +1493,8 @@
     Station which is on Mesa Road just before it ends at the trailhead parking area.
     It has an unstaffed visitor center open year-round and often has staff at work
     banding birds and doing other lab tasks which visitors can observe.
+  latitude: 37.93002
+  longitude: -122.7452438
   managment:
   - National park
   name: Palomarin Beach
@@ -1210,7 +1502,9 @@
     the town of Bolinas. Free parking
   pet_policy: No dogs allowed on beach
   phone: (415) 663-1092
+  region: us_pacific_coast
   slug: palomarin-beach
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2017-11-26T05:33:32.000Z'
   airtable_id: recrVKdoD7nkSOr5i
   area: Carmel/Monterey
@@ -1227,6 +1521,8 @@
     1 and the rocky shoreline for about a mile to Arroyo de los Frijoles Beach, the
     southern beach in Bean Hollow State Beach.
   country_slug: us
+  latitude: 36.561669
+  longitude: -121.936278
   managment:
   - California State Park
   name: Pebble beach
@@ -1236,6 +1532,7 @@
   picnic_options: checked
   region: us_pacific_coast
   slug: pebble-beach
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:32:35.000Z'
   airtable_id: recsMdvJYtGcDhzg1
   area: San Simeon
@@ -1271,6 +1568,8 @@
   country_slug: us
   name: Sugarloaf point
   region: us_pacific_coast
+  slug: sugarloaf-point
+  time_zone: America/Los_Angeles
 - accessibility_and_safety: The alga covered rocks can be very slippery. Sturdy boots,
     trekking poles and knee pads are highly recommended!
   address: Highway 1 and Riley Ranch Rd. Carmel,
@@ -1340,6 +1639,7 @@
     \ which has some protection from Tomales Point on Point Reyes Peninsula. For this\
     \ reason surfers come here when conditions are right. When the tide is low and\
     \ the surf is too, tide pool exploration is fun. "
+  country_slug: us
   directions_to_tidepools: The beach is located in the small town of Dillon Beach
     at the northern Marin County coastal border. Head west on Dillon Beach Road from
     the town of Tomales on Highway 1 west of Petaluma. Stay left as you head into
@@ -1349,16 +1649,46 @@
     Surfing, Bodyboarding, Tidepooling, Bonfires
     Amenities
     Restrooms, Picnic Tables, Fire Pits, Cabins / Cottages, Cafe, Store, Tide Pools
+  latitude: 38.2672745
+  longitude: -122.9779365
   managment:
   - Private
   name: Dillon Beach
   open_to_public: 'Yes'
   pet_policy: Dogs allowed on leash
   picnic_options: checked
+  region: us_pacific_coast
   slug: dyllon-beach
   tagline: 'Privately owned but publicly accessible beach at a resort which has a
     quaint little cafe, a general store and surf shop, and cabins to rent. '
+  time_zone: America/Los_Angeles
   website_url: https://www.californiabeaches.com/beach/dillon-beach/
 - airtable_createdTime: '2020-08-31T04:39:20.000Z'
   airtable_id: recyyclyRwDDg0OGp
+  area: Santa Cruz
+  bathroom_info: There is a public restroom in the parking lot at the intersection
+    of 41st Avenue and East Cliff Drive
+  bathrooms: Nearby
+  body: "This is a very flat intertidal area. Because the platforms are so flat, only\
+    \ a small rise in the water level floods them. Watch the rising tide, as that\
+    \ will determine the amount of time you will have to work the site. Also, the\
+    \ soft rocks of Opal Cliffs contain numerous fossils, including whale bones. These\
+    \ can become exposed and eroded free, then scattered about in the intertidal.\
+    \ If you are lucky, you might see some!\n\nHowever, unlike Soquel Avenue, the\
+    \ Opal Cliffs site did not appear to be affected by the county\u2019s sewage discharge\
+    \ in the early 1970s. Therefore it could be used as a comparison site to the recovery\
+    \ of the soquel Avenue site once the discharge was stopped in 1976."
+  country_slug: us
+  directions_to_tidepools: To reach the site, walk down the stairs at the intersection
+    of 41st Avenue and East Cliff Drive and straight out to the seaward edge of the
+    outcrop. It is the northwest section of the outer platform, just beyond the channel
+    that parallels the shore and 49 meters from the outcrop.
+  latitude: 36.9599223
+  longitude: -121.9638587
   name: Opal Cliffs
+  parking: Park near the intersection of 41st Avenue and East Cliff Drive.
+  region: us_pacific_coast
+  rules_and_collecting: collecting of any sort is illegal without a CA DFW scientific
+    collecting permit.
+  slug: opal-cliffs
+  time_zone: America/Los_Angeles
