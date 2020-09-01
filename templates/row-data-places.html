@@ -201,27 +201,7 @@
       map.on('moveend', function() {
         console.log(map.getCenter());
       });
-      // Fetch things you might see
-      var url="http://api.inaturalist.org/v1/observations/species_counts?lat={{ place.latitude }}&lng={{ place.longitude }}&radius={{ place.radius_km|default("0.5", true) }}&per_page=9";
-      fetch(url).then(
-        response => response.json()
-      ).then(data => {
-        var divs = data.results.map(item => {
-          var div = document.createElement('div');
-          div.innerHTML = `
-            <h3>${item.taxon.preferred_common_name}</h3>
-            <img width="80px" src="${item.taxon.default_photo.medium_url}">
-            <p>Seen ${item.count} time${item.count === 1 ? '' : 's'}</p>
-          `;
-          return div;
-        });
-        var wrapper = document.getElementById('species');
-        divs.map(div => wrapper.appendChild(div));
-        console.log(divs);
-      });
-
       </script>
-
     </div> <!-- end .primary -->
   </section>
 
