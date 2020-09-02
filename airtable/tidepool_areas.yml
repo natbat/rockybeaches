@@ -833,11 +833,17 @@
   slug: half-moon-bay-tidepools
   time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/attraction/half-moon-bay-tide-pools/
-- address: Natalie, Lampton Cliffs,  (35.5419009, -121.0924447), free parking, no
-    bathrooms, stair access
+- address: Natalie, Lampton Cliffs,  (,), free parking, no bathrooms, stair access
   airtable_createdTime: '2020-09-02T01:46:28.000Z'
   airtable_id: recRa5VtLnA3XwkJ5
+  area: San Simeon
+  country_slug: us
+  latitude: 35.5419009
+  longitude: -121.0924447
   name: Lampton Cliffs
+  region: us_pacific_coast
+  slug: lampton-cliffs
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:34:10.000Z'
   airtable_id: recRiwdIFJbTEAw4k
   area: Santa Cruz
@@ -1329,15 +1335,29 @@
   wikipedia: https://en.m.wikipedia.org/wiki/Coast_Dairies_State_Park
 - address: |-
     Montana de Oro Coralina Cove in Montana de Oro, free
-    Parking, bathrooms, 1/2 mile walk to tide pools. (35.2602930, -120.8945889)p
+    Parking, bathrooms, 1/2 mile walk to tide pools. (,)p
   airtable_createdTime: '2020-09-02T01:48:45.000Z'
   airtable_id: recd1gCmgZekQU4pw
+  area: San Simeon
+  country_slug: us
+  latitude: 35.260293
+  longitude: -120.8945889
   name: Coralina Cove
-- address: Natalie, Harmony Headlands, (35.4787053, -121.0205771), free parking, no
-    bathrooms, 1 mile walk to shore
+  region: us_pacific_coast
+  slug: coralina-cove
+  time_zone: America/Los_Angeles
+- address: Natalie, Harmony Headlands, (,), free parking, no bathrooms, 1 mile walk
+    to shore
   airtable_createdTime: '2020-09-02T01:46:02.000Z'
   airtable_id: recdYhqCho3ng0d0K
+  area: San Simeon
+  country_slug: us
+  latitude: 35.4787053
+  longitude: -121.0205771
   name: Harmony headlands
+  region: us_pacific_coast
+  slug: harmony-headlands
+  time_zone: America/Los_Angeles
 - address: La Jolla, CA
   airtable_createdTime: '2020-08-31T04:22:19.000Z'
   airtable_id: recefZRfMakgL2HnE
@@ -1547,15 +1567,29 @@
   slug: abalone-cove
   time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/map/abalone-cove-shoreline-park/
-- address: Leffingwell (35.5814900, -121.1196817), free parking, bathroom
+- address: Leffingwell (,), free parking, bathroom
   airtable_createdTime: '2020-09-02T01:47:18.000Z'
   airtable_id: recmlNf6L3HrIOwOS
+  area: San Simeon
+  country_slug: us
+  latitude: 35.58149
+  longitude: -121.1196817
   name: Leffingwell
+  region: us_pacific_coast
+  slug: leffingwell
+  time_zone: America/Los_Angeles
 - address: Cayucos Beach, north of pier, free parking, bathrooms, food, crowded, but
-    good cobble tide pools (35.4499004, -120.9153318)
+    good cobble tide pools (,)
   airtable_createdTime: '2020-09-02T01:47:55.000Z'
   airtable_id: recoKPGrSfBynJ3gx
+  area: San Simeon
+  country_slug: us
+  latitude: 35.4499004
+  longitude: -120.9153318
   name: Cayucos Beach
+  region: us_pacific_coast
+  slug: cayucos-beach
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-30T04:35:54.000Z'
   airtable_id: recoMUCXklspb27oG
   area: Bolinas
@@ -1807,13 +1841,14 @@
   natalie_visited: true
   open_to_public: 'Yes'
   other_names: 'Otter cove '
-  parking: Park on Windsor Blvd
+  parking: <p>Park on Windsor Blvd</p>
   region: us_pacific_coast
   rules_and_collecting: This site forms part of the Monterey bay National Marine Reserve.
     Absolutely no collecting animals or organic objects of any sort.
   slug: fiscalini-ranch
   station_id: 9412110
-  tagline: Lots of great varied tidepools and all the richness of the central coast.
+  tagline: Lots of great varied tidepools and all the biodiversity and richness of
+    the central coast.
   time_zone: America/Los_Angeles
   visitor_center: 'No'
 - accessibility_and_safety: The alga covered rocks can be very slippery. Sturdy boots,
@@ -1923,6 +1958,7 @@
   open_to_public: 'Yes'
   parking: ' free parking'
   region: us_pacific_coast
+  slug: san-simeon-south
   station_id: 9412110
   time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:39:20.000Z'
