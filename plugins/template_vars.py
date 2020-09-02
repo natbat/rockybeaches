@@ -52,83 +52,41 @@ order by
   datetime
 """
 
-# Best days are the four days out of the next 30 with the lowest
-# tides during daylight hours
-# https://github.com/natbat/rockybeaches/issues/55
-BEST_DAYS_SQL = """
-with daylight_tides as (
-  select
-    tide_predictions.datetime,
-    time(tide_predictions.datetime),
-    tide_predictions.mllw_feet,
-    sunrise_sunset.sunrise,
-    sunrise_sunset.sunset
-  from
-    tide_predictions
-    join sunrise_sunset on sunrise_sunset.place = :place_slug
-    and sunrise_sunset.day = date(tide_predictions.datetime)
-  where
-    time(tide_predictions.datetime) >= sunrise
-    and time(tide_predictions.datetime) <= sunset
-    and tide_predictions.station_id = (
-      select
-        station_id
-      from
-        places
-      where
-        slug = :place_slug
-    )
-),
-lowest_daylight_tide_per_day as (
-  select
-    date(datetime) as date,
-    min(mllw_feet) as lowest_daylight_tide,
-    time(datetime) as time,
-    sunrise,
-    sunset
-  from
-    daylight_tides
-  group by
-    date(datetime)
-  having
-    mllw_feet = min(mllw_feet)
-),
-best_four_days as (
-  select
-    *
-  from
-    lowest_daylight_tide_per_day
-  order by
-    lowest_daylight_tide
-  limit
-    4
-)
-select
-  *
-from
-  best_four_days
-order by
-  date
-"""
-
 
 @hookimpl
 def extra_template_vars(datasette):
-    async def best_times_for_place(place_slug):
-        db = datasette.get_database()
-        best_times = await db.execute(
-            BEST_DAYS_SQL,
-            {
-                "place_slug": place_slug,
-            },
-        )
-        rows = [dict(r) for r in best_times]
-        for row in rows:
-            row["date"] = datetime.datetime.strptime(row["date"], "%Y-%m-%d").date()
+    async def calculate_best_times(days):
+        # Expects list returned by get_tide_data_for_next_30_days
+        info_by_day = dict(days)
+        minimas = [(d[0], d[1]["lowest_daylight_minima"]) for d in days]
+        # 'feet' can be None for days with no minima occurring in daylight
+        minimas.sort(key=lambda p: p[1]["feet"] if p[1] else 999)
+        # Take the first 4, and produce this shape of data for each one:
+        # {"date": , "time":  "lowest_daylight_tide": , "sunrise":, "sunset": ...}
+        best_details = []
+        for day, minima in minimas[:4]:
+            day_info = info_by_day[day]
+            best_details.append(
+                {
+                    "date": day,
+                    "time": minima["time"],
+                    "lowest_daylight_tide": minima["feet"],
+                    "sunrise": day_info["sunrise"],
+                    "sunset": day_info["sunset"],
+                }
+            )
+        best_details.sort(key=lambda d: d["date"])
         return {
-            "best_details": rows,
-            "best_dates": [r["date"] for r in rows],
+            "best_details": best_details,
+            "best_dates": [r["date"] for r in best_details],
         }
+
+    async def get_tide_data_for_next_30_days(place_slug):
+        days = []
+        for day in next_30_days():
+            tide_data = await tide_data_for_place(place_slug, day)
+            days.append((day, tide_data))
+        return days
 
     async def tide_data_for_place(place_slug, day=None):
         db = datasette.get_database()
@@ -222,9 +180,9 @@ def extra_template_vars(datasette):
         return info
 
     return {
-        "best_times_for_place": best_times_for_place,
+        "calculate_best_times": calculate_best_times,
         "tide_data_for_place": tide_data_for_place,
-        "next_30_days": next_30_days,
+        "get_tide_data_for_next_30_days": get_tide_data_for_next_30_days,
         "ordinal": ordinal,
         "calculate_depth_view": calculate_depth_view,
         "nice_time": nice_time,

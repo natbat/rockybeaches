@@ -19,6 +19,8 @@
   </div>
 </header> <!-- end header -->
 
+{% set tide_data_for_next_30_days = get_tide_data_for_next_30_days(place.slug) %}
+
 <div class="page">
   <section class="page-title"{% if place.header_image %} style="background-image: url('{{ json.loads(place.header_image)[0]['url'] }}');"{% endif %}>
     <div class="title-wrapper stretch">
@@ -59,7 +61,7 @@
 
       {% if place.body %}{{ place.body|safe }}{% endif %}
 
-      {% set best_times = best_times_for_place(place.slug) %}
+      {% set best_times = calculate_best_times(tide_data_for_next_30_days) %}
       {% if best_times %}
         <h3>Good times to visit in the next 30 days</h3>
         <p>To get the most out of tidepooling, you'll want to go when the tide
@@ -224,8 +226,7 @@
 
       <h3>Low tides in the next 30 days</h3>
 
-      {% for day in next_30_days() %}
-        {% set tide_data = tide_data_for_place(place.slug, day) %}
+      {% for day, tide_data in tide_data_for_next_30_days %}
         {% if tide_data %}
           <div class="tide-prediction{% if day in best_times.best_dates %} best{% endif %}">
             <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
