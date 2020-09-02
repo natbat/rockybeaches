@@ -526,9 +526,31 @@
     lot access and then walk along the path to the bluffs and down the steps to the
     beach.
   country_slug: us
+  header_credit: Natalie Downe
+  header_credit_url: http://blog.natbat.net/
+  header_image:
+  - filename: 2020-09-01 16.47.10.jpg
+    id: atthPkn0L8bHw3IVe
+    size: 3716897
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/c28c6ea2d303f5f55c5ad8035396e2e5/161bdf75
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/97a29f5703fa06b837b9c3f9679c12e0/224518f8
+        width: 910
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/1f3f438138349f2ffd62e148d9ddc20e/b4efe3bf
+        width: 64
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/c69ad2b8f320d7a06dfb90f3a4a89cea/9d266cd3/2020-09-0116.47.10.jpg
   latitude: 37.4194665
   longitude: -122.4349273
   name: Cowell Ranch beach
+  natalie_visited: true
   region: us_pacific_coast
   slug: cowell-ranch-beach
   time_zone: America/Los_Angeles
@@ -1667,11 +1689,33 @@
     Vista del Mar and Balboa, walk across a vacant lot to the beach. Once on the sandy
     beach, walk south until you reach a sloping rock platform that rises above the
     sand.
+  header_credit: Natalie Downe
+  header_credit_url: http://blog.natbat.net/
+  header_image:
+  - filename: 2020-09-01 17.32.01.jpg
+    id: attZStboyr9Hcu7n6
+    size: 2097003
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/171b95c640967cad594e99b923fb688e/b114506d
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/7df38aba2217624b19853a585d72c6f8/31bddc3c
+        width: 1425
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/d3ae7b4ab139ab5fcb7fdba3e47bea38/7da9f6fe
+        width: 100
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/9f8982ff4b95dde187b4c5e1480e290c/00de2545/2020-09-0117.32.01.jpg
   latitude: 35.6041315
   longitude: -121.1420191
   managment:
   - California State Marine Conservation Area
   name: San Simeon
+  natalie_visited: true
   parking: 'This site is about a quarter of a mile south of the town of San Simeon.
     From Highway 1 at the Sea Breeze Inn, turn onto on Vista del Mar, the southernmost
     road in town. Drive to the end of Vista del Mar and park where it meets Balboa. '
