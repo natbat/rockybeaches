@@ -54,7 +54,7 @@
         <!-- <li><a href="#origin">Why here?</a></li> -->
         <li><a href="#how-to-get-there">How to get there</a></li>
         <li><a href="#when-to-visit">When to visit</a></li>
-        {% if place.accessibility_and_safety or place.pet_policy or place.food_options %}<li><a href="#other-considerations">Other considerations</a></li>{% endif %}
+        {% if place.rules_and_collecting or place.accessibility_and_safety or place.pet_policy or place.food_options or place.picnic_options or place.rules_and_collecting_url %}<li><a href="#other-considerations">Other considerations</a></li>{% endif %}
       </ul>
 
       {% if place.body %}{{ place.body|safe }}{% endif %}
@@ -161,8 +161,16 @@
     <div class="primary">
       {{ place.directions|safe }}
 
-      <h3>Parking</h3>
-      {{ place.parking|safe }}
+      {% if place.parking %}
+        <h3>Parking</h3>
+        {{ place.parking|safe }}
+      {% endif %}
+
+      {% if place.directions_to_tidepools %}
+        <h3>Directions to tidepools</h3>
+        {{ place.directions_to_tidepools|safe }}
+      {% endif %}
+
     </div>
 
     <div class="secondary">
@@ -296,12 +304,20 @@
     </div>
   </section>
 
-  {% if place.accessibility_and_safety or place.pet_policy or place.food_options %}
+  {% if place.rules_and_collecting or place.accessibility_and_safety or place.pet_policy or place.food_options or place.picnic_options or place.rules_and_collecting_url %}
     <section class="content">
       <a class="anchor" name="other-considerations"></a>
       <h2 class="stretch"><span>Other considerations</span></h2>
 
       <div class="full">
+        {% if place.rules_and_collecting or place.rules_and_collecting_url %}
+          <h3>Rules</h3>
+          {{ place.rules_and_collecting|safe }}
+          {% if place.rules_and_collecting_url %}
+            <p><a href="{{ place.rules_and_collecting_url }}">Information on rules for this location</a></p>
+          {% endif %}
+        {% endif %}
+
         {% if place.accessibility_and_safety %}
           <h3>Accessibility and Safety</h3>
           {{ place.accessibility_and_safety|safe }}
@@ -315,6 +331,11 @@
         {% if place.food_options %}
           <h3>Food options</h3>
           {{ place.food_options|safe }}
+        {% endif %}
+
+        {% if place.picnic_options %}
+          <h3>Picnics</h3>
+          {{ place.picnic_options|safe }}
         {% endif %}
       </div>
     </section> <!-- end .content -->
