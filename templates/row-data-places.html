@@ -54,10 +54,10 @@
         <!-- <li><a href="#origin">Why here?</a></li> -->
         <li><a href="#how-to-get-there">How to get there</a></li>
         <li><a href="#when-to-visit">When to visit</a></li>
-        <li><a href="#other-considerations">Other considerations</a></li>
+        {% if place.accessibility_and_safety or place.pet_policy or place.food_options %}<li><a href="#other-considerations">Other considerations</a></li>{% endif %}
       </ul>
 
-      {{ place.body|safe }}
+      {% if place.body %}{{ place.body|safe }}{% endif %}
 
       {% set best_times = best_times_for_place(place.slug) %}
       {% if best_times %}
@@ -296,24 +296,29 @@
     </div>
   </section>
 
-  <section class="content">
-    <a class="anchor" name="other-considerations"></a>
-    <h2 class="stretch"><span>Other considerations</span></h2>
+  {% if place.accessibility_and_safety or place.pet_policy or place.food_options %}
+    <section class="content">
+      <a class="anchor" name="other-considerations"></a>
+      <h2 class="stretch"><span>Other considerations</span></h2>
 
-    <div class="full">
-      <h3>Accessibility and Safety</h3>
-      {{ place.accessibility_and_safety|safe }}
+      <div class="full">
+        {% if place.accessibility_and_safety %}
+          <h3>Accessibility and Safety</h3>
+          {{ place.accessibility_and_safety|safe }}
+        {% endif %}
 
-      <!-- <p>TODO repeat general tips and link to read more</p> -->
+        {% if place.pet_policy %}
+          <h3 id="pets">Pet Policy</h3>
+          {{ place.pet_policy|safe }}
+        {% endif %}
 
-      <h3 id="pets">Pet Policy</h3>
-      {{ place.pet_policy|safe }}
-
-      <h3>Food options</h3>
-      {{ place.food_options|safe }}
-
-    </div>
-  </section> <!-- end .content -->
+        {% if place.food_options %}
+          <h3>Food options</h3>
+          {{ place.food_options|safe }}
+        {% endif %}
+      </div>
+    </section> <!-- end .content -->
+  {% endif %}
 </div> <!-- end .page -->
 
 <footer class="section">
