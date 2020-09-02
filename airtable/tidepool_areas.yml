@@ -833,6 +833,11 @@
   slug: half-moon-bay-tidepools
   time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/attraction/half-moon-bay-tide-pools/
+- address: Natalie, Lampton Cliffs,  (35.5419009, -121.0924447), free parking, no
+    bathrooms, stair access
+  airtable_createdTime: '2020-09-02T01:46:28.000Z'
+  airtable_id: recRa5VtLnA3XwkJ5
+  name: Lampton Cliffs
 - airtable_createdTime: '2020-08-31T04:34:10.000Z'
   airtable_id: recRiwdIFJbTEAw4k
   area: Santa Cruz
@@ -1322,6 +1327,17 @@
   time_zone: America/Los_Angeles
   visitor_center: 'No'
   wikipedia: https://en.m.wikipedia.org/wiki/Coast_Dairies_State_Park
+- address: |-
+    Montana de Oro Coralina Cove in Montana de Oro, free
+    Parking, bathrooms, 1/2 mile walk to tide pools. (35.2602930, -120.8945889)p
+  airtable_createdTime: '2020-09-02T01:48:45.000Z'
+  airtable_id: recd1gCmgZekQU4pw
+  name: Coralina Cove
+- address: Natalie, Harmony Headlands, (35.4787053, -121.0205771), free parking, no
+    bathrooms, 1 mile walk to shore
+  airtable_createdTime: '2020-09-02T01:46:02.000Z'
+  airtable_id: recdYhqCho3ng0d0K
+  name: Harmony headlands
 - address: La Jolla, CA
   airtable_createdTime: '2020-08-31T04:22:19.000Z'
   airtable_id: recefZRfMakgL2HnE
@@ -1531,6 +1547,15 @@
   slug: abalone-cove
   time_zone: America/Los_Angeles
   website_url: http://www.californiabeaches.com/map/abalone-cove-shoreline-park/
+- address: Leffingwell (35.5814900, -121.1196817), free parking, bathroom
+  airtable_createdTime: '2020-09-02T01:47:18.000Z'
+  airtable_id: recmlNf6L3HrIOwOS
+  name: Leffingwell
+- address: Cayucos Beach, north of pier, free parking, bathrooms, food, crowded, but
+    good cobble tide pools (35.4499004, -120.9153318)
+  airtable_createdTime: '2020-09-02T01:47:55.000Z'
+  airtable_id: recoKPGrSfBynJ3gx
+  name: Cayucos Beach
 - airtable_createdTime: '2020-08-30T04:35:54.000Z'
   airtable_id: recoMUCXklspb27oG
   area: Bolinas
@@ -1734,6 +1759,63 @@
   region: us_pacific_coast
   slug: sugarloaf-point
   time_zone: America/Los_Angeles
+- accessibility_and_safety: <p>The bluff trail is wheelchair accessible but the tidepools
+    are not. Careful on the way down to the beach level as it is quite precarious.
+    Always watch your back with the tide and be careful where you step.</p>
+  address: Cambria, CA
+  airtable_createdTime: '2020-09-02T01:09:42.000Z'
+  airtable_id: recvGJIlcGjvteV4p
+  area: San Simeon
+  bathrooms: 'No'
+  cost: Free
+  country_slug: us
+  directions_latitude: 35.547832
+  directions_longitude: -121.097269
+  directions_to_tidepools: <p>Take the Bluff trail north for about half a mile. The
+    entrance to get to the tidepools is hard to find and quite scrabbly to get to
+    the beach level. You can also park at the other trailhead to the north:</p>
+  docents: 'No'
+  dogs: 'Yes'
+  food_options: <p>Lots of great food options in nearby Cambria</p>
+  header_credit: Natalie Downe
+  header_credit_url: http://blog.natbat.net/
+  header_image:
+  - filename: 2020-09-01 19.21.40.jpg
+    id: attOknot9g84icbyc
+    size: 5029213
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/afe3a308ba9f94b50d8c905bab34d644/629169a3
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/ced8de30c431d825a570008d862c83a4/6031080e
+        width: 883
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/3928e6f025e4bf573d79a6f6916fa7c6/025df20e
+        width: 62
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/03602a246c62455a06c93dfcb1c5b63c/4cf80d3f/2020-09-0119.21.40.jpg
+  latitude: 35.5484032
+  live_on_site: true
+  longitude: -121.1008331
+  managment:
+  - Marine reserve
+  name: Fiscalini Ranch
+  natalie_visited: true
+  open_to_public: 'Yes'
+  other_names: 'Otter cove '
+  parking: Park on Windsor Blvd
+  region: us_pacific_coast
+  rules_and_collecting: This site forms part of the Monterey bay National Marine Reserve.
+    Absolutely no collecting animals or organic objects of any sort.
+  slug: fiscalini-ranch
+  station_id: 9412110
+  tagline: Lots of great varied tidepools and all the richness of the central coast.
+  time_zone: America/Los_Angeles
+  visitor_center: 'No'
 - accessibility_and_safety: The alga covered rocks can be very slippery. Sturdy boots,
     trekking poles and knee pads are highly recommended!
   address: Highway 1 and Riley Ranch Rd. Carmel,
@@ -1827,6 +1909,22 @@
     quaint little cafe, a general store and surf shop, and cabins to rent. '
   time_zone: America/Los_Angeles
   website_url: https://www.californiabeaches.com/beach/dillon-beach/
+- airtable_createdTime: '2020-09-02T01:45:58.000Z'
+  airtable_id: recy7d9rAGVE0PunR
+  area: San Simeon
+  bathrooms: 'No'
+  cost: Free
+  country_slug: us
+  directions_to_tidepools: '1/2 mile walk from the parking to the tidepools '
+  latitude: 35.6043411
+  longitude: -121.1420392
+  name: 'San Simeon south '
+  natalie_visited: true
+  open_to_public: 'Yes'
+  parking: ' free parking'
+  region: us_pacific_coast
+  station_id: 9412110
+  time_zone: America/Los_Angeles
 - airtable_createdTime: '2020-08-31T04:39:20.000Z'
   airtable_id: recyyclyRwDDg0OGp
   area: Santa Cruz
