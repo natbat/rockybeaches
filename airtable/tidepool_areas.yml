@@ -1143,31 +1143,94 @@
   webcam_url: https://www.surf-forecast.com/breaks/Pillar-Point/webcams/latest
   website_url: www.smharbor.com/pillarpoint
   wikipedia: https://en.m.wikipedia.org/wiki/Pillar_Point_Harbor
-- address: |-
-    Redondo Beach Road
-    Half Moon Bay,
+- accessibility_and_safety: <p>Depending on the route you take down to the beach it
+    can be quite treacherous. Be careful especially if you are going down or back
+    when it is dark. Always watch your step and never turn your back on the tide.</p>
+  address: Redondo Beach Road, Half Moon Bay,
   airtable_createdTime: '2017-11-26T02:36:14.000Z'
   airtable_id: recWYDFaFuyJIR9BC
   area: Half moon bay
-  body: "This tide pool area is just south of Half Moon Bay near Cameron\u2019s restaurant.\
-    \ The best access point is from the parking lot at Poplar State Beach at the end\
-    \ of Poplar Street.  You then walk south about a mile along the beach to the tide\
-    \ pools.\n\nJust south of downtown Half Moon Bay, this beach offers beautiful\
-    \ views without the crowds. "
+  bathroom_info: '<p>You might be able to find bathrooms nearby with Half Moon Bay
+    being so close.</p> '
+  bathrooms: 'No'
+  body: "<p>Beautiful sandstone erosion creates gullies in the cliff face. The tidepool\
+    \ area is quite high and accessible even when the tide isn\u2019t all that low.\
+    \ This makes it a great place for summer Tidepooling.</p>\n\n<p>Often one of the\
+    \ less popular beaches in half moon bay, it offers stunning cliff views and exciting\
+    \ wildlife in the tidepools.</p>"
+  cost: Free
   country_slug: us
-  directions_to_tidepools: 'The easiest access point to the tide pools is to park
-    at the end of Poplar Street at Poplar Beach and then head south along the water
-    about a mile to the tide pools. The walk along the shore takes you right past
-    the Ritz-Carlton. You can also take the super scenic coastal trail along the bluffs
-    above the beach but most of the paths down to the water are pretty steep. '
+  directions_latitude: 37.4392236
+  directions_longitude: -122.4430648
+  directions_to_tidepools: "<p>The smoothest way down to the tidepools is to walk\
+    \ along the scenic bluff trail to Poplar beach (or park there) and take the steps\
+    \ down. It\u2019s a bit of a scrabble but it\u2019s also possible to get closer\
+    \ access from the Redondo parking down one of the many steep ravines that the\
+    \ rain has carved out of the cliff. Wear sturdy shoes and bring a walking stick\
+    \ if you have one.</p>"
+  docents: 'No'
+  dogs: 'Yes'
+  food_options: "<p>Close to Cameron\u2019s Inn but also only about a 10 min drive\
+    \ from lots of dining options in Half Moon Bay.</p>"
+  groups: <p>Buses and groups may want to park in the more official car park at the
+    end of Poplar beach road, head down the steps and walk a mile along the beach.</p>
+  header_credit: Natalie Downe
+  header_credit_url: http://blog.natbat.net/
+  header_image:
+  - filename: 2020-09-08 17.04.50.jpg
+    id: attxoPAMVDM9pHsYH
+    size: 5533607
+    thumbnails:
+      full:
+        height: 3000
+        url: https://dl.airtable.com/.attachmentThumbnails/42f423812b054a0a34ce99156d270301/7bb79c9a
+        width: 3000
+      large:
+        height: 512
+        url: https://dl.airtable.com/.attachmentThumbnails/1789c442d1c1363bf7f50e0f9caad166/bcc37b98
+        width: 910
+      small:
+        height: 36
+        url: https://dl.airtable.com/.attachmentThumbnails/ca898500c8c7a776fcb0f224b6df7471/0fd3508f
+        width: 64
+    type: image/jpeg
+    url: https://dl.airtable.com/.attachments/4ad4519b7f66510b07dc31d1cb5d5f51/0d948cc8/2020-09-0817.04.50.jpg
   latitude: 37.4365721
+  live_on_site: true
   longitude: -122.4447811
+  managment:
+  - Coastside Land Trust
   name: Redondo beach
-  parking: Park at the Poplar State beach parking on Poplar st.
+  natalie_visited: true
+  official_open: true
+  open_to_public: 'Yes'
+  other_names: Poplar beach, Half moon bay
+  parking: <p>There is a larger paid parking spot at the Poplar State beach parking
+    on Poplar st but if you are lucky you will be able to get a spot in the small,
+    free, unpaved (and rather bumpy) parking at the end of Redondo Beach Road. Careful
+    how you drive if your car has a low chassis. People park on the side of the road
+    leading up to the carpark also.</p>
+  pet_policy: 'Dogs must be on leash '
+  picnic_options: <p>Definitely take a picnic here! Sit on the cliff and soak up the
+    incredible views or navigate down to the beach and eat there. No fires allowed.</p>
+  radius_km: 0.5
   region: us_pacific_coast
+  rules_and_collecting: "<p>Please be respectful of the reef, don\u2019t pry any shellfish\
+    \ or creatures off their homes. You\u2019ll need a Fishing license if you want\
+    \ to fish and bear in mind that depending on the time of year shellfish may be\
+    \ poisonous and you could get Paralytic Shellfish poisoning.</p>\n\n<p>Watch where\
+    \ you step and don\u2019t step on living things if you can possibly avoid it.</p>"
+  rules_and_collecting_url: https://en.m.wikipedia.org/wiki/Redondo_Beach,_California
   slug: redondo-beach
+  station_id: 9414131
+  tagline: Quiet Tidepooling spot with lots of little pools on a rocky ledge with
+    some stretching out further
+  tidepool_height: 2
   time_zone: America/Los_Angeles
+  variance_ft: 2
+  visitor_center: 'No'
   website_url: https://www.californiabeaches.com/beach/redondo-beach-half-moon-bay/
+  wikipedia: https://en.m.wikipedia.org/wiki/Redondo_Beach,_California
 - airtable_createdTime: '2020-08-31T04:34:29.000Z'
   airtable_id: recWZGrZVAnl1r9ss
   area: Santa Cruz
