@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+{% set places = sql("""
+    select * from places where slug = :slug
+""", {"slug": slug}) %}
+{% if not places %}
+<html><head><title>404: Place not found</title></head>
+<h1>404: Place not found</h1>
+</html>
+{% else %}
+{% set place = places[0] %}
+<html lang="en">
+<head>
+<title>Rocky Beaches. {{ place.name }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+<link rel="stylesheet" href="/static/tidepools.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+</head>
+<body>
+
+<header class="section">
+  <div class="stretch">
+    <h1 class="title">Rocky Beaches</h1>
+  </div>
+</header> <!-- end header -->
+
+{% set tide_data_for_next_30_days = get_tide_data_for_next_30_days(place.slug) %}
+
+<div class="page">
+  <section class="page-title"{% if place.header_image %} style="background-image: url('{{ json.loads(place.header_image)[0]['url'] }}');"{% endif %}>
+    <div class="title-wrapper stretch">
+      <h1 class="text"><span>{{ place.name }}</span></h1>
+    </div>
+  </section> <!-- end .page-title -->
+
+  {% set species_counts = graphql('''
+  query ($slug: String) {
+    places_row(slug: $slug) {
+      species_counts_list(first: 12, sort_desc: count) {
+        nodes {
+          count
+          taxon {
+            id
+            preferred_common_name
+            wikipedia_url
+            name
+            default_photo
+          }
+        }
+      }
+    }
+  }
+  ''', variables={"slug": place.slug})["places_row"]["species_counts_list"]["nodes"] %}
+
+  <section class="content">
+    <div class="primary">
+
+      {% if place.tagline %}<p class="intro">{{ place.tagline }}</p>{% endif %}
+
+      <ul class="subnav">
+        <!-- <li><a href="#origin">Why here?</a></li> -->
+        <li><a href="#how-to-get-there">How to get there</a></li>
+        <li><a href="#when-to-visit">When to visit</a></li>
+        {% if place.rules_and_collecting or place.accessibility_and_safety or place.pet_policy or place.food_options or place.picnic_options or place.rules_and_collecting_url %}<li><a href="#other-considerations">Other considerations</a></li>{% endif %}
+      </ul>
+
+      {% if place.body %}{{ place.body|safe }}{% endif %}
+
+      {% set best_times = calculate_best_times(tide_data_for_next_30_days) %}
+      {% if best_times %}
+        <h3>Good times to visit in the next 30 days</h3>
+        <p>To get the most out of tidepooling, you'll want to go when the tide
+          is low so that the rocks of the beaches are visible and as the ocean
+          tide gets lower it leaves behind little pools of water in which you can
+          see lots of fun critters!</p>
+        <p>Try to arrive before the lowest tide time, so that you can have some
+          fun on the tidepools before the tide rises again. Below are the four
+          best low tides for {{ place.tagline|safe }} in the next 30 days during
+          daylight hours.</p>
+
+        {% for best_time in best_times.best_details %}
+          <p class="good-tide">
+            <strong>{{ best_time.date.strftime("%A %-d") }}{{ ordinal(best_time.date.day) }} {{ best_time.date.strftime("%B %Y") }}</strong>
+            at {{ nice_time(best_time.time) }} for a low tide of {{ "%.2f"|format(best_time.lowest_daylight_tide) }}ft.
+            <span class="meta">sunrise is {{ nice_time(best_time.sunrise) }} and sunset is {{ nice_time(best_time.sunset) }}</span>
+          </p>
+        {% endfor %}
+        <p><a href="#when-to-visit">See more good times to visit</a></p>
+      {% endif %}
+
+      {% set tide_data = tide_data_for_place(place.slug) %}
+      {% if tide_data %}
+        <div class="tide-prediction{% if day in best_times.best_dates %} best{% endif %}">
+          <h4 class="tide-day header3">Low tides today</h4>
+          {% if tide_data.lowest_daylight_minima %}
+            <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_daylight_minima.feet) }}ft</strong> at <strong>{{ nice_time(tide_data.lowest_daylight_minima.time) }}</strong></p>
+          {% endif %}
+          <div class="day-view wider" style="
+            background: linear-gradient(90deg,
+              #176AB8 0%,
+              #97bcdf {{ tide_data.dawn_pct }}%,
+              #d1e1f1 {{ tide_data.sunrise_pct }}%,
+              #FFFFFF {{ tide_data.noon_pct }}%,
+              #d1e1f1 {{ tide_data.sunset_pct }}%,
+              #97bcdf {{ tide_data.dusk_pct }}%,
+              #176AB8 100%
+            );
+          ">
+            <svg style="width: 100%; height: 60px; opacity: 0.5" viewBox="0 -2 240 104" preserveAspectRatio="none">
+              <polyline fill="none" stroke="#176AB8" stroke-width="2"
+                points="{{ tide_data.svg_points }}"
+              />
+            </svg>
+            {% for minima in tide_data.minimas %}
+              <span class="minima{% if minima == tide_data.lowest_daylight_minima %} best-minima{% endif %}" style="left: {{ minima.time_pct }}%">
+                <span class="time">{{ nice_time(minima.time) }}</span>
+                <span class="depth">{{ "%.2f"|format(minima.feet) }}ft</span>
+              </span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <h2>What you could see</h2>
+      <div>
+        <ul class="species-list">
+          {% for species_count in species_counts %}
+            <li class="species"><a href="https://www.inaturalist.org/taxa/{{species_count.taxon.id}}" class="link-wrap">
+              <h3 class="name"><span class="image" style="background-image: url('{{ species_count.taxon.default_photo.medium_url }}')"></span>{{ species_count.taxon.preferred_common_name }}</h3>
+              <p class="latin">{{ species_count.taxon.name }}</p>
+
+            <p class="meta seen">seen here {{ species_count.count }} times</p>
+            </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div> <!-- end .primary -->
+
+    <div class="secondary pull-out">
+      <h2>Tidepooling tips</h2>
+      <h3>Stay safe</h3>
+      <ul class="bullets">
+        <li>Never turn your back on the ocean.</li>
+        <li>Wear water shoes and watch your step.</li>
+        <li>Pack water and sunscreen.</li>
+      </ul>
+
+      <h3>Respect the reef</h3>
+      <ul class="bullets">
+        <li>Don't take anything from the reef, leave it for others to enjoy.</li>
+        <li>Leave the reef as you found it, careful where you step and try not to break the reef or step on living things'</li>
+        <li>Take all your litter back home with you.</li>
+      </ul>
+
+      <h3>Have fun!</h3>
+      <ul class="bullets">
+        <li>Take lots of photos, <a href="https://www.inaturalist.org/">upload to iNaturalist</a> for help identifying.</li>
+        <li>If you don't see anything, sit very still, wait and watch!</li>
+      </ul>
+      <!-- <p><a href="#">See more tips</a></p> -->
+    </div>
+  </section> <!-- end .page-title -->
+
+  <section class="content">
+    <a class="anchor" name="how-to-get-there"></a>
+    <h2 class="stretch"><span>How to get there</span></h2>
+    <div class="primary">
+      {{ place.directions|safe }}
+
+      {% if place.parking %}
+        <h3>Parking</h3>
+        {{ place.parking|safe }}
+      {% endif %}
+
+      {% if place.directions_to_tidepools %}
+        <h3>Directions to tidepools</h3>
+        {{ place.directions_to_tidepools|safe }}
+      {% endif %}
+
+    </div>
+
+    <div class="secondary">
+      <h3>About {{ place.name }}</h3>
+      {% if place.address %}<p>{{ place.address }}</p>{% endif %}
+        <ul class="spaced">
+          {% if place.phone %}<li>{{ place.phone }}</li>{% endif %}
+          <li><a href="https://www.google.com/maps/dir/?api=1&destination={{ place.directions_latitude or place.latitude }},{{ place.directions_longitude or place.longitude }}">Get directions</a></li>
+          {% if place.open_to_public %}<li><strong>Open to the public:</strong> {{ place.open_to_public }}</li>{% endif %}
+          {% if place.entry_cost %}<li><strong>Entry cost:</strong> {{ place.entry_cost }}</li>{% endif %}
+          {% if place.bathrooms %}<li><strong>Bathrooms nearby:</strong> {{ place.bathrooms }}</li>{% endif %}
+          {% if place.visitor_center %}<li><strong>Visitor center:</strong> {{ place.visitor_center }}</li>{% endif %}
+          {% if place.docents %}<li><strong>Docents and guides:</strong> {{ place.docents }}</li>{% endif %}
+          {% if place.dogs %}<li><strong>Dogs allowed:</strong> {% if place.pet_policy %}<a href="#pets" title="view pet policy">{% endif %}{{ place.dogs }}{% if place.pet_policy %}</a>{% endif %}</li>{% endif %}
+        </ul>
+
+    </div> <!-- end .secondary -->
+
+    <div class="primary">
+      <div id="map"></div>
+
+      <script type="text/javascript">
+      var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+              detectRetina: true,
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+          }),
+          latlng = L.latLng({{ place.latitude }}, {{ place.longitude }});
+
+      var map = L.map('map', {
+          center: latlng,
+          zoom: 14,
+          layers: [tiles]
+      });
+      L.circle([{{ place.latitude }}, {{ place.longitude }}], {{ place.radius_km|default("0.5", true) }} * 1000).addTo(map);
+      map.on('moveend', function() {
+        console.log(map.getCenter());
+      });
+      </script>
+    </div> <!-- end .primary -->
+  </section>
+
+  <section class="content">
+    <a class="anchor" name="when-to-visit"></a>
+    <h2 class="stretch"><span>When to visit</span></h2>
+    <div class="full">
+
+      <p>As a general rule it is always a good idea to get to the tidepool site
+        before the lowest tide so that you can have a good time looking at critters
+        before the tide starts to come in.</p>
+
+      <h3>Low tides in the next 30 days</h3>
+
+      {% for day, tide_data in tide_data_for_next_30_days %}
+        {% if tide_data %}
+          <div class="tide-prediction{% if day in best_times.best_dates %} best{% endif %}">
+            <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
+            {% if tide_data.lowest_daylight_minima %}
+              <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_daylight_minima.feet) }}ft</strong> at <strong>{{ nice_time(tide_data.lowest_daylight_minima.time) }}</strong></p>
+            {% endif %}
+
+            {% if tide_data.lowest_daylight_minima %}
+              {% set depth_view = calculate_depth_view(-2, 2, tide_data.lowest_daylight_minima.feet) %}
+              <div class="depth-view">
+                <span class="depth negative" style="left: {{ depth_view.left }}%; width: {{ depth_view.width }}%">lowest tide is</span> <span class="number" style="left: {{ depth_view.left }}%">{{ "%.2f"|format(tide_data.lowest_daylight_minima.feet) }}ft</span>
+              </div>
+            {% endif %}
+
+            <div class="day-view" style="
+              background: linear-gradient(90deg,
+                #176AB8 0%,
+                #97bcdf {{ tide_data.dawn_pct }}%,
+                #d1e1f1 {{ tide_data.sunrise_pct }}%,
+                #FFFFFF {{ tide_data.noon_pct }}%,
+                #d1e1f1 {{ tide_data.sunset_pct }}%,
+                #97bcdf {{ tide_data.dusk_pct }}%,
+                #176AB8 100%
+              );
+            ">
+              <svg style="width: 100%; height: 60px; opacity: 0.5" viewBox="0 -2 240 104" preserveAspectRatio="none">
+                <polyline fill="none" stroke="#176AB8" stroke-width="2"
+                  points="{{ tide_data.svg_points }}"
+                />
+              </svg>
+              {% for minima in tide_data.minimas %}
+                <span class="minima{% if minima == tide_data.lowest_daylight_minima %} best-minima{% endif %}" style="left: {{ minima.time_pct }}%">
+                  <span class="time">{{ nice_time(minima.time) }}</span>
+                  <span class="depth">{{ "%.2f"|format(minima.feet) }}ft</span>
+                </span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      <h3>Recent observations at {{ place.name }}</h3>
+
+      {% set observations = graphql('''
+      query ($slug: String) {
+        places_row(slug: $slug) {
+          observations_list(first: 24, sort_desc:observed_on, filter: {quality_grade: {eq: "research"}}) {
+            nodes {
+              id
+              observed_on
+              user
+              observation_photos
+              taxon {
+                preferred_common_name
+                name
+              }
+            }
+          }
+        }
+      }
+      ''', variables={"slug": place.slug})["places_row"]["observations_list"]["nodes"] %}
+
+      <ul class="observation-list">
+        {% for observation in observations %}
+          <li class="observation"><a href="https://www.inaturalist.org/observations/{{ observation.id }}" class="link-wrap">
+            <h4 class="context-text">{{ observation.taxon.preferred_common_name }}. Seen</h4>
+            <div class="image" style="background-image: url('{{ observation.observation_photos.0.photo.url|replace("/square.", "/medium.") }}')"><span class="by">by {{ observation.user.login }}</span></div>
+            <p class="name header3">{{ observation.taxon.preferred_common_name }}</p>
+            <p class="latin">{{ observation.taxon.name }}</p>
+            <p class="meta seen">spotted here {{ observation.observed_on }}</p>
+          </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </section>
+
+  {% if place.rules_and_collecting or place.accessibility_and_safety or place.pet_policy or place.food_options or place.picnic_options or place.rules_and_collecting_url %}
+    <section class="content">
+      <a class="anchor" name="other-considerations"></a>
+      <h2 class="stretch"><span>Other considerations</span></h2>
+
+      <div class="full">
+        {% if place.rules_and_collecting or place.rules_and_collecting_url %}
+          <h3>Rules</h3>
+          {{ place.rules_and_collecting|safe }}
+          {% if place.rules_and_collecting_url %}
+            <p><a href="{{ place.rules_and_collecting_url }}">Information on rules for this location</a></p>
+          {% endif %}
+        {% endif %}
+
+        {% if place.accessibility_and_safety %}
+          <h3>Accessibility and Safety</h3>
+          {{ place.accessibility_and_safety|safe }}
+        {% endif %}
+
+        {% if place.pet_policy %}
+          <h3 id="pets">Pet Policy</h3>
+          {{ place.pet_policy|safe }}
+        {% endif %}
+
+        {% if place.food_options %}
+          <h3>Food options</h3>
+          {{ place.food_options|safe }}
+        {% endif %}
+
+        {% if place.picnic_options %}
+          <h3>Picnics</h3>
+          {{ place.picnic_options|safe }}
+        {% endif %}
+      </div>
+    </section> <!-- end .content -->
+  {% endif %}
+</div> <!-- end .page -->
+
+<footer class="section">
+    <ul class="full">
+      <li><a href="https://github.com/natbat/rockybeaches">About</a></li>
+      <li><a href="mailto:natbat+rockybeaches@natbat.net">Contact</a></li>
+    </ul>
+</footer> <!-- end footer -->
+
+</body>
+</html>
+{% endif %}

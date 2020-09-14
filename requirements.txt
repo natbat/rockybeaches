@@ -1,5 +1,5 @@
 sqlite-utils
-datasette
+datasette==0.49a1
 datasette-graphql>=1.0.1
 datasette-publish-vercel>=0.8
 datasette-cluster-map
