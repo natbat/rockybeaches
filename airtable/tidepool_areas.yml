@@ -1807,13 +1807,21 @@
   directions_to_tidepools: 'MacKerricher State Park is three miles north of Fort Bragg
     on Highway 1, near the town of Cleone. Enter the park and drive west to the Seal
     Watching Station and tidepools at Laguna Point. '
+  dogs: 'Yes'
   latitude: 39.4903913
+  live_on_site: true
   longitude: -123.8026179
-  name: 'Leguna Point '
+  managment:
+  - California State Park
+  name: 'Laguna Point '
+  official_open: true
+  open_to_public: 'Yes'
   other_names: 'Leguna Point '
+  pet_policy: Dogs on a 6 ft leash
   phone: (707) 964-9112
   region: us_pacific_coast
-  slug: leguna-point
+  slug: laguna-point
+  station_id: 9417426
   time_zone: America/Los_Angeles
   website_url: http://www.parks.ca.gov/?page_id=436
 - address: |-
