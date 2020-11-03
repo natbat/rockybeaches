@@ -1823,6 +1823,7 @@
   slug: laguna-point
   station_id: 9417426
   time_zone: America/Los_Angeles
+  variance_ft: 10
   website_url: http://www.parks.ca.gov/?page_id=436
 - address: |-
     Highway 1 and Linda Mar Blvd.
