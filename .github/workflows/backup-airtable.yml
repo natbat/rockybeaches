@@ -28,7 +28,7 @@ jobs:
         AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
         AIRTABLE_KEY: ${{ secrets.AIRTABLE_KEY }}
       run: |-
-        airtable-export airtable $AIRTABLE_BASE_ID tidepool_areas -v
+        airtable-export airtable $AIRTABLE_BASE_ID tidepool_areas -v --user-agent "curl/7.64.1"
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
