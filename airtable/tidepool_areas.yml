@@ -71,6 +71,7 @@
   header_credit: sykospark
   header_image:
   - filename: 2020-09-02 11.37.02.jpg
+    height: 627
     id: attP4D6QEXxgPxT56
     size: 368970
     thumbnails:
@@ -88,6 +89,7 @@
         width: 51
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/faadd2c0d1a39d41962d1c39c20961bd/7e413170/2020-09-0211.37.02.jpg
+    width: 880
   latitude: 33.7067878
   longitude: -118.2858259
   name: Point Fermin
@@ -147,6 +149,7 @@
   header_credit: sykospark
   header_image:
   - filename: 2020-09-02 12.00.02.jpg
+    height: 690
     id: att36NiOqaDHLExRU
     size: 423947
     thumbnails:
@@ -164,6 +167,7 @@
         width: 48
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/a14c5144eeb7a5c2b94f95a3c1d6b61b/d460c2f6/2020-09-0212.00.02.jpg
+    width: 920
   hours: The park gate closes at 4:30 pm; the park closes at 5 pm.
   latitude: 33.7109034
   longitude: -118.3039992
@@ -248,6 +252,7 @@
   header_credit: sykospark
   header_image:
   - filename: 2020-09-02 11.56.11.jpg
+    height: 263
     id: attp73U4olJoOydNJ
     size: 97316
     thumbnails:
@@ -265,6 +270,7 @@
         width: 99
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/8db1bc5b20daff541be37af8ba94ad54/cc6fe81e/2020-09-0211.56.11.jpg
+    width: 720
   latitude: 32.8409038
   longitude: -117.2821229
   name: 'La Jolla tidepools '
@@ -349,6 +355,7 @@
   header_credit: sykospark
   header_image:
   - filename: 2020-09-02 11.40.57.jpg
+    height: 624
     id: attEejTgyIepzz1Va
     size: 535452
     thumbnails:
@@ -366,6 +373,7 @@
         width: 52
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/cfbe42b83a5a6cc624b063b9a225cadf/a5cd1333/2020-09-0211.40.57.jpg
+    width: 895
   latitude: 33.5902452
   longitude: -117.8705083
   name: Little Corona Del Mar
@@ -441,6 +449,7 @@
   header_credit: Anlace
   header_image:
   - filename: 2020-08-28 21.59.14.jpg
+    height: 960
     id: attrjkoiKpEvxvSzg
     size: 781759
     thumbnails:
@@ -458,6 +467,7 @@
         width: 48
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/d460d58b2e6c73b2d4cb0269c08fde3a/edef3bb4/2020-08-2821.59.14.jpg
+    width: 1280
   hours: Opens at 8am. Closing time varies seasonally, check the reserve website for
     specific openings.
   latitude: 37.510556
@@ -552,6 +562,7 @@
   header_credit: sykospark
   header_image:
   - filename: 2020-09-02 12.14.17.jpg
+    height: 660
     id: att6SADUeRg5WBYt5
     size: 340814
     thumbnails:
@@ -569,6 +580,7 @@
         width: 49
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/621434a59f19b61a1f0476b671e28077/f4fd6948/2020-09-0212.14.17.jpg
+    width: 897
   name: Leguna Beach
   region: us_pacific_coast
   slug: leguna-beach
@@ -642,6 +654,7 @@
   header_credit_url: http://blog.natbat.net/
   header_image:
   - filename: 2020-09-01 16.47.10.jpg
+    height: 1701
     id: atthPkn0L8bHw3IVe
     size: 3716897
     thumbnails:
@@ -659,6 +672,7 @@
         width: 64
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/c69ad2b8f320d7a06dfb90f3a4a89cea/9d266cd3/2020-09-0116.47.10.jpg
+    width: 3024
   latitude: 37.4194665
   longitude: -122.4349273
   name: Cowell Ranch beach
@@ -770,6 +784,7 @@
   header_credit_url: https://www.flickr.com/photos/eschipul/5987162386/
   header_image:
   - filename: 2020-08-30 17.16.27.jpg
+    height: 481
     id: att2KorehRBfzeESL
     size: 304819
     thumbnails:
@@ -787,6 +802,7 @@
         width: 64
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/83e47097014e2f92008ec687fc50faac/103cc88f/2020-08-3017.16.27.jpg
+    width: 855
   latitude: 37.7893246
   live_on_site: true
   longitude: -122.4898912
@@ -838,6 +854,7 @@
   header_credit_url: http://blog.natbat.net/
   header_image:
   - filename: 2020-09-01 10.21.09.jpg
+    height: 2446
     id: attk5XKj6t0Xj9j02
     size: 6451666
     thumbnails:
@@ -855,6 +872,7 @@
         width: 56
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/7117b52bc1f8e92435ffe1fa5780ebad/391de478/2020-09-0110.21.09.jpg
+    width: 3798
   latitude: 37.2646157
   longitude: -122.4138891
   name: Pescadero State beach
@@ -1178,6 +1196,7 @@
   header_credit_url: http://blog.natbat.net/
   header_image:
   - filename: 2020-09-08 17.04.50.jpg
+    height: 2268
     id: attxoPAMVDM9pHsYH
     size: 5533607
     thumbnails:
@@ -1195,6 +1214,7 @@
         width: 64
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/4ad4519b7f66510b07dc31d1cb5d5f51/0d948cc8/2020-09-0817.04.50.jpg
+    width: 4032
   latitude: 37.4365721
   live_on_site: true
   longitude: -122.4447811
@@ -1465,6 +1485,7 @@
   header_credit_url: http://blog.natbat.net/
   header_image:
   - filename: 2020-09-01 11.23.24.jpg
+    height: 2508
     id: attZW4523qQbUtDKy
     size: 7264655
     thumbnails:
@@ -1482,6 +1503,7 @@
         width: 53
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/86339e21c28c3b9f67cebb8cecf2ac6f/47936cae/2020-09-0111.23.24.jpg
+    width: 3660
   hours: Sunrise to sunset
   latitude: 37.003824
   live_on_site: true
@@ -1604,6 +1626,7 @@
   header_credit: sykospark
   header_image:
   - filename: 2020-09-02 12.04.19.jpg
+    height: 631
     id: attu4Eft5m5szKbSd
     size: 479916
     thumbnails:
@@ -1621,6 +1644,7 @@
         width: 52
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/3485d4bcc36a44ea356c2caddecf8cd8/a2141c36/2020-09-0212.04.19.jpg
+    width: 917
   latitude: 34.0436707
   longitude: -118.9392402
   managment:
@@ -1683,6 +1707,7 @@
   header_credit_url: https://goo.gl/maps/L9jcMig6eQDKVnMs5
   header_image:
   - filename: 2020-08-31 17.33.09.jpg
+    height: 697
     id: attLYYmQzMMHLkkX6
     size: 973529
     thumbnails:
@@ -1700,6 +1725,7 @@
         width: 108
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/b64b70331a4cece99a7238597ea6f0c1/3374ca32/2020-08-3117.33.09.jpg
+    width: 2085
   latitude: 36.5438817
   longitude: -121.9339618
   managment:
@@ -1910,6 +1936,7 @@
   header_credit_url: http://blog.natbat.net/
   header_image:
   - filename: 2020-09-01 10.26.02.jpg
+    height: 2630
     id: attqrwclUbGsvXBfH
     size: 6988001
     thumbnails:
@@ -1927,6 +1954,7 @@
         width: 55
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/1bc0899b67765392d08417b56b0c40a7/836955a0/2020-09-0110.26.02.jpg
+    width: 4032
   latitude: 36.561669
   longitude: -121.936278
   managment:
@@ -1958,6 +1986,7 @@
   header_credit_url: http://blog.natbat.net/
   header_image:
   - filename: 2020-09-01 17.32.01.jpg
+    height: 1195
     id: attZStboyr9Hcu7n6
     size: 2097003
     thumbnails:
@@ -1975,6 +2004,7 @@
         width: 100
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/9f8982ff4b95dde187b4c5e1480e290c/00de2545/2020-09-0117.32.01.jpg
+    width: 3325
   latitude: 35.6041315
   longitude: -121.1420191
   managment:
@@ -2021,6 +2051,7 @@
   header_credit_url: http://blog.natbat.net/
   header_image:
   - filename: 2020-09-01 19.21.40.jpg
+    height: 2271
     id: attOknot9g84icbyc
     size: 5029213
     thumbnails:
@@ -2038,6 +2069,7 @@
         width: 62
     type: image/jpeg
     url: https://dl.airtable.com/.attachments/03602a246c62455a06c93dfcb1c5b63c/4cf80d3f/2020-09-0119.21.40.jpg
+    width: 3918
   latitude: 35.5484032
   live_on_site: true
   longitude: -121.1008331
