@@ -18,7 +18,7 @@ root = pathlib.Path(__file__).parent.resolve()
 def db_path(tmpdir):
     db_path = str(tmpdir / "data.db")
     yaml_to_sqlite_cli.callback(
-        db_path, "places", open(root / "airtable" / "tidepool_areas.yml"), "slug"
+        db_path, "places", open(root / "airtable" / "tidepool_areas.yml"), "slug", None
     )
     db = sqlite_utils.Database(db_path)
     # Fake tide data
