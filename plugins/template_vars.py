@@ -89,7 +89,7 @@ def extra_template_vars(datasette):
         return days
 
     async def tide_data_for_place(place_slug, day=None):
-        db = datasette.get_database()
+        db = datasette.get_database("data")
         place = (
             await db.execute(
                 "select * from places where slug = :place_slug",
