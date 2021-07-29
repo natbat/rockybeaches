@@ -54,6 +54,7 @@ jobs:
           --token $VERCEL_TOKEN \
           --metadata metadata.yml \
           --project tidepools-near-me \
+          --scope datasette \
           --install datasette-template-sql \
           --install "datasette-graphql>=1.0.1" \
           --install datasette-cluster-map \
