@@ -1,4 +1,3 @@
 #!/bin/bash
 pytest
-datasette . --get / 
-datasette . --get / | grep 'Rocky Beaches'
+datasette . --get /us/pillar-point | grep 'Rocky Beaches'
