@@ -1,3 +1,4 @@
 #!/bin/bash
 pytest
+datasette . --get / 
 datasette . --get / | grep 'Rocky Beaches'
