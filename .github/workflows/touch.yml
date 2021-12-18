@@ -1,0 +1,25 @@
+name: Touch timestamp
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "3 5 * * 0"
+  # 5:03am every Sunday
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out this repo
+      uses: actions/checkout@v2
+    - name: Write timestamp to timestamp.txt
+      run: |-
+        date > timestamp.txt
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Touch timestamp: ${timestamp}" || exit 0
+        git push
