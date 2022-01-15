@@ -61,4 +61,5 @@ jobs:
           --install astral \
           --static static:static \
           --template-dir templates \
-          --plugins-dir plugins
+          --plugins-dir plugins \
+          --setting max_returned_rows 2000
