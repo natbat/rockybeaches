@@ -228,7 +228,7 @@
 
       {% for day, tide_data in tide_data_for_next_30_days %}
         {% if tide_data %}
-          <div class="tide-prediction{% if day in best_times.best_dates %} best{% endif %}">
+          <div id="tide-prediction-{{ day.strftime("%Y-%m-%d") }}" class="tide-prediction{% if day in best_times.best_dates %} best{% endif %}">
             <h4 class="tide-day header3">{{ day.strftime("%A %-d") }}{{ ordinal(day.day) }} {{ day.strftime("%B %Y") }}</h4>
             {% if tide_data.lowest_daylight_minima %}
               <p class="advice">The lowest tide in daylight today is <strong>{{ "%.2f"|format(tide_data.lowest_daylight_minima.feet) }}ft</strong> at <strong>{{ nice_time(tide_data.lowest_daylight_minima.time) }}</strong></p>
