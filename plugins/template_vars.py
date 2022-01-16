@@ -191,7 +191,7 @@ def extra_template_vars(datasette):
 
 
 def next_30_days():
-    today = datetime.date.today()
+    today = datetime.datetime.now(pytz.timezone("America/Los_Angeles")).date()
     for i in range(0, 30):
         yield today + datetime.timedelta(days=i)
 
