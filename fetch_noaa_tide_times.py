@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 
 def fetch_predictions(station_id):
     yesterday = datetime.date.today() - datetime.timedelta(days=1)
-    end_date = yesterday + datetime.timedelta(days=32)
+    end_date = yesterday + datetime.timedelta(days=365)
     url = "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?" + urlencode(
         {
             "begin_date": yesterday.strftime("%Y%m%d"),
