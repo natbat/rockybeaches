@@ -62,4 +62,4 @@ jobs:
           --static static:static \
           --template-dir templates \
           --plugins-dir plugins \
-          --setting max_returned_rows 2000
+          --setting max_returned_rows 4000
