@@ -8,12 +8,12 @@ from urllib.parse import urlencode
 
 
 def calculate_sunrise_sunset(place):
-    yesterday = datetime.date.today() - datetime.timedelta(days=180)
-    end_date = yesterday + datetime.timedelta(days=365)
+    start_date = datetime.date.today() - datetime.timedelta(days=180)
+    end_date = datetime.date.today() + datetime.timedelta(days=365)
     location_info = LocationInfo(
         place["address"], "", place["time_zone"], place["latitude"], place["longitude"]
     )
-    day = yesterday
+    day = start_date
     day_infos = []
     tz = pytz.timezone(place["time_zone"])
     while day <= end_date:
