@@ -59,6 +59,7 @@ jobs:
           --install "datasette-graphql>=1.0.1" \
           --install datasette-cluster-map \
           --install astral \
+          --install datasette-ics \
           --static static:static \
           --template-dir templates \
           --plugins-dir plugins \
