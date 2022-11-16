@@ -60,6 +60,7 @@ jobs:
           --install datasette-cluster-map \
           --install astral \
           --install datasette-ics \
+          --install pytz \
           --static static:static \
           --template-dir templates \
           --plugins-dir plugins \
