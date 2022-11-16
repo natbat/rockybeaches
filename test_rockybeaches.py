@@ -8,6 +8,7 @@ from plugins.template_vars import (
 import httpx
 import datetime
 import pytest
+import pytest_asyncio
 import pathlib
 import sqlite_utils
 
@@ -30,9 +31,11 @@ def db_path(tmpdir):
     return db_path
 
 
-@pytest.fixture
-def ds(db_path):
-    return Datasette([db_path], plugins_dir=str(root / "plugins"))
+@pytest_asyncio.fixture
+async def ds(db_path):
+    ds = Datasette([db_path], plugins_dir=str(root / "plugins"))
+    await ds.invoke_startup()
+    return ds
 
 
 @pytest.mark.asyncio
@@ -63,18 +66,18 @@ async def test_tide_data_for_place(ds):
             {"time": "12:12", "time_pct": 50.83, "feet": 4.97},
             {"time": "23:24", "time_pct": 97.5, "feet": 6.397},
         ],
+        "lowest_daylight_minima": {"time": "17:30", "time_pct": 72.92, "feet": 1.979},
         "lowest_tide": {"time": "05:42", "time_pct": 23.75, "feet": -0.77},
-        "lowest_daylight_minima": {"feet": 1.979, "time": "17:30", "time_pct": 72.92},
         "dawn": "06:02:08",
         "sunrise": "06:30:10",
         "noon": "13:13:37",
-        "sunset": "19:56:05",
-        "dusk": "20:24:02",
+        "sunset": "19:57:24",
+        "dusk": "20:25:25",
         "dawn_pct": 25.15,
         "sunrise_pct": 27.09,
         "noon_pct": 55.11,
-        "sunset_pct": 83.06,
-        "dusk_pct": 85.0,
+        "sunset_pct": 83.15,
+        "dusk_pct": 85.1,
     }
     assert tide_data == expected
     assert len(heights) == 240
