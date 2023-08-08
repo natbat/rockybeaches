@@ -13,7 +13,7 @@ def fetch_species_counts(place):
             "radius": (place["radius_km"] or "0.5"),
         }
     )
-    return httpx.get(url).json()["results"]
+    return httpx.get(url, timeout=20.0).json()["results"]
 
 
 def fetch_observations(place):
@@ -27,7 +27,7 @@ def fetch_observations(place):
             "quality_grade": "research",
         }
     )
-    return httpx.get(url).json()["results"]
+    return httpx.get(url, timeout=20.0).json()["results"]
 
 
 if __name__ == "__main__":
