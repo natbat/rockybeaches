@@ -28,20 +28,6 @@ jobs:
     - name: Install Python dependencies
       run: |
         pip install -r requirements.txt
-    - name: Backup Airtable to airtable/
-      env:
-        AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
-        AIRTABLE_KEY: ${{ secrets.AIRTABLE_KEY }}
-      run: |-
-        airtable-export airtable $AIRTABLE_BASE_ID tidepool_areas -v --user-agent "curl/7.64.1"
-    - name: Commit and push if it changed
-      run: |-
-        git config user.name "Automated"
-        git config user.email "actions@users.noreply.github.com"
-        git add -A
-        timestamp=$(date -u)
-        git commit -m "Latest data: ${timestamp}" || exit 0
-        git push
     - name: Build database
       run: script/build
     - name: Run tests
