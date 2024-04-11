@@ -6,7 +6,15 @@ async def place_page(datasette, request, scope, send, receive):
     slug = request.url_vars["slug"]
     internal_path = "/data/places/{}".format(slug)
     new_scope = dict(scope, path=internal_path, raw_path=internal_path.encode("utf-8"))
-    await datasette.app()(new_scope, receive, send)
+
+    async def send_with_cache_control(event):
+        if event["type"] == "http.response.start":
+            headers = dict(event["headers"])
+            headers[b"cache-control"] = b"max-age=0, s-maxage=600"
+            event["headers"] = list(headers.items())
+        await send(event)
+
+    await datasette.app()(new_scope, receive, send_with_cache_control)
 
 
 @hookimpl
